@@ -11,7 +11,7 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: start;
+  flex: start;
   flex-wrap: wrap;
   gap: 10px 30px;
   min-height: 72px;

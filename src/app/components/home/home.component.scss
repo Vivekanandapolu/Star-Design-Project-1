@@ -23,6 +23,24 @@
       bottom: 38px;
     }
   }
+
+  .card {
+    border-radius: 0px;
+    .card-img-top {
+      max-height: 200px;
+      overflow: hidden;
+      img {
+        max-width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+    }
+  }
+  .card:hover {
+    transition: all 0.3s;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 5px 5px 5px #00000071;
+  }
   .content1 {
     h1 {
       font-size: var(--fiftyFive);
@@ -106,6 +124,65 @@
         display: flex;
         align-items: start;
         gap: 10px;
+      }
+    }
+  }
+
+  .events {
+    .card {
+      .card-title {
+        font-size: var(--twenty);
+        font-weight: bold;
+      }
+      .card-text {
+        font-size: var(--twelve);
+      }
+      .duration {
+        // padding: 20px 15px;
+        font-size: var(--twelve);
+      }
+      .date {
+        font-size: var(--fourteen);
+        background: var(--bg-blue);
+        padding: 6px 15px;
+        color: white;
+        position: absolute;
+        left: 3%;
+        /* top: 100%; */
+        bottom: 3%;
+      }
+
+      .card-footer {
+        background: transparent;
+        border: 0px;
+        .register-btn {
+          font-size: 14px;
+          border: 1px solid #515151;
+          border-radius: 0px;
+          padding: 8px 15px;
+          opacity: 0.5;
+          transition: all 0.3s;
+        }
+        i {
+          font-size: 25px;
+          margin-right: 10px;
+          color: var(--bg-blue);
+          cursor: pointer;
+          transition: transform 0.3s ease;
+        }
+        i:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    .card:is(:hover) {
+      .card-footer {
+        .register-btn {
+          opacity: 1;
+          background-color: #515151;
+          color: white;
+        }
       }
     }
   }
