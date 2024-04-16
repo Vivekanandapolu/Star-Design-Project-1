@@ -1,5 +1,5 @@
 .container-fluid {
-  // animation: navbar linear forwards;
+  animation: navbar linear forwards;
   animation-timeline: view();
   animation-range: 110dvh 180dvh;
   position: sticky;
@@ -56,14 +56,14 @@
 @keyframes navbar {
   0%,
   100% {
-    border-radius: 100vw;
+    // border-radius: 100vw;
     overflow: hidden;
     padding: 0px 30px;
     backdrop-filter: blur(0.3rem);
-    background-color: rgb(0 241 255 / 33%);
+    background-color: rgb(255 255 255 / 75%);
   }
   100% {
-    top: 15px;
+    top: 0px;
   }
 }
 
