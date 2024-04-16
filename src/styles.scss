@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --bg-blue: #0866ff;
+  --black: #000000;
+  --white: white;
+  --link: #0247fe;
+  --li: #000000fc;
+  --twentyTwo: 22px;
+  --twenty: 20px;
+  --eieghteen: 18px;
+  --sixteen: 16px;
+  --sixty: 60px;
+  --fiftyFive: 55px;
+  --thirtyFive: 35px;
+  --thirty: 30px;
+  --twentyFive: 25px;
+  --eleven: 11px;
+  --twelve: 12px;
+  --fourteen: 14px;
+  --fifteen: 15px;
+  --seventeen: 17px;
+  --yellow-bg: #ffcc09;
+  --light: #f9f9f9;
+}
+
+*,
+body {
+  font-family: "Montserrat";
+  scroll-behavior: smooth;
+  scroll-snap-align: center;
+}
+
+body {
+  min-width: 375px;
+}

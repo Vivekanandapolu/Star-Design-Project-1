@@ -1,0 +1,149 @@
+.container-fluid {
+  padding: 0px;
+  .img-sec {
+    background-color: var(--bg-blue);
+    .row {
+      .left-col {
+        margin-top: var(--marginTop, 0px);
+      }
+      color: var(--white);
+      h1 {
+        font-size: var(--sixty);
+      }
+      p {
+        font-size: var(--thirtyFive);
+      }
+    }
+    .image {
+      max-width: 100%;
+      display: block;
+      border-radius: 85% 1% 15% 3%;
+      height: 526px;
+      position: relative;
+      bottom: 38px;
+    }
+  }
+  .content1 {
+    h1 {
+      font-size: var(--fiftyFive);
+    }
+    p {
+      font-size: var(--twentyFive);
+    }
+  }
+
+  .courses {
+    .card {
+      .card-title {
+        font-size: var(--twenty);
+        font-weight: bold;
+      }
+      .card-text {
+        font-size: var(--twelve);
+      }
+      .duration {
+        padding: 20px 15px;
+        background-color: var(--light);
+        font-size: var(--twelve);
+        .pb-2 {
+          border-bottom: 1px solid #e2e2e2;
+        }
+      }
+      .card-footer {
+        display: flex;
+        align-items: center;
+        padding: 5px 16px 0px 16px;
+        border: none;
+        background: transparent;
+        button {
+          font-size: var(--twelve);
+        }
+        .enroll-btn {
+          padding: 8px 15px;
+          background: var(--bg-blue);
+          border-radius: 0px;
+          color: white;
+          font-weight: 500;
+          transition: all 0.3s ease-in;
+        }
+        .enroll-btn:is(:hover) {
+          background: #2e2e87;
+          font-weight: 600;
+        }
+        .knowmore-btn {
+          transition: all 0.7s ease;
+          padding: 8px 0px;
+          flex: 1;
+          font-weight: 500;
+          text-align: end;
+        }
+        .knowmore-btn:is(:hover) {
+          background-color: var(--light);
+        }
+      }
+    }
+  }
+
+  .why-star {
+    background-color: var(--yellow-bg);
+    .row {
+      padding: 0px 70px;
+    }
+    .card {
+      background: transparent;
+      border: 0px;
+      .card-title {
+        font-weight: bold;
+        font-size: var(--eighteen);
+      }
+      .card-text {
+        font-size: var(--fourteen);
+      }
+      .star-1 {
+        i {
+          font-size: 40px;
+        }
+        display: flex;
+        align-items: start;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .image {
+    height: auto !important;
+  }
+  h1 {
+    font-size: var(--thirty) !important;
+  }
+}
+@media (max-width: 786px) {
+  .why-star {
+    .row {
+      padding: 0px !important;
+      .card {
+        border: 1px solid #c3ad10bf;
+        padding: 5px 10px;
+        background: #ffffff5e;
+        height: 100%;
+        .card-title {
+          font-size: var(--fourteen) !important;
+        }
+        .card-text {
+          font-size: var(--twelve) !important;
+        }
+      }
+    }
+  }
+  .left-col {
+    --marginTop: 50px !important;
+  }
+  .image {
+    height: 526px !important;
+  }
+  h1 {
+    font-size: var(--thirty) !important;
+  }
+}

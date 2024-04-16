@@ -1,1 +1,21 @@
-<p>header works!</p>
+<div class="container-fluid ">
+    <div class="container header">
+        <div class="left-head d-flex align-items-center gap-3 ">
+            <img src="../../../assets/images/star.jpg" width="30" alt="">
+            <!-- <h4 class="fw-bold m-0">STAR DESIGN INSTITUTE</h4> -->
+            <h4 class="fw-bold m-0">Hello, Guru!</h4>
+        </div>
+        <div class="right-head">
+            <ul class=" list">
+                <li routerLink="/" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"
+                    class="list-tem">
+                    Courses</li>
+                <li class="list-tem">Placements</li>
+                <li routerLink="/services" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"
+                    class="list-tem">Services</li>
+                <li class="list-tem">Hire Talent</li>
+                <li class="list-tem">Contact us</li>
+            </ul>
+        </div>
+    </div>
+</div>
