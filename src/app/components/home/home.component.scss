@@ -2,6 +2,8 @@
   padding: 0px;
   .img-sec {
     background-color: var(--bg-blue);
+    padding-top: 40px;
+
     .row {
       .left-col {
         margin-top: var(--marginTop, 0px);
@@ -17,16 +19,17 @@
     .image {
       max-width: 100%;
       display: block;
-      border-radius: 85% 1% 15% 3%;
+      // border-radius: 85% 1% 15% 3%;
       height: 526px;
       position: relative;
-      bottom: 38px;
+      bottom: 0px;
     }
   }
 
   .card {
     border-radius: 0px;
     .card-img-top {
+      border-radius: 0px;
       max-height: 200px;
       overflow: hidden;
       img {
@@ -186,9 +189,118 @@
       }
     }
   }
+  .work {
+    .card-img {
+      width: auto;
+      display: flex;
+      align-items: center;
+
+      .logos {
+        min-width: 100%;
+        display: block;
+        max-height: 100px;
+        object-fit: contain;
+        object-fit: scale-down;
+      }
+    }
+    .logos-div {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px 10px;
+    }
+  }
+
+  .experience,
+  .work,
+  .events {
+    .content1 {
+      h1 {
+        font-size: var(--fourtyFive) !important;
+      }
+      p {
+        font-size: var(--twenty) !important;
+      }
+    }
+  }
+
+  .experience {
+    .cards {
+      display: flex;
+      /* grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); */
+      gap: 10px;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      overflow-x: auto;
+      .card {
+        min-width: 350px;
+      }
+    }
+    .cards > * {
+      flex: 1 1;
+    }
+    .cards::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card-body {
+      padding: 20px 30px;
+    }
+    .card-text {
+      position: relative;
+      font-size: var(--siventeen);
+    }
+    .card-text:first-child::before {
+      content: '"';
+      position: absolute;
+      left: -19px;
+      font-size: 50px;
+      color: var(--bg-blue);
+      top: -19px;
+      isolation: isolate;
+      z-index: 1;
+    }
+    .exp-div {
+      .img-div {
+        // height: 112px;
+        width: 112px;
+        img {
+          max-width: 100%;
+          object-position: center;
+          max-height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .exp-text {
+      text-align: end;
+      h4 {
+        font-size: var(--eighteen);
+        white-space: nowrap;
+      }
+      p {
+        font-size: var(--twelve);
+      }
+    }
+    .arrows {
+      i {
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 @media (max-width: 1024px) {
+  .experience {
+    .cards > * {
+      flex: auto !important;
+    }
+  }
   .image {
     height: auto !important;
   }
