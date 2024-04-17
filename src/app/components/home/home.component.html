@@ -1,16 +1,17 @@
 <app-header></app-header>
 <div class="container-fluid">
     <div class="container-fluid img-sec">
-        <div class="container  ">
+        <div class="" [ngClass]="{'container-fluid':windowWidth,'container':!windowWidth}">
             <div class="row h-100">
-                <div class="col-lg-7 col-xl-7 col-xxl-7 col-md-8 col-sm-12 ">
-                    <div class="h-100 left-col d-flex flex-column gap-2 align-items-start justify-content-center">
+                <div class="col-lg-7 col-xl-7 col-xxl-7 col-md-12 col-sm-12 ">
+                    <div [ngClass]="{'px-3':windowWidth}"
+                        class="h-100 left-col d-flex flex-column gap-2 align-items-start justify-content-center">
                         <h1 class="m-0 fw-bold ">LEARN, CERTIFY, MAKE AN IMPACT.</h1>
                         <p class="display-5">Design Your Better Future . . .</p>
                     </div>
                 </div>
                 <div
-                    class="col-lg-5 col-xl-5 col-xxl-5 col-md-4 col-sm-12 d-flex align-items-center justify-content-center ">
+                    class="col-lg-5 col-xl-5 col-xxl-5 col-md-12 col-sm-12 d-flex align-items-center justify-content-center ">
                     <img class="image object-fit-contain "
                         src="../../../assets/Landing Page/heroimage.stardesigninstitute.png" alt="">
                 </div>
@@ -170,7 +171,8 @@
                 <div class="col-lg-6 col-xl-6 col-xxl-4 mb-4 col-md-6 col-6 ">
                     <div class="card">
                         <div class="star-1">
-                            <i class="ri-presentation-fill"></i>
+                            <img src="../../../assets/Landing Page/Why Star design Institute/Small offline class.star design institute.svg"
+                                alt="">
                             <div class="right">
                                 <h4 class="card-title mb-2">
                                     Small Offline Class
@@ -184,7 +186,8 @@
                 <div class="col-lg-6 col-xl-6 col-xxl-4 mb-4 col-md-6 col-6 ">
                     <div class="card">
                         <div class="star-1">
-                            <i class="ri-user-2-fill"></i>
+                            <img src="../../../assets/Landing Page/Why Star design Institute/exprience teacher.star design institute.svg"
+                                alt="">
                             <div class="right">
                                 <h4 class="card-title mb-2">
                                     Experienced Teachers
@@ -198,7 +201,8 @@
                 <div class="col-lg-6 col-xl-6 col-xxl-4 mb-4 col-md-6 col-6 ">
                     <div class="card">
                         <div class="star-1">
-                            <i class="ri-parent-line"></i>
+                            <img src="../../../assets/Landing Page/Why Star design Institute/mentorship..star design institute.svg"
+                                alt="">
                             <div class="right">
                                 <h4 class="card-title mb-2">
                                     Mentorship
@@ -212,7 +216,8 @@
                 <div class="col-lg-6 col-xl-6 col-xxl-4 mb-4 col-md-6 col-6 ">
                     <div class="card">
                         <div class="star-1">
-                            <i class="ri-presentation-fill"></i>
+                            <img src="../../../assets/Landing Page/Why Star design Institute/mock interview.star design institute.svg"
+                                alt="">
                             <div class="right">
                                 <h4 class="card-title mb-2">
                                     Mock Interviews
@@ -226,7 +231,8 @@
                 <div class="col-lg-6 col-xl-6 col-xxl-4 mb-4 col-md-6 col-6 ">
                     <div class="card">
                         <div class="star-1">
-                            <i class="ri-slideshow-fill"></i>
+                            <img src="../../../assets/Landing Page/Why Star design Institute/hybrid learning..star design institute.svg"
+                                alt="">
                             <div class="right">
                                 <h4 class="card-title mb-2">
                                     Hybrid Learning
@@ -240,7 +246,8 @@
                 <div class="col-lg-6 col-xl-6 col-xxl-4 mb-4 col-md-6 col-6 ">
                     <div class="card">
                         <div class="star-1">
-                            <i class="ri-dashboard-line"></i>
+                            <img src="../../../assets/Landing Page/Why Star design Institute/Real world projects.star design institute.svg"
+                                alt="">
                             <div class="right">
                                 <h4 class="card-title mb-2">
                                     Real-World Projects
@@ -443,11 +450,14 @@
         <div class="cards" #cards>
             <div class="card">
                 <div class="card-body">
-                    <p class="card-text mb-3">Whole team of UX Academy was supportive along the whole course.
+                    <p class="card-text mb-3">
+                        <img src="../../../assets/Landing Page/logo-icons/Group 76304.svg" alt="">Whole team of UX
+                        Academy was supportive along the whole course.
                         Quickly
                         reacting, offering information and help. I am really impressed by the level of competence
                         presented by the teacher. And of course what cannot be overestimated, providing contact with
-                        real clients .</p>
+                        real clients .
+                    </p>
                     <div class="exp-div">
                         <div class="img-div"><img src="../../../assets/Landing Page/Student Experiences/Sukasi Raju.png"
                                 width="141" alt=""></div>
@@ -462,7 +472,8 @@
             </div>
             <div class="card">
                 <div class="card-body">
-                    <p class="card-text mb-3">I was so impressed with UX Academy. The content is expansive and the
+                    <p class="card-text mb-3"><img src="../../../assets/Landing Page/logo-icons/Group 76304.svg"
+                            alt="">I was so impressed with UX Academy. The content is expansive and the
                         instructors are extremely knowledgeable. The course setup is well thought out and its fantastic
                         you get to work on a real-life product. I’ve done a few courses and this is by far up there with
                         the best.</p>
@@ -480,7 +491,8 @@
             </div>
             <div class="card">
                 <div class="card-body">
-                    <p class="card-text mb-3">I recently completed the UI/UX course it was an amazing experience. The
+                    <p class="card-text mb-3"><img src="../../../assets/Landing Page/logo-icons/Group 76304.svg"
+                            alt="">I recently completed the UI/UX course it was an amazing experience. The
                         course was very informative and engaging, with a great mix of theoretical and practical
                         components ,Highly recommend for anyone looking to get into UX/UI design .</p>
                     <div class="exp-div">
@@ -498,7 +510,8 @@
             </div>
             <div class="card">
                 <div class="card-body">
-                    <p class="card-text mb-3">I recently completed the UI/UX course it was an amazing experience. The
+                    <p class="card-text mb-3"><img src="../../../assets/Landing Page/logo-icons/Group 76304.svg"
+                            alt="">I recently completed the UI/UX course it was an amazing experience. The
                         course was very informative and engaging, with a great mix of theoretical and practical
                         components ,Highly recommend for anyone looking to get into UX/UI design .</p>
                     <div class="exp-div">
