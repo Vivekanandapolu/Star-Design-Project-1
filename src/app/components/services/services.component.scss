@@ -1,11 +1,11 @@
 .bgimg1{
-  background-image: url('https://images.pexels.com/photos/128234/pexels-photo-128234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-  height: 60vh;
+  background-image: url('../../../assets/Services/services.star\ design\ institute.png') !important;
+  height: 70vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  opacity: 3;
+  opacity: 1;
 
   color: white;
   display: flex;
@@ -69,8 +69,89 @@ opacity: 1;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
+    line-height:28px;
   }
 }
+.cardtext1{
+  h1{
+    text-align: left;
+    font: normal normal bold 23px/35px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+  p{
+    font: normal normal normal 14px/18px Messina Sans;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+  }
+
+}
+.img{
+  border-radius: 10px;
+}
+.burnoncode{
+  h1{
+    font: normal normal bold 55px/53px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+  p{
+    font: normal normal 600 20px/20px Nunito;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    line-height:28px;
+  }
+  .designh1{
+    font: normal normal bold 49px/81px Montserrat;
+    letter-spacing: 0px;
+    color: #FFCB05;
+    opacity: 1;
+  }
+  .codeingh1{
+    font: normal normal bold 49px/81px Montserrat;
+    letter-spacing: 0px;
+    color: #FFCB05;
+    opacity: 1;
+  }
+  .testingh1{
+    font: normal normal bold 49px/81px Montserrat;
+    letter-spacing: 0px;
+    color: #0247FE !important;
+    opacity: 1;
+  }
+}
+.container-fluid {
+  padding: 0px;
+  .img-sec {
+    background-color: var(--bg-blue);
+    padding-top: 40px;
+
+    .row {
+      .left-col {
+        margin-top: var(--marginTop, 0px);
+      }
+      color: var(--white);
+      h1 {
+        font-size: var(--sixty);
+      }
+      p {
+        font-size: var(--thirtyFive);
+      }
+    }
+    .image {
+      max-width: 100%;
+      display: block;
+      // border-radius: 85% 1% 15% 3%;
+      height: 526px;
+      position: relative;
+      bottom: 0px;
+    }
+  }}
+
 @media (max-width:654px) {
   .bgimg1{
     h1{
@@ -78,6 +159,7 @@ opacity: 1;
     }
     p{
       font-size: 20px;
+
     }
   }
 
