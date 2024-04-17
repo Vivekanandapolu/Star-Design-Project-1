@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-
+  showDropdown = false;
+  dropdownItems = [
+    'UI/UX Design',
+    'AR-VR/UX Design',
+    'UI/VI Design',
+    'Bachelor Of Design',
+    'Product Management',
+    'Graphic Design'
+  ];
 }

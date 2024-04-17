@@ -12,6 +12,10 @@ const routes: Routes = [
   {
     path: 'services',
     component: ServicesComponent
+  },
+  {
+    path: 'courses',
+    loadChildren: () => import("./components/courses/courses.module").then(m => m.CoursesModule)
   }
 
 ];
