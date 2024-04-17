@@ -30,11 +30,17 @@
 
 *,
 body {
-  font-family: "Montserrat";
+  font-family: "Montserrat" !important;
   scroll-behavior: smooth;
   scroll-snap-align: center;
+  transition: all 0.3s ease-in-out !important;
 }
 
 body {
-  min-width: 400px;
+  background: #00000005 !important;
+  min-width: 425px;
+}
+
+.card {
+  border: none !important;
 }
