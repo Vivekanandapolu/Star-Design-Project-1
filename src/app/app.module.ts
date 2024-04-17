@@ -7,13 +7,15 @@ import { HeaderComponent } from './shared/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { ServicesComponent } from './components/services/services.component';
 import { CoursesModule } from './components/courses/courses.module';
+import { AboutusComponent } from './components/aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ServicesComponent
+    ServicesComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,
