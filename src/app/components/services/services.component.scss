@@ -110,21 +110,21 @@ opacity: 1;
     line-height:28px;
   }
   .designh1{
-    font: normal normal bold var(--fourtyfive)/81px Montserrat;
+    font: normal normal bold var(--fourtyFive)/81px Montserrat;
 
     letter-spacing: 0px;
     color: #FFCB05;
     opacity: 1;
   }
   .codeingh1{
-    font: normal normal bold var(--fourtyfive)/81px Montserrat;
+    font: normal normal bold var(--fourtyFive)/81px Montserrat;
 
     letter-spacing: 0px;
     color: #FFCB05;
     opacity: 1;
   }
   .testingh1{
-    font: normal normal bold var(--fourtyfive)/81px Montserrat;
+    font: normal normal bold var(--fourtyFive)/81px Montserrat;
 
     letter-spacing: 0px;
     color: #0247FE !important;
@@ -170,6 +170,7 @@ opacity: 1;
   /* Card hover effect */
   .card {
     transition: transform 0.3s ease;
+    overflow: hidden !important;
   }
 
   .card:hover {
@@ -275,6 +276,9 @@ p:hover {
 
   p {
     font-size: 12px;
+  }
+  .image{
+    height: 326px !important;
   }
 
   .card {
