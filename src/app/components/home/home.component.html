@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="container-fluid">
-    <div class="container-fluid img-sec">
-        <div class="" [ngClass]="{'container-fluid':windowWidth,'container':!windowWidth}">
+    <div class="img-sec">
+        <div class="" [ngClass]="{'container':!windowWidth,'container-fluid':windowWidth}">
             <div class="row h-100">
                 <div class="col-lg-7 col-xl-7 col-xxl-7 col-md-12 col-sm-12 ">
                     <div [ngClass]="{'px-3':windowWidth}"
@@ -582,7 +582,7 @@
                         </div>
                         <div class="bottom">
                             <ul class="navbar-nav d-flex flex-column align-items-start gap-2">
-                                <li>About Us</li>
+                                <li routerLink="/Aboutus">About Us</li>
                                 <li>Placements</li>
                                 <li>Services</li>
                                 <li>Verify certificate</li>

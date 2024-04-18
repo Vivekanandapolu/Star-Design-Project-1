@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   showDropdown = false;
   dropdownItems = [
     'UI/UX Design',
@@ -15,4 +15,14 @@ export class HeaderComponent {
     'Product Management',
     'Graphic Design'
   ];
+  windowWidth: boolean = false
+  ngOnInit(): void {
+    this.windowWidth = window.innerWidth <= 1024;
+    window.addEventListener('resize', () => {
+      this.windowWidth = window.innerWidth <= 1024;
+      if (this.windowWidth) {
+        console.log("yess");
+      }
+    });
+  }
 }

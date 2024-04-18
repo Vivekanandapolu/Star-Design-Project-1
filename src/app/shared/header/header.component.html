@@ -1,57 +1,91 @@
-<!-- <div class="container-fluid ">
-    <nav class="navbar navbar-expand-md  navbar-light ">
-        <a class="navbar-brand fw-bold" href="#">
-            <img width="40" src="../../../assets/Landing Page/logo-icons/STAR DESIGN INSTITUTE.svg" alt="">
-            STAR DESIGN INSTITUTE
-        </a>
-        <button class="navbar-toggler shadow-none border-0 w-auto" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/" [routerLinkActiveOptions]="{ exact: true }"
-                        routerLinkActive="active">Courses</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Placements</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/services" [routerLinkActiveOptions]="{ exact: true }"
-                        routerLinkActive="active">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Hire Talent</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-</div> -->
-
-
-
 <div class="container-fluid ">
-    <div class="container header">
+    <div class="header" [ngClass]="{'container':!windowWidth}">
         <div class="left-head d-flex align-items-center gap-3 ">
             <img width="42" src="../../../assets/Landing Page/logo-icons/STAR DESIGN INSTITUTE.svg" alt="">
-            <h4 class="fw-bold m-0">STAR DESIGN INSTITUTE</h4>
+            <h4 class="fw-bold m-0">Caratred</h4>
         </div>
-        <div class="right-head">
-            <ul class=" list">
+        <div class="right-head" [ngClass]="{'menu':windowWidth}">
+            <ul class="list normal-ul" *ngIf="!windowWidth">
                 <li routerLink="/" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"
                     class="list-tem">
-                    Courses</li>
-                <li class="list-tem">Placements</li>
-                <li routerLink="/services" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"
+                    Home</li>
+                <li class="list-tem dropdown">
+                    <a class="btn border-0" role="button" aria-expanded="false">
+                        Courses <i class="ri-arrow-down-s-line"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item">UI/UX DESIGN</a></li>
+                        <li><a class="dropdown-item">AR-VR/UX DESIGN
+                            </a></li>
+                        <li><a class="dropdown-item">UX/VI DESIGN
+                            </a></li>
+                        <li><a class="dropdown-item">BACHELOR OF DESIGN
+
+                            </a></li>
+                        <li><a class="dropdown-item">PRODUCT MANAGEMENT
+
+                            </a></li>
+                        <li><a class="dropdown-item">GRAPHIC DESIGN
+
+                            </a></li>
+                    </ul>
+                </li>
+                <li class="list-tem" routerLink="/Placements" [routerLinkActiveOptions]="{ exact: true }"
+                    routerLinkActive="active">Placements</li>
+                <li routerLink="/Services" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"
                     class="list-tem">Services</li>
                 <li class="list-tem">Hire Talent</li>
                 <li class="list-tem">Contact us</li>
             </ul>
+
+
+            <div class="dropdown">
+                <button *ngIf="windowWidth" [ngClass]="{'menu':windowWidth}" class="btn shadow-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                    aria-controls="offcanvasScrolling"><i class="ri-menu-line"></i></button>
+
+            </div>
+
         </div>
+    </div>
+
+</div>
+
+<div class="offcanvas offcanvas-start" data-bs-backdrop="true" id="offcanvasScrolling"
+    aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-body d-flex align-items-start justify-content-between">
+        <ul class="navbar-nav off-ul list">
+            <li routerLink="/" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active" class="list-tem">
+                Home</li>
+            <li class="list-tem dropdown">
+                <a class="btn dropdown-toggle ps-0 border-0" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Courses
+                </a>
+                <ul class="dropdown-menu position-relative">
+                    <li><a class="dropdown-item">UI/UX DESIGN</a></li>
+                    <li><a class="dropdown-item">AR-VR/UX DESIGN
+                        </a></li>
+                    <li><a class="dropdown-item">UX/VI DESIGN
+                        </a></li>
+                    <li><a class="dropdown-item">BACHELOR OF DESIGN
+
+                        </a></li>
+                    <li><a class="dropdown-item">PRODUCT MANAGEMENT
+
+                        </a></li>
+                    <li><a class="dropdown-item">GRAPHIC DESIGN
+
+                        </a></li>
+                </ul>
+            </li>
+            <li class="list-tem" routerLink="/Placements" [routerLinkActiveOptions]="{ exact: true }"
+                routerLinkActive="active">Placements</li>
+            <li routerLink="/Services" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"
+                class="list-tem">Services</li>
+            <li class="list-tem">Hire Talent</li>
+            <li class="list-tem">Contact us</li>
+        </ul>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
 </div>

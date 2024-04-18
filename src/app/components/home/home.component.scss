@@ -44,7 +44,7 @@
     }
   }
   .card:hover {
-    box-shadow: 5px 5px 10px #00000071;
+    box-shadow: 3px 3px 10px #00000071;
     .card-img-top {
       img {
         scale: 1.2;
@@ -123,12 +123,8 @@
       box-shadow: none !important;
       transform: translateY(-10px) scale(1, 1.03);
       .star-1 {
-        mix-blend-mode: multiply;
-        // flex-direction: row;
         img {
-          filter: saturate(1.5) brightness(200%) contrast(1.4);
-
-          mix-blend-mode: normal;
+          filter: saturate(0.1);
         }
       }
     }
@@ -144,7 +140,7 @@
       }
       .star-1 {
         img {
-          filter: contrast(0.5);
+          filter: contrast(1);
         }
         display: flex;
         align-items: start;
