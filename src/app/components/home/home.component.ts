@@ -10,10 +10,15 @@ export class HomeComponent implements OnInit {
   windowWidth: boolean = false
   @ViewChild('cards') cardsContainers: ElementRef | undefined;
   ngOnInit(): void {
-    if (document.body.offsetWidth <= 1024) {
-      this.windowWidth = true
-    }
+    this.windowWidth = window.innerWidth <= 1024;
+    window.addEventListener('resize', () => {
+      this.windowWidth = window.innerWidth <= 1024;
+      if (this.windowWidth) {
+        console.log("yess");
+      }
+    });
   }
+
 
   slide(direction: string) {
     if (this.cardsContainers)

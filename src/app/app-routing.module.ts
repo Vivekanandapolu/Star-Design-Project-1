@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { ServicesComponent } from './components/services/services.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { PlacementsComponent } from './components/placements/placements.component';
 // import { HeaderComponent } from './shared/header/header.component';
 
 const routes: Routes = [
@@ -11,7 +12,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'services',
+    path: 'Services',
     component: ServicesComponent
   },
   {
@@ -19,7 +20,11 @@ const routes: Routes = [
     component: AboutusComponent
   },
   {
-    path: 'courses',
+    path: 'Placements',
+    component: PlacementsComponent
+  },
+  {
+    path: 'Courses',
     loadChildren: () => import("./components/courses/courses.module").then(m => m.CoursesModule)
   }
 
