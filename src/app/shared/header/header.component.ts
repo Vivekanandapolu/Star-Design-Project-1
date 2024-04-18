@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +17,9 @@ export class HeaderComponent implements OnInit {
     'Graphic Design'
   ];
   windowWidth: boolean = false
+  constructor(private activatedParams: ActivatedRoute) { }
   ngOnInit(): void {
+    console.log(this.activatedParams.url);
     this.windowWidth = window.innerWidth <= 1024;
     window.addEventListener('resize', () => {
       this.windowWidth = window.innerWidth <= 1024;

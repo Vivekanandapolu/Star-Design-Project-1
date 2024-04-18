@@ -49,13 +49,22 @@
   cursor: pointer;
 }
 
-.list li:is(:hover, .active) {
-  color: black;
-  font-weight: bold;
-  text-shadow: 1px 10px 25px blue;
+// li:is(:hover, .active),
+// a:is(:hover, .active) {
+// }
+li:hover,
+a:hover {
+  font-weight: bold !important;
 }
-.list li:is(.active) {
+.active {
+  color: black !important;
+  font-weight: bold !important;
   text-shadow: none;
+  *.active {
+    color: black !important;
+    font-weight: bold !important;
+    text-shadow: none;
+  }
 }
 
 @keyframes navbar {

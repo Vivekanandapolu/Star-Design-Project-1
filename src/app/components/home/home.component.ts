@@ -13,9 +13,6 @@ export class HomeComponent implements OnInit {
     this.windowWidth = window.innerWidth <= 1024;
     window.addEventListener('resize', () => {
       this.windowWidth = window.innerWidth <= 1024;
-      if (this.windowWidth) {
-        console.log("yess");
-      }
     });
   }
 
