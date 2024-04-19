@@ -48,7 +48,8 @@
   transition: all 0.3s;
   cursor: pointer;
 }
-a.nav-link.btn.dropdown-toggle.ps-0.border-0.active.show {
+a.nav-link.btn.dropdown-toggle.ps-0.border-0.active.show,
+a.nav-link.btn.dropdown-toggle.ps-0.border-0 {
   text-align: start;
 }
 
