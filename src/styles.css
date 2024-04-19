@@ -1,1 +1,44 @@
-@import"https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";:root{--bg-blue: #0866ff;--black: #000000;--white: white;--link: #0247fe;--li: #000000fc;--twentyTwo: 22px;--twenty: 20px;--eieghteen: 18px;--sixteen: 16px;--sixty: 60px;--fiftyFive: 55px;--thirtyFive: 35px;--thirty: 30px;--twentyFive: 25px;--eleven: 11px;--twelve: 12px;--fourteen: 14px;--fifteen: 15px;--seventeen: 17px;--yellow-bg: #ffcc09;--light: #f9f9f9;--fourtyFive: 45px;--siventeen: 17px;--ten: 10px;--thirteen: 13px;--seventyFive: 75px;--fifty: 50px}*,body{font-family:"Montserrat" !important;scroll-behavior:smooth;scroll-snap-align:center;transition:all .3s ease-in-out !important}body{background:rgba(0,0,0,.0196078431) !important;min-width:425px}.card{border:none !important}
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
+:root {
+  --bg-blue: #0866ff;
+  --black: #000000;
+  --white: white;
+  --link: #0247fe;
+  --li: #000000fc;
+  --twentyTwo: 22px;
+  --twenty: 20px;
+  --eieghteen: 18px;
+  --sixteen: 16px;
+  --sixty: 60px;
+  --fiftyFive: 55px;
+  --thirtyFive: 35px;
+  --thirty: 30px;
+  --twentyFive: 25px;
+  --eleven: 11px;
+  --twelve: 12px;
+  --fourteen: 14px;
+  --fifteen: 15px;
+  --seventeen: 17px;
+  --yellow-bg: #ffcc09;
+  --light: #f9f9f9;
+  --fourtyFive: 45px;
+  --siventeen: 17px;
+  --ten: 10px;
+  --thirteen: 13px;
+  --seventyFive: 75px;
+  --fifty: 50px;
+}
+*,
+body {
+  font-family: "Montserrat" !important;
+  scroll-behavior: smooth;
+  scroll-snap-align: center;
+  transition: all 0.3s ease-in-out !important;
+}
+body {
+  background: rgba(0, 0, 0, 0.0196078431) !important;
+  min-width: 425px;
+}
+.card {
+  border: none !important;
+}
