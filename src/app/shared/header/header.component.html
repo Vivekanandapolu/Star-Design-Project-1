@@ -1,9 +1,9 @@
 <div class="container-fluid ">
-    <div class="header" [ngClass]="{'container':!windowWidth}">
+    <div class="header m-0" [ngClass]="{'container':!windowWidth}">
         <div class="left-head d-flex align-items-center gap-3 ">
             <img width="42" routerLink="/" class="cursor"
                 src="../../../assets/Landing Page/logo-icons/STAR DESIGN INSTITUTE.svg" alt="">
-            <h4 class="fw-bold m-0">STAR DESIGN INSTITUTE</h4>
+            <h4 class="fw-bold m-0">Carated Technologies</h4>
         </div>
         <div class="right-head" [ngClass]="{'menu':windowWidth}">
             <ul class="list normal-ul" *ngIf="!windowWidth">
@@ -12,8 +12,8 @@
                         routerLinkActive="active">Home</a>
                 </li>
                 <li class="list-tem dropdown">
-                    <a routerLink="/Courses" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-                        class="btn border-0" role="button" aria-expanded="false">
+                    <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="btn border-0"
+                        [ngClass]="{'active':course}" role="button" aria-expanded="false">
                         Courses <i class="ri-arrow-down-s-line"></i>
                     </a>
                     <ul class="dropdown-menu">
@@ -50,18 +50,19 @@
 
 
             <div class="dropdown">
-                <button *ngIf="windowWidth" [ngClass]="{'menu':windowWidth}" class="btn shadow-none" type="button"
-                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-                    aria-controls="offcanvasScrolling"><i class="ri-menu-line"></i></button>
-
+                <button *ngIf="windowWidth" (click)="openMenu()" [ngClass]="{'menu':windowWidth}"
+                    class="btn shadow-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i
+                        class="ri-menu-line"></i></button>
             </div>
 
         </div>
     </div>
-
 </div>
 
-<div class="offcanvas offcanvas-start" data-bs-backdrop="true" id="offcanvasScrolling"
+<!--Offcanvas-->
+
+<div class="offcanvas offcanvas-start" id="offcanvas" data-bs-backdrop="true" id="offcanvasScrolling"
     aria-labelledby="offcanvasScrollingLabel">
     <div class="offcanvas-body d-flex align-items-start justify-content-between">
         <ul class="navbar-nav off-ul list">
@@ -70,9 +71,8 @@
                     routerLinkActive="active">Home</a>
             </li>
             <li class="list-tem nav-item dropdown">
-                <a routerLink="/Courses" [routerLinkActiveOptions]=" { exact: true }" routerLinkActive="active"
-                    class="nav-link btn dropdown-toggle ps-0 border-0" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                <a class="nav-link btn dropdown-toggle ps-0 border-0" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false" [ngClass]="{'active':course}">
                     Courses
                 </a>
                 <ul class="dropdown-menu position-relative">
