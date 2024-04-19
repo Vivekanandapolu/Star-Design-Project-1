@@ -1,0 +1,298 @@
+.bgcolor1{
+  background: var(--bg-blue) 0% 0% no-repeat padding-box !important;
+
+box-shadow: 0px 3px 6px #00000029;
+opacity: 1;
+height: 519px;
+
+}
+.mainheader{
+  h1{
+    font: normal normal bold var(--fourtyFive)/60px Montserrat;
+letter-spacing: 0px;
+color: #FFFFFF;
+text-transform: capitalize;
+opacity: 1;
+  }
+  p{
+    font: normal normal normal var(--twenty)/25px Montserrat;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+  }
+}
+.content1 {
+  h1 {
+    font-size: var(--fiftyFive);
+  }
+  p {
+    font-size: var(--twentyFive);
+  }
+}
+.work {
+  .card-img {
+    width: auto;
+    display: flex;
+    align-items: center;
+
+    .logos {
+      min-width: 100%;
+      display: block;
+      max-height: 100px;
+      object-fit: contain;
+      object-fit: scale-down;
+    }
+  }
+  .logos-div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px 10px;
+    .card-img {
+      transition: all 0.5s;
+      img {
+        filter: contrast(0.2);
+        transition: filter 0.5s;
+      }
+    }
+    .card-img:hover {
+      img {
+        filter: saturate(1) brightness(100%) contrast(1);
+      }
+    }
+  }
+}
+.about-learning {
+  h1 {
+    text-align: center;
+    font-size: var(--fiftyFive);
+  }
+  p {
+    text-align: center;
+    font-size: var(--twentyFive);
+  }
+
+  .learn-cards {
+    img {
+      border-radius: 10px;
+      max-width: 100%;
+      height: 261px;
+      object-fit: cover;
+    }
+    .lady img {
+      object-fit: contain !important;
+    }
+  }
+}
+.bgcolor2{
+  background: var(--bg-blue) 0% 0% no-repeat padding-box !important;
+color: white;
+
+opacity: 1;
+height: 323px;
+}
+.footertext {
+  h1{
+    font: normal normal 600 var(--fourtyFive)/70px Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+  }
+  p{
+    font: normal normal normal var(--twentyTwo)/30px Open Sans;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+  }
+}
+.recent {
+  h1 {
+    font: normal normal bold var(--fiftyFive) / 53px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+  p {
+    font: normal normal 600 var(--twenty) / 20px Nunito;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    line-height: 28px;
+  }
+}
+
+.img {
+  border-radius: 10px;
+}
+.bgimg1{
+  height: max-content;
+  // line-height: 59px !important;
+
+background:   url('../../../assets/Placements/polygon\ background.svg') 0% 0% no-repeat padding-box;
+opacity: 0.5;
+h1{
+  font: normal normal bold var(--fourtyFive)/30px Montserrat;
+  letter-spacing: 0px;
+  color: #000000 !important;
+  opacity: 1;
+  margin-top: 4rem;
+}
+p{
+  margin-top: 2rem;
+  font: normal normal normal var(--twenty)/25px Montserrat;
+  letter-spacing: 0px;
+  color: #000000;
+  text-transform: capitalize;
+  opacity: 1;
+}
+.cardtext1 {
+  h1 {
+    text-align: left;
+    font: normal normal bold var(--twentyTwo) / 35px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+  p {
+    font: normal normal normal var(--fourteen) / 18px Messina Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+}
+}
+.card{
+  // width: 286px;
+  // height: 341px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+border-radius: 12px;
+opacity: 1;
+}
+.card:hover img {
+  transform: scale(1.1); /* Increase image size on hover */
+}
+
+/* Card hover effect */
+.card {
+  transition: transform 0.3s ease;
+  overflow: hidden !important;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Move card up slightly on hover */
+}
+.cardtext{
+h1{
+  font: normal normal bold 21px/26px Montserrat;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+p{
+  font: normal normal normal 12px/19px Montserrat;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+}
+.successtext {
+  h1{
+    font: normal normal 600 var(--fourtyFive)/70px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+  p{
+    font: normal normal normal var(--twentyTwo)/30px Open Sans;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+  }
+}
+.cards {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  overflow-x: auto;
+  .card {
+    min-width: 350px;
+  }
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+.curosalcard{
+  background: #FFFFFF 0% 0% no-repeat padding-box !important;
+border: 1px solid #0247FE !important;
+opacity: 1;
+border-left: none !important;
+p{
+  font: normal normal normal 17px/30px Montserrat;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+}
+h1{
+  font: normal normal bold 27px/23px Montserrat;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+}
+}
+.ri-arrow-left-line{
+  background: #0247FE !important;
+  color: white;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+.ri-arrow-right-line{
+  background: #0247FE !important;
+  color: white;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+@media (max-width:768px) {
+.mainheader{
+  h1{
+    font-size: 30px;
+  }
+}
+.footertext{
+  h1{
+    font-size: 30px;
+  }
+}
+.bgcolor1{
+  height: 650px;
+}
+}
+
+@media (max-width: 1024px) {
+  .mainheader{
+    h1{
+      font-size: 30px;
+    }
+  }
+  .footertext{
+    h1{
+      font-size: 30px;
+    }
+  }
+  .logos-div {
+    gap: 10px !important;
+    .card-img {
+      transition: all 0.5s;
+      img {
+        filter: none !important;
+        transition: filter 0.5s;
+      }
+    }
+    .card-img:hover {
+      img {
+        filter: none !important;
+      }
+    }
+  }}
+
