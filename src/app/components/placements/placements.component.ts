@@ -19,10 +19,10 @@ export class PlacementsComponent implements OnInit {
   slide(direction: string) {
     if (this.cardsContainers)
       if (direction === 'left') {
-        this.cardsContainers.nativeElement.scrollLeft -= 350;
+        this.cardsContainers.nativeElement.scrollLeft -= 1140;
       }
       else if (direction === 'right') {
-        this.cardsContainers.nativeElement.scrollLeft += 350;
+        this.cardsContainers.nativeElement.scrollLeft += 1140;
       }
   }
 }

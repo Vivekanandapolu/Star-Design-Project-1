@@ -1,24 +1,23 @@
-.bgcolor1{
+.bgcolor1 {
   background: var(--bg-blue) 0% 0% no-repeat padding-box !important;
 
-box-shadow: 0px 3px 6px #00000029;
-opacity: 1;
-height: 519px;
-
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+  height: 519px;
 }
-.mainheader{
-  h1{
-    font: normal normal bold var(--fourtyFive)/60px Montserrat;
-letter-spacing: 0px;
-color: #FFFFFF;
-text-transform: capitalize;
-opacity: 1;
+.mainheader {
+  h1 {
+    font: normal normal bold var(--fourtyFive) / 60px Montserrat;
+    letter-spacing: 0px;
+    color: #ffffff;
+    text-transform: capitalize;
+    opacity: 1;
   }
-  p{
-    font: normal normal normal var(--twenty)/25px Montserrat;
-letter-spacing: 0px;
-color: #FFFFFF;
-opacity: 1;
+  p {
+    font: normal normal normal var(--twenty) / 25px Montserrat;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
   }
 }
 .content1 {
@@ -83,25 +82,25 @@ opacity: 1;
     }
   }
 }
-.bgcolor2{
+.bgcolor2 {
   background: var(--bg-blue) 0% 0% no-repeat padding-box !important;
-color: white;
+  color: white;
 
-opacity: 1;
-height: 323px;
+  opacity: 1;
+  height: 323px;
 }
 .footertext {
-  h1{
-    font: normal normal 600 var(--fourtyFive)/70px Montserrat;
+  h1 {
+    font: normal normal 600 var(--fourtyFive) / 70px Montserrat;
     letter-spacing: 0px;
-    color: #FFFFFF;
+    color: #ffffff;
     opacity: 1;
   }
-  p{
-    font: normal normal normal var(--twentyTwo)/30px Open Sans;
-letter-spacing: 0px;
-color: #FFFFFF;
-opacity: 1;
+  p {
+    font: normal normal normal var(--twentyTwo) / 30px Open Sans;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
   }
 }
 .recent {
@@ -123,50 +122,51 @@ opacity: 1;
 .img {
   border-radius: 10px;
 }
-.bgimg1{
+.bgimg1 {
   height: max-content;
   // line-height: 59px !important;
 
-background:   url('../../../assets/Placements/polygon\ background.svg') 0% 0% no-repeat padding-box;
-opacity: 0.5;
-h1{
-  font: normal normal bold var(--fourtyFive)/30px Montserrat;
-  letter-spacing: 0px;
-  color: #000000 !important;
-  opacity: 1;
-  margin-top: 4rem;
-}
-p{
-  margin-top: 2rem;
-  font: normal normal normal var(--twenty)/25px Montserrat;
-  letter-spacing: 0px;
-  color: #000000;
-  text-transform: capitalize;
-  opacity: 1;
-}
-.cardtext1 {
+  background: url("../../../assets/Placements/polygon\ background.svg") 0% 0%
+    no-repeat padding-box;
+  opacity: 0.5;
   h1 {
-    text-align: left;
-    font: normal normal bold var(--twentyTwo) / 35px Montserrat;
+    font: normal normal bold var(--fourtyFive) / 30px Montserrat;
     letter-spacing: 0px;
-    color: #000000;
+    color: #000000 !important;
     opacity: 1;
+    margin-top: 4rem;
   }
   p {
-    font: normal normal normal var(--fourteen) / 18px Messina Sans;
+    margin-top: 2rem;
+    font: normal normal normal var(--twenty) / 25px Montserrat;
     letter-spacing: 0px;
     color: #000000;
+    text-transform: capitalize;
     opacity: 1;
   }
+  .cardtext1 {
+    h1 {
+      text-align: left;
+      font: normal normal bold var(--twentyTwo) / 35px Montserrat;
+      letter-spacing: 0px;
+      color: #000000;
+      opacity: 1;
+    }
+    p {
+      font: normal normal normal var(--fourteen) / 18px Messina Sans;
+      letter-spacing: 0px;
+      color: #000000;
+      opacity: 1;
+    }
+  }
 }
-}
-.card{
+.card {
   // width: 286px;
   // height: 341px;
-background: #FFFFFF 0% 0% no-repeat padding-box;
-box-shadow: 0px 3px 6px #00000029;
-border-radius: 12px;
-opacity: 1;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 12px;
+  opacity: 1;
 }
 .cardhover:hover img {
   transform: scale(1.1); /* Increase image size on hover */
@@ -181,32 +181,32 @@ opacity: 1;
 .cardhover:hover {
   transform: translateY(-10px); /* Move card up slightly on hover */
 }
-.cardtext{
-h1{
-  font: normal normal bold 21px/26px Montserrat;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-}
-p{
-  font: normal normal normal 12px/19px Montserrat;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-}
-}
-.successtext {
-  h1{
-    font: normal normal 600 var(--fourtyFive)/70px Montserrat;
+.cardtext {
+  h1 {
+    font: normal normal bold 21px/26px Montserrat;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
   }
-  p{
-    font: normal normal normal var(--twentyTwo)/30px Open Sans;
-letter-spacing: 0px;
-color: #000000;
-opacity: 1;
+  p {
+    font: normal normal normal 12px/19px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+}
+.successtext {
+  h1 {
+    font: normal normal 600 var(--fourtyFive) / 70px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+  p {
+    font: normal normal normal var(--twentyTwo) / 30px Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
   }
 }
 .cards {
@@ -216,67 +216,86 @@ opacity: 1;
   overflow: hidden;
   overflow-x: auto;
   .card {
-    min-width: 350px;
+    overflow: hidden;
+    min-width: 100%;
   }
 }
 
 .cards::-webkit-scrollbar {
   display: none;
 }
-.curosalcard{
-  background: #FFFFFF 0% 0% no-repeat padding-box !important;
-border: 1px solid #0247FE !important;
-opacity: 1;
-border-left: none !important;
-p{
-  font: normal normal normal 17px/30px Montserrat;
-letter-spacing: 0px;
-color: #000000;
-opacity: 1;
+.curosalcard {
+  background: #ffffff 0% 0% no-repeat padding-box !important;
+  border: 1px solid #0247fe !important;
+  opacity: 1;
+  border-left: none !important;
+  p {
+    font: normal normal normal 17px/30px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+  h1 {
+    font: normal normal bold 27px/23px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
 }
-h1{
-  font: normal normal bold 27px/23px Montserrat;
-letter-spacing: 0px;
-color: #000000;
-opacity: 1;
-}
-}
-.ri-arrow-left-line{
-  background: #0247FE !important;
+.ri-arrow-left-line {
+  background: #0247fe !important;
   color: white;
   padding: 5px 10px;
   font-size: 20px;
+  cursor: pointer;
 }
-.ri-arrow-right-line{
-  background: #0247FE !important;
+.ri-arrow-right-line {
+  cursor: pointer;
+
+  background: #0247fe !important;
   color: white;
   padding: 5px 10px;
   font-size: 20px;
-}
-@media (max-width:768px) {
-.mainheader{
-  h1{
-    font-size: 30px;
-  }
-}
-.footertext{
-  h1{
-    font-size: 30px;
-  }
-}
-.bgcolor1{
-  height: 650px;
-}
 }
 
-@media (max-width: 1024px) {
-  .mainheader{
-    h1{
+@media (max-width: 768px) {
+  .mainheader {
+    h1 {
       font-size: 30px;
     }
   }
-  .footertext{
-    h1{
+  .footertext {
+    h1 {
+      font-size: 30px;
+    }
+  }
+  .bgcolor1 {
+    height: 650px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    gap: 20px;
+    .card {
+      min-width: 100%;
+      .img-fluid {
+        min-height: 100% !important;
+        object-fit: cover;
+      }
+      p.m-0 {
+        padding: 0px 10px;
+        font-size: var(--fifteen);
+      }
+    }
+  }
+  .mainheader {
+    h1 {
+      font-size: 30px;
+    }
+  }
+  .footertext {
+    h1 {
       font-size: 30px;
     }
   }
@@ -294,5 +313,5 @@ opacity: 1;
         filter: none !important;
       }
     }
-  }}
-
+  }
+}

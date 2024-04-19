@@ -121,31 +121,6 @@
       }
     }
   }
-  .upcoming {
-    h1 {
-      font-size: var(--sixty);
-    }
-    p {
-      font-size: var(--twenty);
-    }
-    .finish-btn,
-    .enroll-btn {
-      font-size: var(--twelve);
-      color: white;
-      background-color: var(--grey);
-      border-radius: 0px;
-      padding: 8px 20px;
-      font-weight: 500;
-    }
-    .enroll-btn {
-      background-color: var(--bg-blue);
-    }
-    .low-price {
-      font-size: var(--nine);
-      color: var(--bg-blue);
-      font-weight: 500;
-    }
-  }
 
   .why-star {
     background-color: var(--yellow-bg);
@@ -265,19 +240,20 @@
     transform: translateY(-5px) scale(1.03);
   }
 }
-.bgcolor{
-  background: #0247FE 0% 0% no-repeat padding-box;
-opacity: 1;
-height: 311px;
-li{
-  font: normal normal normal var(--twenty)/100px Open Sans;
-letter-spacing: 0px;
-color: #FFFFFF;
-opacity: 1;
-}
-.row{
-  padding: none !important;
-}
+.bgcolor {
+  background: #0247fe 0% 0% no-repeat padding-box;
+  opacity: 1;
+  // height: 311px;
+  li {
+    font: normal normal normal var(--twenty) / 100px Open Sans;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    font-size: 16px !important;
+  }
+  .row {
+    padding: none !important;
+  }
 }
 @media (max-width: 1024px) {
   .experience {
@@ -287,6 +263,12 @@ opacity: 1;
   }
 }
 @media (max-width: 768px) {
+  .bgcolor {
+    li {
+      font-size: 16px;
+    }
+  }
+
   .footer {
     .card {
       min-width: 230px;
@@ -333,4 +315,3 @@ opacity: 1;
     display: none;
   }
 }
-

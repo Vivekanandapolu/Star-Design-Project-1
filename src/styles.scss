@@ -155,6 +155,32 @@ body {
   }
 }
 
+.upcoming {
+  h1 {
+    font-size: var(--sixty);
+  }
+  p {
+    font-size: var(--twenty);
+  }
+  .finish-btn,
+  .enroll-btn {
+    font-size: var(--twelve);
+    color: white;
+    background-color: var(--grey) !important;
+    border-radius: 0px;
+    padding: 8px 20px;
+    font-weight: 500;
+  }
+  .enroll-btn {
+    background-color: var(--bg-blue) !important;
+  }
+  .low-price {
+    font-size: var(--nine);
+    color: var(--bg-blue);
+    font-weight: 500;
+  }
+}
+
 @media (max-width: 1024px) {
   :root {
     ----seventyFive: 50px !important;

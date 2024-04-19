@@ -70,7 +70,7 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 30px 0px;
+  gap: 30px 10px;
 }
 .about .expect h1,
 .about .Glimpses h1,
@@ -108,6 +108,12 @@
   align-items: center;
   gap: 12px;
   font-size: var(--twentyTwo);
+}
+
+.tools {
+  h1 {
+    font-size: var(--fifty) !important;
+  }
 }
 .about .upcoming h1 {
   font-size: var(--sixty);
@@ -241,16 +247,17 @@
 .bgcolor {
   background: #0247fe 0% 0% no-repeat padding-box;
   opacity: 1;
-  height: 311px;
-}
-.bgcolor li {
-  font: normal normal normal var(--twenty) / 100px Open Sans;
-  letter-spacing: 0px;
-  color: #fff;
-  opacity: 1;
-}
-.bgcolor .row {
-  padding: none !important;
+  // height: 311px;
+  li {
+    font: normal normal normal var(--twenty) / 100px Open Sans;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    font-size: 16px !important;
+  }
+  .row {
+    padding: none !important;
+  }
 }
 @media (max-width: 1024px) {
   .experience .cards > * {
