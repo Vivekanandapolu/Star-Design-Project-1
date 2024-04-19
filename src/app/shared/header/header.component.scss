@@ -48,6 +48,9 @@
   transition: all 0.3s;
   cursor: pointer;
 }
+a.nav-link.btn.dropdown-toggle.ps-0.border-0.active.show {
+  text-align: start;
+}
 
 // li:is(:hover, .active),
 // a:is(:hover, .active) {
@@ -65,6 +68,9 @@ a:hover {
     font-weight: bold !important;
     text-shadow: none;
   }
+}
+a.active {
+  font-weight: bold !important;
 }
 
 @keyframes navbar {

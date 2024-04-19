@@ -6,6 +6,7 @@
   --white: white;
   --link: #0247fe;
   --li: #000000fc;
+  --grey: #9b9b9b;
   --twentyTwo: 22px;
   --twenty: 20px;
   --eieghteen: 18px;
@@ -28,8 +29,21 @@
   --thirteen: 13px;
   --seventyFive: 75px;
   --fifty: 50px;
+  --nine: 9px;
+  --seven: 7px;
+}
+::placeholder {
+  font-size: var(--twelve);
+  opacity: 0.65;
+}
+.form-control {
+  font-size: 14px !important;
+  font-weight: 500;
 }
 
+.form-select {
+  font-size: 14px !important;
+}
 *,
 body {
   font-family: "Montserrat" !important;
@@ -40,9 +54,109 @@ body {
 
 body {
   background: #00000005 !important;
-  min-width: 425px;
+  min-width: 408px;
 }
 
+.table-responsive {
+  overflow-y: auto;
+}
+.table {
+  white-space: nowrap;
+  thead {
+    tr {
+      th {
+        span {
+          font-size: var(--fourteen);
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        span {
+          font-size: var(--twelve);
+        }
+      }
+    }
+  }
+}
+.container-fluid {
+  *.container {
+    margin-top: 100px;
+  }
+}
 .card {
   border: none !important;
+}
+
+.experience {
+  .cards {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x: auto;
+    .card {
+      min-width: 350px;
+    }
+  }
+  .cards > * {
+    flex: 1 1;
+  }
+  .cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-body {
+    padding: 20px 30px;
+  }
+  .card-text {
+    position: relative;
+    font-size: var(--siventeen);
+  }
+
+  .card-text img {
+    position: relative;
+    left: -3px;
+  }
+  .exp-div {
+    .img-div {
+      // height: 112px;
+      width: 112px;
+      img {
+        max-width: 100%;
+        object-position: center;
+        max-height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .exp-text {
+    text-align: end;
+    h4 {
+      font-size: var(--eighteen);
+      white-space: nowrap;
+    }
+    p {
+      font-size: var(--twelve);
+    }
+  }
+  .arrows {
+    i {
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    ----seventyFive: 50px !important;
+  }
 }
