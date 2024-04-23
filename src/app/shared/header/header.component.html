@@ -44,8 +44,11 @@
                     routerLinkActive="active">Placements</li>
                 <li routerLink="/Services" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"
                     class="list-tem">Services</li>
-                <li class="list-tem">Hire Talent</li>
-                <li class="list-tem">Contact us</li>
+                <li class="list-tem" routerLink="/Hire-Talent" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Hire Talent</li>
+                <li class="list-tem" routerLink="/Contact-Us" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Contact us
+                </li>
             </ul>
 
 
@@ -105,8 +108,10 @@
                     [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">Placements</a></li>
             <li class="list-tem nav-item"><a class="nav-link" routerLink="/Services"
                     [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">Services</a></li>
-            <li class="list-tem nav-item"><a class="nav-link">Hire Talent</a></li>
-            <li class="list-tem nav-item"><a class="nav-link">Contact us</a></li>
+            <li class="list-tem nav-item"><a routerLink="/Hire-Talent" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Hire Talent</a></li>
+            <li class="list-tem nav-item"><a routerLink="/Contact-Us" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Contact us</a></li>
         </ul>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>

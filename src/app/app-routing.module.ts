@@ -4,6 +4,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ServicesComponent } from './components/services/services.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { PlacementsComponent } from './components/placements/placements.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { HireTalentComponent } from './components/hire-talent/hire-talent.component';
 // import { HeaderComponent } from './shared/header/header.component';
 
 const routes: Routes = [
@@ -22,6 +24,14 @@ const routes: Routes = [
   {
     path: 'Placements',
     component: PlacementsComponent
+  },
+  {
+    path: 'Contact-Us',
+    component: ContactUsComponent
+  },
+  {
+    path: 'Hire-Talent',
+    component: HireTalentComponent
   },
   {
     path: 'Courses',
