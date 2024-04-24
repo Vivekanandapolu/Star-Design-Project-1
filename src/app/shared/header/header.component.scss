@@ -53,12 +53,13 @@ a.nav-link.btn.dropdown-toggle.ps-0.border-0 {
   text-align: start;
 }
 
-// li:is(:hover, .active),
-// a:is(:hover, .active) {
-// }
+li,
+a {
+  font-weight: 400;
+}
 li:hover,
 a:hover {
-  font-weight: bold !important;
+  font-weight: 550 !important;
 }
 .active {
   color: black !important;
