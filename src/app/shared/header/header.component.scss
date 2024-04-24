@@ -110,7 +110,7 @@ a.active {
 
 .menu {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   border: none;
 }
 
@@ -157,7 +157,7 @@ a.active {
 .off-ul {
   display: flex;
   gap: 15px;
-  align-items: start;
+  align-items: flex-start;
   .dropdown-menu {
     transform: translate3d(0px, 27px, 0px) translateY(-21px) !important;
 
