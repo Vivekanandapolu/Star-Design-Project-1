@@ -8,6 +8,7 @@
   --li: #000000fc;
   --grey: #9b9b9b;
 --red:#ED1941;
+  --yellow: #ffcc09;
   --twentyTwo: 22px;
   --twenty: 20px;
   --eieghteen: 18px;
@@ -32,6 +33,12 @@
   --fifty: 50px;
   --nine: 9px;
   --seven: 7px;
+  --eight: 8px;
+}
+
+::selection {
+  background-color: var(--bg-blue);
+  color: var(--white);
 }
 ::placeholder {
   font-size: var(--twelve);

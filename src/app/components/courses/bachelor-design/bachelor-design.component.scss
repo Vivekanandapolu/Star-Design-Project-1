@@ -1,0 +1,304 @@
+.about {
+  padding: 0px;
+  .about-hero {
+    position: relative;
+    background: url("../../../../assets/Bachelor of Design/Bachelor of Design . star design institute.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 90vh;
+    .position-absolute {
+      bottom: 60px;
+      left: 70px;
+      * {
+        color: #ffcc09;
+      }
+      h1 {
+        font-size: var(--sixty);
+      }
+      p {
+        font-size: var(--thirty);
+      }
+    }
+  }
+  .overlap-sec {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid #0000003b;
+    padding: 40px 20px;
+    background: white;
+    position: relative;
+    bottom: 110px;
+    .vr {
+      width: 2px;
+    }
+    .first {
+      p {
+        margin: 0px;
+      }
+      .first-label {
+        font-size: var(--thirteen);
+        font-weight: 600;
+      }
+      .first-text {
+        font-size: var(--eighteen);
+        font-weight: bold;
+      }
+    }
+  }
+
+  .learn-course,
+  .about-course {
+    h1 {
+      font-size: var(--fifty);
+    }
+  }
+  .learn-course {
+    .terms {
+      font-size: var(--nine);
+      span {
+        font-size: var(--eleven);
+      }
+    }
+    .submit-btn {
+      background-color: var(--bg-blue);
+      color: var(--white);
+      font-size: var(--sixteen);
+      font-weight: 500;
+    }
+    .submit-btn:hover {
+      background-color: rgba(4, 4, 128, 0.818);
+    }
+  }
+
+  .tools {
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px 0px;
+    }
+  }
+  .expect {
+    h1 {
+      font-size: var(--sixty);
+    }
+    p {
+      font-size: var(--twenty);
+    }
+  }
+
+  .why-star {
+    background-color: var(--yellow-bg);
+    h1 {
+      font-size: var(--fifty);
+      color: var(--bg-blue);
+    }
+    .navbar-nav {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 23px 10px;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: var(--twenty);
+      font-weight: medium;
+      i {
+        color: var(--bg-blue);
+      }
+    }
+    p {
+      font-size: var(--twentyFive);
+    }
+    .row {
+      padding: 0px 70px;
+    }
+    .card:hover {
+      box-shadow: none !important;
+      transform: translateY(-10px) scale(1, 1.03);
+      .star-1 {
+        img {
+          filter: saturate(0.1);
+        }
+      }
+    }
+    .card {
+      background: transparent;
+      border: 0px;
+      .card-title {
+        font-weight: bold;
+        font-size: var(--eighteen);
+      }
+      .card-text {
+        font-size: var(--fourteen);
+      }
+      .star-1 {
+        img {
+          filter: contrast(1);
+        }
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  }
+  .learn-cards {
+    img {
+      border-radius: 10px;
+      max-width: 100%;
+      height: 261px;
+      object-fit: cover;
+    }
+    .lady img {
+      object-fit: contain !important;
+    }
+  }
+
+  .bgcolor {
+    height: 100%;
+    background: #0247fe 0% 0% no-repeat padding-box;
+    opacity: 1;
+    .navbar-nav {
+      display: flex;
+      gap: 20px;
+    }
+    li {
+      color: var(--white);
+      font-size: var(--twenty);
+    }
+    .row {
+      padding: none !important;
+    }
+  }
+}
+.bach-img {
+  max-width: 100%;
+  display: block;
+}
+
+.Glimpses {
+  h1 {
+    font-size: var(--fifty);
+  }
+  .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    .card {
+      flex: 1;
+      text-align: center;
+    }
+    img {
+      max-width: 220px;
+      max-height: 220px;
+      border-radius: 50%;
+      border: 8px solid var(--bg-blue);
+      border-right: 8px solid var(--yellow);
+    }
+  }
+}
+.accordion-div {
+  .accordion {
+    border: none;
+  }
+  .accordion-item {
+    border: none;
+
+    .accordion-button {
+      border: none;
+      border-bottom: 1px solid #0000004f;
+      box-shadow: none;
+      font-size: var(--sixteen);
+      font-weight: bold;
+      border-radius: 0px;
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: transparent;
+    }
+  }
+  .load-btn {
+    padding: 8px 20px;
+    background: var(--bg-blue);
+    border-radius: 0px;
+    color: var(--white);
+    font-weight: 500;
+    margin-top: 30px;
+  }
+  .load-btn:is(:hover) {
+    background: darkblue;
+    transform: translateY(-5px) scale(1.03);
+  }
+}
+
+@media (max-width: 1024px) {
+  .Glimpses {
+    .cards {
+      img {
+        max-width: 180px;
+        max-height: 180px;
+      }
+    }
+  }
+
+  .why-star {
+    h1 {
+      font-size: var(--fifty) !important;
+    }
+    .navbar-nav {
+      gap: 0px !important;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .Glimpses {
+    .cards {
+      flex-direction: column;
+    }
+  }
+  .about-hero {
+    .position-absolute {
+      h1 {
+        font-size: 40px !important;
+      }
+      p {
+        font-size: 30px !important;
+      }
+    }
+  }
+  .first-label {
+    font-size: var(--ten) !important;
+  }
+  .first-text {
+    font-size: var(--thirteen) !important;
+  }
+}
+
+@media (max-width: 512px) {
+  .overlap-sec {
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+
+    padding: 10px 60px !important;
+
+    .first {
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid;
+      padding-bottom: 10px;
+      margin-bottom: 5px;
+    }
+  }
+  .vr {
+    display: none;
+  }
+}

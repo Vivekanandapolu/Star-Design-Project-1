@@ -244,6 +244,7 @@
   .load-btn:is(:hover) {
     background: darkblue;
     transform: translateY(-5px) scale(1.03);
+    border-radius: 25px;
   }
 }
 

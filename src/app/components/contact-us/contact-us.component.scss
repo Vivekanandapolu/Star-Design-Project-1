@@ -1,0 +1,99 @@
+.bgimg1 {
+  background-image: url("../../../assets/Contact US/hero-contact-us.png") !important;
+  height: 70vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  * {
+    color: var(--white);
+  }
+  display: flex;
+  align-items: flex-end;
+  h1 {
+    font-size: var(--thirtyFive);
+  }
+  p {
+    font-size: var(--twenty);
+  }
+}
+
+.left {
+  h4 {
+    font-size: var(--twenty);
+  }
+  p {
+    font-size: var(--twelve);
+  }
+  h6 {
+    font-size: var(--fifteen);
+  }
+  span.link {
+    font-size: var(--nine);
+    font-weight: bold !important;
+    color: var(--bg-blue);
+    cursor: pointer;
+  }
+  p.link {
+    color: var(--bg-blue);
+    cursor: pointer;
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    * {
+      cursor: pointer;
+    }
+    *:hover {
+      scale: 1.05;
+    }
+  }
+}
+
+.right {
+  .contact-card {
+    border: 1px solid rgba(0, 0, 0, 0.183) !important;
+    border-radius: 0px;
+    p {
+      font-size: var(--fifteen);
+    }
+    span {
+      font-size: var(--twelve);
+    }
+  }
+  .form-card {
+    border: 1px solid rgba(0, 0, 0, 0.183) !important;
+    border-radius: 0px;
+    span {
+      color: red;
+    }
+    p {
+      font-size: var(--fifteen);
+    }
+    .form-label {
+      font-size: var(--fifteen) !important;
+      font-weight: bold;
+    }
+    .checks {
+      label {
+        font-size: var(--twelve);
+      }
+    }
+    .form-check-label:last-child {
+      font-size: var(--ten);
+    }
+    .send-btn {
+      width: 100%;
+      background: var(--bg-blue);
+      color: var(--white);
+      font-weight: 600;
+      font-size: var(--sixteen);
+      border-radius: 3px;
+    }
+    .send-btn:hover {
+      background-color: rgb(45, 45, 169);
+    }
+  }
+}

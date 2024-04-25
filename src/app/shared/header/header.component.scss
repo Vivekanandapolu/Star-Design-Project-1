@@ -53,12 +53,13 @@ a.nav-link.btn.dropdown-toggle.ps-0.border-0 {
   text-align: start;
 }
 
-// li:is(:hover, .active),
-// a:is(:hover, .active) {
-// }
+li,
+a {
+  font-weight: 400;
+}
 li:hover,
 a:hover {
-  font-weight: bold !important;
+  font-weight: 550 !important;
 }
 .active {
   color: black !important;
@@ -110,7 +111,7 @@ a.active {
 
 .menu {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   border: none;
 }
 
@@ -157,7 +158,7 @@ a.active {
 .off-ul {
   display: flex;
   gap: 15px;
-  align-items: start;
+  align-items: flex-start;
   .dropdown-menu {
     transform: translate3d(0px, 27px, 0px) translateY(-21px) !important;
 
