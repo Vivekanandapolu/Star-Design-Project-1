@@ -29,13 +29,14 @@
 .left-head {
   h4 {
     white-space: nowrap;
+    font-weight: 1000 !important;
   }
 }
 .list {
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 20px;
+  gap: 30px;
   margin: 0px;
   padding: 0px;
 }
@@ -53,20 +54,26 @@ a.nav-link.btn.dropdown-toggle.ps-0.border-0 {
   text-align: start;
 }
 
+.logo-text {
+  cursor: pointer;
+}
+
 li,
 a {
-  font-weight: 400;
+  font-weight: 700;
+  font-size: var(--sixteen);
 }
 li:hover,
 a:hover {
-  font-weight: 550 !important;
+  color: var(--bg-blue) !important;
+  // font-weight: 600 !important;
 }
 .active {
-  color: black !important;
+  color: var(--bg-blue) !important;
   font-weight: bold !important;
   text-shadow: none;
   *.active {
-    color: black !important;
+    color: var(--bg-blue) !important;
     font-weight: bold !important;
     text-shadow: none;
   }
@@ -80,7 +87,7 @@ a.active {
   100% {
     padding: 0px 30px;
     backdrop-filter: blur(0.3rem);
-    background-color: rgb(255 255 255 / 75%);
+    background-color: rgb(255 255 255 / 100%);
   }
   100% {
     top: 0px;
@@ -105,6 +112,12 @@ a.active {
     gap: 5px 15px;
   }
 }
+
+@media (min-width: 1440px) {
+  .list {
+    gap: 60px !important;
+  }
+}
 .ri-menu-line {
   font-size: 30px;
 }
@@ -118,6 +131,7 @@ a.active {
 .normal-ul {
   .dropdown:hover {
     .dropdown-menu {
+      display: flex !important;
       display: block;
     }
   }
@@ -128,13 +142,24 @@ a.active {
   .dropdown-menu {
     transition: display 0.3s;
     display: none;
+    flex-direction: column !important;
+    border: none;
+    gap: 15px !important;
+    padding: 15px !important;
     li {
+      padding: 4px 16px !important;
       a {
+        padding: 0px !important;
         font-size: var(--fourteen);
         font-weight: 500;
         background-color: transparent !important;
+        position: relative;
+        width: fit-content;
       }
-      position: relative;
+      a:hover {
+        font-weight: 600;
+        font-size: var(--fourteen);
+      }
 
       a::before {
         content: "";
@@ -145,9 +170,9 @@ a.active {
       a:hover::before {
         content: "";
         position: absolute;
-        height: 3px;
+        height: 1px;
         width: 100%;
-        bottom: 0px;
+        bottom: -5px;
         left: 0px;
         background-color: var(--bg-blue);
       }

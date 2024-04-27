@@ -1,6 +1,7 @@
 .bgcolor1 {
-  background: var(--bg-blue) 0% 0% no-repeat padding-box !important;
-
+  // background: var(--bg-blue) 0% 0% no-repeat padding-box !important;
+  background: url("../../../assets/Placements/placement\ .star\ design\ institute.png");
+  background-size: cover;
   box-shadow: 0px 3px 6px #00000029;
   opacity: 1;
   height: 519px;
@@ -49,7 +50,7 @@
     .card-img {
       transition: all 0.5s;
       img {
-        filter: contrast(0.2);
+        filter: contrast(0);
         transition: filter 0.5s;
       }
     }
@@ -78,7 +79,12 @@
       object-fit: cover;
     }
     .lady img {
-      object-fit: contain !important;
+      object-fit: cover !important;
+    }
+    div:last-child {
+      img {
+        min-width: 100%;
+      }
     }
   }
 }
@@ -128,7 +134,6 @@
 
   background: url("../../../assets/Placements/polygon\ background.svg") 0% 0%
     no-repeat padding-box;
-  opacity: 0.5;
   h1 {
     font: normal normal bold var(--fourtyFive) / 30px Montserrat;
     letter-spacing: 0px;
@@ -197,7 +202,7 @@
 }
 .successtext {
   h1 {
-    font: normal normal 600 var(--fourtyFive) / 70px Montserrat;
+    font: normal normal 700 var(--fourtyFive) / 70px Montserrat;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;

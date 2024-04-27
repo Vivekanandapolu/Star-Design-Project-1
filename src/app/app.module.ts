@@ -10,6 +10,7 @@ import { PlacementsComponent } from './components/placements/placements.componen
 import { HeaderComponent } from './shared/header/header.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { HireTalentComponent } from './components/hire-talent/hire-talent.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HireTalentComponent } from './components/hire-talent/hire-talent.compon
     PlacementsComponent,
     ContactUsComponent,
     HireTalentComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,12 +7,12 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    min-height: 90vh;
+    min-height: 78vh;
     .position-absolute {
       bottom: 60px;
       left: 70px;
       * {
-        color: var(--white);
+        color: black;
       }
       h1 {
         font-size: var(--seventyFive);
@@ -54,6 +54,9 @@
   .about-course {
     h1 {
       font-size: var(--fifty);
+    }
+    p {
+      font-size: var(--twenty);
     }
   }
   .learn-course {
@@ -208,48 +211,18 @@
     }
   }
 }
-.accordion-div {
-  .accordion {
-    border: none;
-  }
-  .accordion-item {
-    border: none;
 
-    .accordion-button {
-      border: none;
-      border-bottom: 1px solid #0000004f;
-      box-shadow: none;
-      font-size: var(--sixteen);
-      font-weight: bold;
-      border-radius: 0px;
-    }
-    .accordion-button:not(.collapsed) {
-      background-color: transparent;
-    }
-  }
-  .load-btn {
-    padding: 8px 20px;
-    background: var(--bg-blue);
-    border-radius: 0px;
-    color: var(--white);
-    font-weight: 500;
-    margin-top: 30px;
-  }
-  .load-btn:is(:hover) {
-    background: darkblue;
-    transform: translateY(-5px) scale(1.03);
-  }
-}
 .bgcolor {
   background: #0247fe 0% 0% no-repeat padding-box;
   opacity: 1;
+  ul {
+    display: flex;
+    gap: 22px;
+  }
   // height: 311px;
   li {
-    font: normal normal normal var(--twenty) / 100px Open Sans;
-    letter-spacing: 0px;
-    color: #ffffff;
-    opacity: 1;
-    font-size: 16px !important;
+    font-size: var(--sixteen) !important;
+    color: white;
   }
   .row {
     padding: none !important;

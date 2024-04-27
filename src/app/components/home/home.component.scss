@@ -31,19 +31,20 @@
     transition: all 0.4s;
     .card-img-top {
       border-radius: 0px;
-      max-height: 200px;
+      min-height: 300px;
       overflow: hidden;
 
       img {
         transition: all 0.4s;
         max-width: 100%;
+        min-height: 100%;
         display: block;
         object-fit: cover;
       }
     }
   }
   .card:hover {
-    box-shadow: 3px 3px 10px #00000071;
+    box-shadow: 3px 3px 10px #00000031;
     .card-img-top {
       img {
         scale: 1.2;
@@ -52,28 +53,31 @@
   }
   .content1 {
     h1 {
-      font-size: var(--fiftyFive);
+      font-size: var(--fiftyFive) !important;
     }
     p {
-      font-size: var(--twentyFive);
+      font-size: var(--twentyFive) !important;
     }
   }
 
   .courses {
-    padding: 0px 100px;
-
     .card {
       .card-title {
-        font-size: var(--twenty);
+        font-size: var(--twentyTwo);
         font-weight: bold;
       }
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
       .card-text {
-        font-size: var(--twelve);
+        font-size: var(--fourteen);
       }
       .duration {
         padding: 20px 15px;
         background-color: var(--light);
-        font-size: var(--twelve);
+        font-size: var(--fourteen);
         .pb-2 {
           border-bottom: 1px solid #e2e2e2;
         }
@@ -84,10 +88,12 @@
         padding: 5px 16px 0px 16px;
         border: none;
         background: transparent;
+        justify-content: space-between;
         button {
           font-size: var(--twelve);
         }
         .enroll-btn {
+          border: none;
           padding: 8px 15px;
           background: var(--bg-blue);
           border-radius: 0px;
@@ -95,19 +101,31 @@
           font-weight: 500;
           transition: all 0.3s ease-in;
         }
-        .enroll-btn:is(:hover) {
+        .enroll-btn:is(:hover),
+        .knowmore-btn:hover {
           background: #2e2e87;
           font-weight: 600;
         }
         .knowmore-btn {
+          border: none;
+
           transition: all 0.7s ease;
-          padding: 8px 0px;
-          flex: 1;
+          padding: 8px 15px;
+          // flex: 1;
           font-weight: 500;
+          border-radius: 0px;
           text-align: end;
         }
         .knowmore-btn:is(:hover) {
-          background-color: var(--light);
+          font-weight: 600;
+          background: yellow;
+          color: black;
+          // padding-right: 55px;
+        }
+
+        button:has(+ button:hover) {
+          background-color: white !important;
+          color: black;
         }
       }
     }
@@ -127,6 +145,7 @@
         }
       }
     }
+
     .card {
       background: transparent;
       border: 0px;
@@ -135,7 +154,7 @@
         font-size: var(--eighteen);
       }
       .card-text {
-        font-size: var(--fourteen);
+        font-size: var(--sixteen);
       }
       .star-1 {
         img {
@@ -158,8 +177,7 @@
         font-size: var(--twelve);
       }
       .duration {
-        // padding: 20px 15px;
-        font-size: var(--twelve);
+        font-size: var(--fourteen);
       }
       .date {
         font-size: var(--fourteen);
@@ -168,7 +186,6 @@
         color: white;
         position: absolute;
         left: 3%;
-        /* top: 100%; */
         bottom: 3%;
       }
 
@@ -227,7 +244,7 @@
       .card-img {
         transition: all 0.5s;
         img {
-          filter: contrast(0.2);
+          filter: contrast(0);
           transition: filter 0.5s;
         }
       }

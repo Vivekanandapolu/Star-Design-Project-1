@@ -1,19 +1,23 @@
-h4{
-font-size: var(--seventeen);
-color: var(--black);
-}
-p{
-font-size: var(--ten);
-color: var(--red);
-}
-label{
-  font-size: var(--ten);
+h4 {
+  font-size: var(--seventeen);
   color: var(--black);
-
 }
-.btn-verify{
+p {
+  font-size: var(--ten);
+  color: var(--red);
+}
+label {
+  font-size: 13px;
+  color: var(--black);
+  font-weight: 500;
+}
+.btn-verify {
   background-color: var(--grey);
   padding: 0px 20px;
   float: right;
+}
 
+.verify {
+  display: none;
+  font-size: 14px !important;
 }

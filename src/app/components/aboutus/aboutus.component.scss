@@ -7,12 +7,13 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    min-height: 90vh;
+    min-height: 78vh;
     .position-absolute {
       bottom: 30px;
       left: 70px;
       * {
-        color: var(--white);
+        color: rgb(143, 230, 3);
+        filter: drop-shadow(3px 3px 2px rgba(0, 0, 255, 0.504));
       }
       h1 {
         font-size: var(--seventyFive);
@@ -38,13 +39,23 @@
       display: block;
       min-height: 100%;
       object-fit: fill;
-      box-shadow: -10px -10px 3px #0000003d;
+      // box-shadow: -10px -10px 3px #0000003d;
       border-radius: 5px;
+      padding-left: 20px;
     }
-  }
-  .about-mission {
-    img {
-      box-shadow: 10px 10px 3px #0000003d;
+    .col-lg-6 {
+      position: relative;
+    }
+    .col-lg-6:last-child::before {
+      content: "";
+      position: absolute;
+      background-color: #0000003d;
+      width: 80%;
+      height: 100%;
+      left: 10px;
+      bottom: 20px;
+      z-index: -1;
+      border-radius: 5px;
     }
   }
   .about-learning {
@@ -67,6 +78,11 @@
       .lady img {
         object-fit: contain !important;
       }
+      div:last-child {
+        img {
+          min-width: 100%;
+        }
+      }
     }
   }
 }
@@ -82,9 +98,4 @@
       }
     }
   }
-  // .about-vision {
-  //   img {
-  //     //   box-shadow: none !important;
-  //   }
-  // }
 }

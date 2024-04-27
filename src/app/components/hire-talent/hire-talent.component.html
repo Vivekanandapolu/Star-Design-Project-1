@@ -37,14 +37,24 @@
             <input type="text" placeholder="" class="form-control shadow-none mb-3">
             <label for="phone">Phone Number</label>
             <input type="number" placeholder="" class="form-control shadow-none mb-3">
-
-<button class="btn  text-white btn-verify mb-5">Verify</button>
-            <p class="terms mb-4 mt-5">
+            <span class="d-flex align-items-center justify-content-end">
+              <button class="btn verify btn-sm text-white bg-secondary ">Verify</button>
+            </span>
+            <!-- <p class="terms mb-4 mt-5">
               <input class="mt-1" type="checkbox">
               I have read, and I agree to the Terms of Service and Privacy Policy <span
                 class="text-primary text-decoration-underline">Privacy
                 Policy</span>.
-            </p>
+            </p> -->
+
+            <div class=" form-check mb-4">
+              <input class="form-check-input shadow-none" type="checkbox" value="" id="flexCheckIndeterminate">
+              <label class="form-check-label text-danger" for="flexCheckIndeterminate">
+                I have read, and I agree to the Terms of Service and <br> <span
+                  class="text-decoration-underline text-primary">Privacy
+                  Policy</span>
+              </label>
+            </div>
             <button class="btn btn-primary text-white submit-btn w-100">Submit</button>
           </form>
         </div>

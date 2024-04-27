@@ -1,15 +1,17 @@
 .bgimg1 {
   background-image: url("../../../assets/Services/services.star\ design\ institute.png") !important;
-  height: 70vh;
+  min-height: 357px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   opacity: 1;
-
   color: white;
   display: flex;
   align-items: flex-end;
+  * {
+    color: var(--white);
+  }
   h1 {
     font: normal normal bold var(--sixty) / 92px Montserrat;
     letter-spacing: 0px;
@@ -19,13 +21,7 @@
   p {
     font: normal normal normal var(--thirtyFive) / 52px Montserrat;
     letter-spacing: 0px;
-    color: #ff6600;
-    text-transform: capitalize;
     opacity: 1;
-  }
-  h1,
-  p:hover {
-    color: #ff6600 !important;
   }
 }
 .service {
@@ -33,7 +29,6 @@
     font: normal normal bold var(--fiftyFive) / 68px Montserrat;
     letter-spacing: 0px;
     color: #000000;
-    text-transform: capitalize;
     opacity: 1;
   }
   p {
@@ -48,7 +43,6 @@
     font: normal normal bold var(--twenty) / 21px Montserrat;
     letter-spacing: 0px;
     color: #000000;
-    text-transform: capitalize;
     opacity: 1;
   }
   p {

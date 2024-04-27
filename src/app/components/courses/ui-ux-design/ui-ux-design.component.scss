@@ -13,7 +13,7 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    min-height: 90vh;
+    min-height: 78vh;
     .position-absolute {
       bottom: 60px;
       left: 70px;
@@ -60,6 +60,9 @@
   .about-course {
     h1 {
       font-size: var(--fifty);
+    }
+    p {
+      font-size: var(--twenty);
     }
   }
   .learn-course {
@@ -180,6 +183,11 @@
     .lady img {
       object-fit: contain !important;
     }
+    div:last-child {
+      img {
+        min-width: 100%;
+      }
+    }
   }
 
   .experience {
@@ -208,8 +216,8 @@
       }
       .card:hover {
         cursor: pointer;
-        transform: scale(1.04);
-        box-shadow: 3px 3px 5px white;
+        // transform: scale(1.04);
+        // box-shadow: 3px 3px 5px white;
       }
     }
   }
@@ -217,16 +225,18 @@
 .accordion-div {
   .accordion {
     border: none;
+    border-radius: 25px;
+    overflow: hidden;
   }
   .accordion-item {
     border: none;
 
     .accordion-button {
       border: none;
-      border-bottom: 1px solid #0000004f;
+      border-bottom: 1px solid #e9e9e9b1;
       box-shadow: none;
       font-size: var(--sixteen);
-      font-weight: bold;
+      font-weight: 500;
       border-radius: 0px;
     }
     .accordion-button:not(.collapsed) {
