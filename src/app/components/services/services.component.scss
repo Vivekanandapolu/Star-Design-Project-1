@@ -24,6 +24,11 @@
     opacity: 1;
   }
 }
+
+.first {
+  max-height: 555px !important;
+  min-width: 100% !important;
+}
 .service {
   h1 {
     font: normal normal bold var(--fiftyFive) / 68px Montserrat;
@@ -139,7 +144,7 @@
         font-size: var(--sixty);
       }
       p {
-        font-size: var(--thirtyFive);
+        font-size: var(--twenty);
       }
     }
     .image {
@@ -174,19 +179,14 @@ h4 {
   transition: color 0.3s ease;
 }
 
-h1:hover,
-h4:hover {
-  color: #ff6600; /* Change text color on hover */
-}
-
 /* Text animation */
 p {
   transition: opacity 0.3s ease;
 }
 
-p:hover {
-  opacity: 0.8;
-}
+// p:hover {
+//   opacity: 0.8;
+// }
 .recent {
   opacity: 0;
 }
