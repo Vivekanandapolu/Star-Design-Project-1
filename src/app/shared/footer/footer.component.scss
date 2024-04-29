@@ -26,13 +26,30 @@
       padding-bottom: 10px;
     }
     .bottom {
+      ul li {
+        position: relative;
+      }
       ul li:hover {
         cursor: pointer;
-        text-shadow: 2px 2px 5px white;
         scale: 1.1;
         font-weight: 500;
         transition: all 0.2s ease-out;
       }
+
+      ul li::before {
+        content: "";
+        width: 0%;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        height: 1px;
+        background-color: blue;
+        transition: all 0.4s ease !important;
+      }
+      ul li:hover::before {
+        width: 100%;
+      }
+
       font-size: var(--twelve);
       .bottom-div {
         display: flex;
@@ -64,14 +81,9 @@
       img {
         border: 2px solid transparent;
         cursor: pointer;
+        width: 30px;
+        height: 30px;
       }
-      //   img:hover {
-      //     // transform: scale(1.2);
-      //     // border: 2px solid white;
-      //     // border-radius: 50%;
-      //     // transition: all 0.3s ease-in-out;
-      //     // filter: drop-shadow(1px 1px 5px white) brightness(150%);
-      //   }
     }
   }
   .foot-title {
@@ -108,8 +120,14 @@
   bottom: 13%;
   z-index: 999;
   cursor: pointer;
+  i {
+    position: relative;
+    top: 2px;
+  }
 }
-
+.chat:hover {
+  scale: 1.1;
+}
 @media (max-width: 786px) {
   .footer {
     .foot-1 {
