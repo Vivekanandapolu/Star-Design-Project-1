@@ -119,10 +119,17 @@
   right: 0.5%;
   bottom: 13%;
   z-index: 999;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+
   cursor: pointer;
-  i {
+  img {
+    border-radius: 50%;
+    display: flex;
     position: relative;
-    top: 2px;
+    left: 0px;
+    width: 55px;
   }
 }
 .chat:hover {

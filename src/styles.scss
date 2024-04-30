@@ -263,15 +263,31 @@ body {
   }
 }
 
+@keyframes dropAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropping-text {
+  animation: dropAnimation 0.7s ease-out forwards;
+}
+
 .accordion-div {
   .accordion {
     padding: 0px 20px;
-    background: white;
-    border: none;
+    // background: white;
     border-radius: 25px;
     overflow: hidden;
+    border: 1px solid rgba(128, 128, 128, 0.22) !important;
   }
   .accordion-item {
+    background-color: transparent !important;
     border: none;
 
     .accordion-button {
@@ -281,9 +297,13 @@ body {
       font-size: var(--sixteen);
       font-weight: 500;
       border-radius: 0px;
+      background-color: inherit !important;
     }
     .accordion-button:not(.collapsed) {
       background-color: transparent;
+    }
+    .accordion-body {
+      background-color: var(--white);
     }
   }
   .load-btn {

@@ -21,3 +21,14 @@ label {
   display: none;
   font-size: 14px !important;
 }
+
+.all {
+  font-size: var(--thirteen);
+}
+
+.submit-btn {
+  width: fit-content !important;
+  margin: auto !important;
+  height: 52px !important;
+  padding: 0px 41px;
+}

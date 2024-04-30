@@ -11,6 +11,9 @@ import { HeaderComponent } from './shared/header/header.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { HireTalentComponent } from './components/hire-talent/hire-talent.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +31,8 @@ import { FooterComponent } from './shared/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule
     // HeaderModule
 
   ],

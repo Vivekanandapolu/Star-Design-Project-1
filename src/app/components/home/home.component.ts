@@ -1,10 +1,19 @@
 
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [
+    trigger('dropAnimation', [
+      transition(':enter', [
+        style({ transform: 'translateY(-100%)', opacity: 0 }),
+        animate('1000ms ease-out', style({ transform: 'translateY(0)', opacity: 1 })),
+      ]),
+    ]),
+  ]
 })
 export class HomeComponent implements OnInit {
   windowWidth: boolean = false

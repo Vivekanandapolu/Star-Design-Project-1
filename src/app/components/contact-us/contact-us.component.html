@@ -1,6 +1,6 @@
 <div class="container-fluid p-0">
     <div class="bgimg1 mb-5">
-        <div class="container ">
+        <div class="container dropping-text">
             <h1 class="m-0 fw-bold">How can we help you today? <br>
                 Come, Visit Us !</h1>
             <p class="pt-3 m-0 fw-medium">Looking forward to meeting you on campus.</p>
@@ -19,33 +19,46 @@
                         <h4 class="m-0 fw-bold mb-3">Bengaluru Center</h4>
                         <p class="m-0 fw-medium">1st floor, RMZ Latitude Commercial <br> Building Bellary Rd, Hebbal,
                             Bengaluru <br> Karnataka 560024 India <br> Phone:080 49526900</p>
-                        <span class="link mb-5 ">Get Google Map Direction <img
-                                src="../../../assets/Contact US/location icon.svg"></span>
+                        <span class="link mb-5" (click)="openGoogleMapsDirection('Bengaluru')">
+                            Get Google Map Direction
+                            <img src="../../../assets/Contact US/location icon.svg">
+                        </span>
                     </div>
 
                     <div class="mb-3">
                         <h4 class="m-0 fw-bold mb-4">Hyderabad Center</h4>
                         <div class="hyd-locations mb-5">
-                            <p class="m-0 fw-medium"><b>Ameerpet,</b> Shashi Nilayam <br> Aster Prime Hospital Lane
-                                ,Ameerpet <br>
-                                Hyderabad,
-                                Telangana 500016 India <br> Phone:040 49526011</p>
-                            <span class="link mb-5 ">Get Google Map Direction <img
-                                    src="../../../assets/Contact US/location icon.svg"></span>
+                            <p class="m-0 fw-medium">
+                                <b>Ameerpet,</b> Shashi Nilayam <br> Aster Prime Hospital Lane, Ameerpet <br>
+                                Hyderabad, Telangana 500016 India <br> Phone: 040 49526011
+                            </p>
+                            <span class="link mb-5" (click)="openGoogleMapsDirection('Ameerpet')">
+                                Get Google Map Direction
+                                <img src="../../../assets/Contact US/location icon.svg">
+                            </span>
+                        </div>
+
+                        <div class="hyd-locations mb-5">
+                            <p class="m-0 fw-medium">
+                                <b>Himayat Nagar,</b> 2nd Floor, Om Towers, <br> Opposite McDonald’s, Himayatnagar Main
+                                Road <br>
+                                Hyderabad-500029 India <br> Phone: 040 49526900
+                            </p>
+                            <span class="link mb-5" (click)="openGoogleMapsDirection('Himayat Nagar')">
+                                Get Google Map Direction
+                                <img src="../../../assets/Contact US/location icon.svg">
+                            </span>
                         </div>
                         <div class="hyd-locations mb-5">
-                            <p class="m-0 fw-medium"><b>Himayat Nagar,</b> 2nd Floor, Om Towers,<br> Opposite
-                                Mcdonald’s,
-                                Himayatnagar Main Road<br> Hyderabad-500029 India <br> Phone:040 49526900</p>
-                            <span class="link mb-5 ">Get Google Map Direction <img
-                                    src="../../../assets/Contact US/location icon.svg"></span>
-                        </div>
-                        <div class="hyd-locations mb-5">
-                            <p class="m-0 fw-medium"><b>Hitec City,</b> 101N-Heights, 1'St Floor, Siddiq Nagar,<br>
-                                Hitec
-                                City, Hyderabad, Telangana 500081 Phone:040 49526900</p>
-                            <span class="link mb-5 ">Get Google Map Direction <img
-                                    src="../../../assets/Contact US/location icon.svg"></span>
+                            <p class="m-0 fw-medium">
+                                <b>Hitec City,</b> 101N-Heights, 1'St Floor, Siddiq Nagar,<br>
+                                Hitec City, Hyderabad, Telangana 500081<br>
+                                Phone: 040 49526900
+                            </p>
+                            <span class="link mb-5" (click)="openGoogleMapsDirection('Hyderabad')">Get Google Map
+                                Direction
+                                <img src="../../../assets/Contact US/location icon.svg">
+                            </span>
                         </div>
                     </div>
                     <div class="mb-3">
@@ -57,7 +70,7 @@
                         <p class="m-0 fw-medium link">talent@stardi.in</p>
                     </div>
                     <div class="mb-3">
-                        <h6 class="m-0 fw-bold mb-1">Connect with Us</h6>
+                        <h6 class="m-0 fw-bold mb-2">Connect with Us</h6>
                         <div class="icons">
                             <img src="../../../assets/Contact US/X.svg" alt="">
                             <img src="../../../assets/Contact US/Facebook.svg" alt="">
@@ -75,7 +88,7 @@
                         <div class="card-body">
                             <p class="m-0 mb-3 fw-bold">Talk to a counselor; just call us at:</p>
                             <p class="m-0 mb-3 fw-bold d-flex align-items-center gap-2"><i class="ri-phone-line"></i>
-                                +91( 40) 35592277 - 9985280011</p>
+                                +91(40) 35592277 - 9985280011</p>
                             <span class="m-0 mb-3 fw-medium">Monday - Saturday from 07:00am to 09:30pm</span>
                         </div>
                     </div>
@@ -88,34 +101,33 @@
                                 <p class="m-0 mb-3 fw-bold">How may we contact you? <span>*</span></p>
                                 <div class="checks mb-3 d-flex align-items-center gap-3">
                                     <div class="form-check">
-                                        <input class="form-check-input shadow-none " type="radio"
-                                            name="flexRadioDefault" id="flexRadioDefault1" checked>
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            WhatsApp
-                                        </label>
+                                        <input class="form-check-input shadow-none" type="radio"
+                                            name="communicationMethod" id="whatsapp" [(ngModel)]="selectedMethod"
+                                            value="whatsapp" (change)="updatePlaceholder()">
+                                        <label class="form-check-label" for="whatsapp">WhatsApp</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input shadow-none" type="radio" name="flexRadioDefault"
-                                            id="flexRadioDefault2">
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            phone call
-                                        </label>
+                                        <input class="form-check-input shadow-none" type="radio"
+                                            name="communicationMethod" id="phonecall" [(ngModel)]="selectedMethod"
+                                            value="phonecall" (change)="updatePlaceholder()">
+                                        <label class="form-check-label" for="phonecall">Phone call</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input shadow-none" type="radio" name="flexRadioDefault"
-                                            id="flexRadioDefault3">
-                                        <label class="form-check-label" for="flexRadioDefault3">
-                                            e-mail
-                                        </label>
+                                        <input class="form-check-input shadow-none" type="radio"
+                                            name="communicationMethod" id="email" [(ngModel)]="selectedMethod"
+                                            value="email" (change)="updatePlaceholder()">
+                                        <label class="form-check-label" for="email">E-mail</label>
                                     </div>
                                 </div>
 
-                                <label class="form-label" for="email">Your e-mail address <span>*</span></label>
+                                <label class="form-label" for="email">Your {{ placeholderText }} <span>*</span></label>
                                 <input id="email" type="text" class="form-control shadow-none mb-3">
 
+
+
                                 <label class="form-label" for="floatingTextarea">Message <span>*</span></label>
-                                <textarea class="form-control mb-3 shadow-none" placeholder="Leave a Message here"
-                                    id="floatingTextarea"></textarea>
+                                <textarea rows="5" class="form-control mb-3 shadow-none"
+                                    placeholder="Leave a Message here" id="floatingTextarea"></textarea>
                                 <div class="form-check mb-4">
                                     <input class="form-check-input shadow-none" type="checkbox" value=""
                                         id="flexCheckIndeterminate">

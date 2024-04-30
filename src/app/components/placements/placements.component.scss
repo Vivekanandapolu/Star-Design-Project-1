@@ -293,19 +293,20 @@
   }
 }
 .ri-arrow-left-line {
-  background: #0247fe !important;
+  background: #0247fe;
   color: white;
-  padding: 5px 10px;
-  font-size: 20px;
+  padding: 5px 8px;
+  font-size: 15px;
   cursor: pointer;
+  border-radius: 50%;
 }
 .ri-arrow-right-line {
   cursor: pointer;
-
-  background: #0247fe !important;
+  border-radius: 50%;
+  background: #0247fe;
   color: white;
-  padding: 5px 10px;
-  font-size: 20px;
+  padding: 5px 8px;
+  font-size: 15px;
 }
 
 .place-text {

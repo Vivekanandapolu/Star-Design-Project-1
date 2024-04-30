@@ -1,6 +1,6 @@
 .bgimg1 {
   background-image: url("../../../assets/Services/services.star\ design\ institute.png") !important;
-  min-height: 357px;
+  min-height: 78vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -179,16 +179,8 @@ h4 {
   transition: color 0.3s ease;
 }
 
-/* Text animation */
 p {
   transition: opacity 0.3s ease;
-}
-
-// p:hover {
-//   opacity: 0.8;
-// }
-.recent {
-  opacity: 0;
 }
 
 .recent.in-view {

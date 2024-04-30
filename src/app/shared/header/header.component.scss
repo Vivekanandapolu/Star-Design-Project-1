@@ -7,6 +7,9 @@
   z-index: 1000;
   background-color: white;
 }
+.container {
+  position: relative;
+}
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -21,6 +24,7 @@
   gap: 10px 30px;
   min-height: 72px;
   padding: 15px 0px;
+  position: relative;
 }
 .header > * {
   flex: 1;
@@ -212,4 +216,10 @@ a.active {
       }
     }
   }
+}
+
+.tracker {
+  width: 100%;
+  background-color: blue;
+  height: 10px;
 }
