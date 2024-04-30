@@ -1,6 +1,6 @@
 .bgcolor1 {
   // background: var(--bg-blue) 0% 0% no-repeat padding-box !important;
-  background: url("../../../assets/Placements/placement\ .star\ design\ institute.png");
+  background: url("../../../assets/Placements/placement.star\ design\ institute_new.png");
   background-size: cover;
   box-shadow: 0px 3px 6px #00000029;
   opacity: 1;
@@ -50,13 +50,8 @@
     .card-img {
       transition: all 0.5s;
       img {
-        filter: contrast(0);
+        // filter: contrast(0);
         transition: filter 0.5s;
-      }
-    }
-    .card-img:hover {
-      img {
-        filter: saturate(1) brightness(100%) contrast(1);
       }
     }
   }
@@ -72,15 +67,24 @@
   }
 
   .learn-cards {
+    .row {
+      div {
+        overflow: hidden;
+        border-radius: 15px !important;
+      }
+    }
     img {
-      border-radius: 10px;
+      border-radius: 15px !important;
       max-width: 100%;
       height: 261px;
       object-fit: cover;
+      padding: 5px 10px;
     }
     .lady img {
-      object-fit: cover !important;
+      // object-fit: contain !important;
+      border-radius: 15px !important;
     }
+
     div:last-child {
       img {
         min-width: 100%;
@@ -165,6 +169,7 @@
     }
   }
 }
+
 .card {
   // width: 286px;
   // height: 341px;
@@ -175,6 +180,38 @@
 }
 .cardhover:hover img {
   transform: scale(1.1); /* Increase image size on hover */
+}
+
+.stepper {
+  .step-div {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0px 40px;
+
+    .step-line {
+      width: 100%;
+      height: 1px;
+      background-color: #00000057;
+      margin: 0px 30px;
+    }
+    .step {
+      width: 103px !important;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--bg-blue);
+      color: var(--white);
+      font-weight: 500;
+    }
+  }
+
+  .step-div:first-child,
+  .step-div:last-child {
+    flex: 1;
+  }
 }
 
 /* Card hover effect */
@@ -230,17 +267,29 @@
   display: none;
 }
 .curosalcard {
+  padding: 0px 58px !important;
   opacity: 1;
   border-left: none !important;
   p {
     font-size: var(--sixteen);
-    padding: 10px !important;
   }
   h1 {
     font: normal normal bold 27px/23px Montserrat;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
+  }
+  .name {
+    position: relative;
+  }
+
+  .name::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--bg-blue);
   }
 }
 .ri-arrow-left-line {
@@ -280,6 +329,9 @@
 }
 
 @media (max-width: 1024px) {
+  .stepper {
+    display: none !important;
+  }
   .cards {
     gap: 20px;
     .card {
@@ -318,5 +370,11 @@
         filter: none !important;
       }
     }
+  }
+}
+
+@media (min-width: 991px) {
+  .stepper {
+    display: block !important;
   }
 }
