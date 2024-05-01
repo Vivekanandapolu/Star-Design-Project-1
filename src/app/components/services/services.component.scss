@@ -132,7 +132,7 @@
   padding: 0px;
   .img-sec {
     background-color: var(--bg-blue);
-    padding-top: 40px;
+    padding: 50px 0px;
 
     .row {
       .left-col {
@@ -185,6 +185,17 @@ p {
 
 .recent.in-view {
   animation: fadeIn 0.5s ease forwards;
+}
+.view-port {
+  display: flex;
+  justify-content: end;
+  margin-top: 48px;
+  p {
+    cursor: pointer;
+  }
+  p:hover {
+    font-weight: 600 !important;
+  }
 }
 
 @keyframes fadeIn {
