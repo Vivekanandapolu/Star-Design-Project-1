@@ -1,3 +1,7 @@
+.container-fluid {
+  background-color: var(--white);
+}
+
 .about {
   padding: 0px;
 }
@@ -22,30 +26,35 @@
 .about .about-hero .position-absolute p {
   font-size: var(--fiftyFive);
 }
-.about .overlap-sec {
+.overlap-sec {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  border: 1px solid rgba(0, 0, 0, 0.231372549);
-  padding: 40px 20px;
-  background: #fff;
+  border: 1px solid #0000003b;
+  background: white;
   position: relative;
   bottom: 110px;
+  .vr {
+    margin: 30px 0px;
+  }
+  .first {
+    padding: 40px;
+
+    p {
+      margin: 0px;
+    }
+    .first-label {
+      font-size: var(--fifteen);
+      font-weight: 600;
+      text-align: center;
+    }
+    .first-text {
+      font-size: var(--twenty) !important;
+      font-weight: bold;
+    }
+  }
 }
-.about .overlap-sec .vr {
-  width: 2px;
-}
-.about .overlap-sec .first p {
-  margin: 0px;
-}
-.about .overlap-sec .first .first-label {
-  font-size: var(--thirteen);
-  font-weight: 600;
-}
-.about .overlap-sec .first .first-text {
-  font-size: var(--eighteen);
-  font-weight: bold;
-}
+
 .about .learn-course h1,
 .about .about-course h1 {
   font-size: var(--fifty);
@@ -310,6 +319,16 @@
   .first-text {
     font-size: var(--thirteen) !important;
   }
+}
+
+.first-label {
+  font-size: var(--fifteen);
+  font-weight: 600;
+  text-align: center;
+}
+.first-text {
+  font-size: var(--twenty) !important;
+  font-weight: bold;
 }
 @media (max-width: 512px) {
   .overlap-sec {

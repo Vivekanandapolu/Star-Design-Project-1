@@ -11,6 +11,8 @@
       color: var(--white);
       h1 {
         font-size: var(--sixty);
+        font-weight: 800 !important;
+        line-height: 75px;
       }
       p {
         font-size: var(--thirtyFive);
@@ -26,6 +28,7 @@
   }
 
   .card {
+    box-shadow: 1px 1px 8px #00000025;
     border-radius: 0px;
     cursor: pointer;
     transition: all 0.4s;
@@ -51,6 +54,15 @@
       }
     }
   }
+  .experience {
+    .card {
+      box-shadow: none !important;
+      border: 1px solid rgba(0, 0, 0, 0.183) !important;
+    }
+    .cards > * {
+      flex: auto !important;
+    }
+  }
   .content1 {
     h1 {
       font-size: var(--fiftyFive) !important;
@@ -59,7 +71,6 @@
       font-size: var(--twentyFive) !important;
     }
   }
-
   .courses {
     .card {
       .card-title {
@@ -82,6 +93,32 @@
           border-bottom: 1px solid #e2e2e2;
         }
       }
+      .course-title {
+        padding: 0px 15px;
+      }
+      .know-btn {
+        padding: 8px 15px;
+        font-weight: 500;
+        transition: all 0.7s ease;
+        .black {
+          display: block;
+        }
+        .blue {
+          display: none;
+        }
+      }
+      .know-btn:hover {
+        scale: 1.2;
+        padding: 8px 30px;
+        color: var(--bg-blue);
+        .black {
+          display: none;
+        }
+        .blue {
+          display: block;
+        }
+      }
+
       .card-footer {
         display: flex;
         align-items: center;
@@ -130,7 +167,16 @@
       }
     }
   }
-
+  .arrows {
+    img {
+      opacity: 1;
+      cursor: pointer !important;
+    }
+  }
+  .img-scroll {
+    opacity: 0.5 !important;
+    pointer-events: none !important;
+  }
   .why-star {
     background-color: var(--yellow-bg);
     .row {
@@ -149,9 +195,10 @@
     .card {
       background: transparent;
       border: 0px;
+      box-shadow: none !important;
       .card-title {
         font-weight: bold;
-        font-size: var(--eighteen);
+        font-size: var(--twenty) !important;
       }
       .card-text {
         font-size: var(--sixteen);
@@ -159,6 +206,7 @@
       .star-1 {
         img {
           filter: contrast(1);
+          min-width: 100px !important;
         }
         display: flex;
         align-items: flex-start;
@@ -270,7 +318,7 @@
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 30px 40px;
+      gap: 30px 20px;
       white-space: nowrap;
     }
     .org-logos > img {
@@ -327,11 +375,7 @@
       }
     }
   }
-  .experience {
-    .cards > * {
-      flex: auto !important;
-    }
-  }
+
   .image {
     height: 300px !important;
   }
@@ -368,9 +412,6 @@
   }
 
   .why-star {
-    .container {
-      padding-bottom: 50px;
-    }
     .row {
       padding: 0px !important;
       .card {
@@ -389,6 +430,7 @@
     .star-1 {
       flex-direction: column;
     }
+    padding: 50px 0px !important;
   }
   .left-col {
     --marginTop: 50px !important;

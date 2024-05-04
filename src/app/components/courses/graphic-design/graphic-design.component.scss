@@ -1,9 +1,6 @@
 .container-fluid {
-  *.container {
-    margin-top: 100px;
-  }
+  background-color: var(--white);
 }
-
 .about {
   padding: 0px;
   .about-hero {
@@ -34,28 +31,30 @@
     align-items: center;
     justify-content: space-evenly;
     border: 1px solid #0000003b;
-    padding: 40px 20px;
     background: white;
     position: relative;
     bottom: 110px;
     .vr {
-      width: 2px;
+      // width: 2px;
+      margin: 30px 0px;
     }
     .first {
+      padding: 40px;
+
       p {
         margin: 0px;
       }
       .first-label {
-        font-size: var(--thirteen);
+        font-size: var(--fifteen);
         font-weight: 600;
+        text-align: center;
       }
       .first-text {
-        font-size: var(--eighteen);
+        font-size: var(--twenty) !important;
         font-weight: bold;
       }
     }
   }
-
   .learn-course,
   .about-course {
     h1 {
@@ -93,6 +92,9 @@
         width: 250px;
         height: 93px;
         object-fit: contain;
+      }
+      img:first-child {
+        object-fit: cover !important;
       }
     }
   }

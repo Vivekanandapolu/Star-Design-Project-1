@@ -21,7 +21,7 @@ export class PlacementsComponent implements OnInit {
   slide(direction: string) {
     if (this.cardsContainers) {
       const cards = this.cardsContainers.nativeElement;
-      const scrollStep = 1140; // Adjust as needed
+      const scrollStep = 1400; // Adjust as needed
 
       if (direction === 'left') {
         const newScrollLeft = cards.scrollLeft - scrollStep;
