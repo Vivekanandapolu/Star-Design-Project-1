@@ -69,10 +69,6 @@
     aria-labelledby="offcanvasScrollingLabel">
     <div class="offcanvas-body d-flex align-items-start justify-content-between">
         <ul class="navbar-nav off-ul list">
-            <!-- <li class="list-tem nav-item">
-                <a class="nav-link" routerLink="/" [routerLinkActiveOptions]="{ exact: true }"
-                    routerLinkActive="active">Home</a>
-            </li> -->
             <li class="list-tem nav-item dropdown">
                 <a class="nav-link btn dropdown-toggle ps-0 border-0" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false" [ngClass]="{'active':course}">
@@ -113,6 +109,9 @@
             <li class="list-tem nav-item"><a routerLink="/Contact-Us" routerLinkActive="active"
                     [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Contact us</a></li>
         </ul>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="text-white fs-1 p-0 btn border-none" data-bs-dismiss="offcanvas"
+            aria-label="Close">
+            <i class="ri-close-line"></i>
+        </button>
     </div>
 </div>

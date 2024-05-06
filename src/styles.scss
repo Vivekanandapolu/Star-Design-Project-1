@@ -134,7 +134,7 @@ body {
         div {
           justify-content: space-between;
           button {
-            margin-right: 10px !important;
+            margin-right: 15px !important;
           }
         }
       }
@@ -382,7 +382,8 @@ button.btn {
       gap: 30px !important;
       img {
         flex: 1 !important;
-        max-width: fit-content !important;
+        // max-width: fit-content !important;
+        max-width: -webkit-fill-available;
       }
       img:first-child {
         object-fit: none;
@@ -405,7 +406,7 @@ button.btn {
   }
 
   .courses {
-    padding: 0px 20px !important;
+    padding: 0px 10px !important;
   }
 
   .about .why-star .row {
@@ -450,5 +451,23 @@ button.btn {
     h4 {
       font-size: 17px !important;
     }
+  }
+}
+
+.offcanvas-body {
+  // background-color: rgba(0, 0, 255, 0.8) !important;
+  background: var(--bg-blue) !important;
+  a:is(.active) {
+    color: black !important;
+  }
+  a {
+    color: white !important;
+  }
+  a:hover {
+    color: var(--black) !important;
+  }
+  .dropdown-menu {
+    background-color: transparent !important;
+    border: 0px;
   }
 }

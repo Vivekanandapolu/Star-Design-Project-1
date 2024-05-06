@@ -69,7 +69,7 @@ a {
 }
 li:hover,
 a:hover {
-  color: var(--bg-blue) !important;
+  color: var(--bg-blue);
   // font-weight: 600 !important;
 }
 .active {
@@ -199,7 +199,7 @@ a.active {
   gap: 15px;
   align-items: flex-start;
   .dropdown-menu {
-    transform: translate3d(0px, 27px, 0px) translateY(-21px) !important;
+    transform: translate3d(0px, 27px, 0px) translateY(-38px) !important;
 
     li {
       a {

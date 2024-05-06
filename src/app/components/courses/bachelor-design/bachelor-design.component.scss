@@ -293,11 +293,12 @@
   .about-hero {
     .position-absolute {
       h1 {
-        font-size: 40px !important;
+        font-size: 35px !important;
       }
       p {
-        font-size: 30px !important;
+        font-size: 20px !important;
       }
+      bottom: 27px;
     }
   }
   .first-label {
@@ -314,7 +315,7 @@
     width: fit-content;
     margin: auto;
 
-    padding: 10px 60px !important;
+    padding: 10px 80px !important;
 
     .first {
       width: 100%;

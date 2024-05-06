@@ -3,7 +3,7 @@
     <div class="img-sec">
         <div class="" [ngClass]="{'container':!windowWidth,'mt-0':!windowWidth,'container-fluid':windowWidth}">
             <div class="row h-100">
-                <div class="col-lg-7 col-xl-7 col-xxl-7 col-md-12 col-sm-12 ">
+                <div class="col-lg-7 col-xl-7 col-xxl-7 col-md-12 col-sm-12 " [ngClass]="{'mb-3':windowWidth}">
                     <div [ngClass]="{'px-3': windowWidth}"
                         class="h-100 left-col d-flex flex-column gap-2 align-items-start justify-content-center">
                         <h1 class="m-0 mb-4 fw-bold" [@dropAnimation]>LEARN, CERTIFY,<br>MAKE AN IMPACT.</h1>
@@ -200,7 +200,8 @@
         <div class="container pb-5">
             <h1 class="m-0  fw-bold text-center ">Why Star design Institute ?</h1>
             <div class="row">
-                <div class="col-lg-6 col-xl-6 mt-5  col-xxl-4 col-md-6 col-6 ">
+                <div class="col-lg-6 col-xl-6   col-xxl-4 col-md-6 col-12 "
+                    [ngClass]="{'mt-3':windowWidth786,'mt-5':!windowWidth786}">
                     <div class="card">
                         <div class="star-1">
                             <img src="../../../assets/Landing Page/Why Star design Institute/Small offline class.star design institute.svg"
@@ -215,7 +216,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-xl-6 mt-5  col-xxl-4 col-md-6 col-6 ">
+                <div class="col-lg-6 col-xl-6   col-xxl-4 col-md-6 col-12 "
+                    [ngClass]="{'mt-3':windowWidth786,'mt-5':!windowWidth786}">
                     <div class="card">
                         <div class="star-1">
                             <img src="../../../assets/Landing Page/Why Star design Institute/exprience teacher.star design institute.svg"
@@ -230,7 +232,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-xl-6 mt-5  col-xxl-4 col-md-6 col-6 ">
+                <div class="col-lg-6 col-xl-6   col-xxl-4 col-md-6 col-12 "
+                    [ngClass]="{'mt-3':windowWidth786,'mt-5':!windowWidth786}">
                     <div class="card">
                         <div class="star-1">
                             <img src="../../../assets/Landing Page/Why Star design Institute/mentorship..star design institute.svg"
@@ -245,7 +248,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-xl-6 mt-5  col-xxl-4 col-md-6 col-6 ">
+                <div class="col-lg-6 col-xl-6   col-xxl-4 col-md-6 col-12 "
+                    [ngClass]="{'mt-3':windowWidth786,'mt-5':!windowWidth786}">
                     <div class="card">
                         <div class="star-1">
                             <img src="../../../assets/Landing Page/Why Star design Institute/mock interview.star design institute.svg"
@@ -260,7 +264,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-xl-6 mt-5  col-xxl-4 col-md-6 col-6 ">
+                <div class="col-lg-6 col-xl-6   col-xxl-4 col-md-6 col-12 "
+                    [ngClass]="{'mt-3':windowWidth786,'mt-5':!windowWidth786}">
                     <div class="card">
                         <div class="star-1">
                             <img src="../../../assets/Landing Page/Why Star design Institute/hybrid learning..star design institute.svg"
@@ -275,7 +280,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-xl-6 mt-5  col-xxl-4 col-md-6 col-6 ">
+                <div class="col-lg-6 col-xl-6   col-xxl-4 col-md-6 col-12 "
+                    [ngClass]="{'mt-3':windowWidth786,'mt-5':!windowWidth786}">
                     <div class="card">
                         <div class="star-1">
                             <img src="../../../assets/Landing Page/Why Star design Institute/Real world projects.star design institute.svg"
@@ -378,11 +384,11 @@
 
     <div class="container-fluid bg-white  py-5">
         <div class="container work mt-0">
-            <div class="content1 text-center  mb-5">
+            <div class="content1 text-center ">
                 <h1 class="fw-bold m-0">
                     Where our Students Work
                 </h1>
-                <p class="m-0 mb-5">Start your carrier with industry leader our course covers the latest
+                <p class="m-0 ">Start your carrier with industry leader our course covers the latest
                     industry-relevant
                     topics
                     and tools.</p>
@@ -578,8 +584,8 @@
             </div>
         </div>
     </div>
-    <div class="container organization mb-4">
-        <div class="content1 text-center mt-5 mb-4">
+    <div class="container organization py-5">
+        <div class="content1 text-center  mb-4">
             <h1 class="fw-bold m-0">
                 Affiliations & Accreditations
             </h1>

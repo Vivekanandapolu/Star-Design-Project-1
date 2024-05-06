@@ -3,7 +3,8 @@
   background: url("../../../assets/Placements/placement.star\ design\ institute_new.png");
   background-size: cover;
   box-shadow: 0px 3px 6px #00000029;
-  opacity: 1;
+  background-position-x: 65%;
+
   height: 519px;
 }
 .mainheader {
@@ -322,7 +323,8 @@
 @media (max-width: 768px) {
   .mainheader {
     h1 {
-      font-size: 30px;
+      text-wrap: balance;
+      font-size: 30px !important;
     }
   }
   .footertext {

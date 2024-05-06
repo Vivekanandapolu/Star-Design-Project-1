@@ -16,14 +16,18 @@ import { trigger, transition, style, animate } from '@angular/animations';
   ]
 })
 export class HomeComponent implements OnInit {
-  windowWidth: boolean = false
+  windowWidth: boolean = false;
+  windowWidth786: boolean = false;
+
   isLeftScrollable: boolean = false;
   isRightScrollable: boolean = true;
   @ViewChild('cards') cardsContainers: ElementRef | undefined;
   ngOnInit(): void {
     this.windowWidth = window.innerWidth <= 1024;
+    this.windowWidth786 = window.innerWidth <= 786;
     window.addEventListener('resize', () => {
       this.windowWidth = window.innerWidth <= 1024;
+      this.windowWidth786 = window.innerWidth <= 786;
     });
   }
 
