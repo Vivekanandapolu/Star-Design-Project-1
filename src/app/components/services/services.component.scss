@@ -206,7 +206,7 @@ p {
 }
 .view-port {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-top: 48px;
   p {
     cursor: pointer;

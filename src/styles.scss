@@ -42,6 +42,7 @@
   background-color: var(--bg-blue);
   color: var(--white);
 }
+
 ::placeholder {
   font-size: var(--twelve);
   opacity: 0.65;
@@ -69,7 +70,7 @@ body {
 
 body {
   background: #00000005 !important;
-  min-width: 408px;
+  min-width: 425px;
 }
 
 .table-responsive {
@@ -295,7 +296,6 @@ body {
   .accordion-item {
     background-color: transparent !important;
     border: none;
-
     .accordion-button {
       border: none;
       border-bottom: 1px solid #e9e9e9b1;
@@ -339,4 +339,116 @@ body {
 
 button.btn {
   height: 42px !important;
+}
+
+@media (max-width: 1024px) {
+  .first {
+    padding: 20px !important;
+    .first-text {
+      font-size: 15px !important;
+    }
+  }
+}
+
+@media (max-width: 786px) {
+  .overlap-sec {
+    padding: 0px !important;
+    bottom: 80px !important;
+  }
+  .first {
+    padding: 10px 0px !important;
+    .first-text {
+      font-size: 15px !important;
+    }
+  }
+
+  .bgcolor {
+    padding: 10px 10px;
+    gap: 0px !important;
+    li {
+      gap: 0px !important;
+      font-size: 13px !important;
+      color: white;
+      img {
+        width: 30px !important;
+      }
+    }
+  }
+
+  .tools {
+    .container {
+      flex-direction: column !important;
+
+      gap: 30px !important;
+      img {
+        flex: 1 !important;
+        max-width: fit-content !important;
+      }
+      img:first-child {
+        object-fit: none;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 40px !important;
+  }
+
+  .accordion-button {
+    font-size: var(--fourteen) !important;
+  }
+
+  .learn-course {
+    div.row {
+      padding: 0px !important;
+    }
+  }
+
+  .courses {
+    padding: 0px 20px !important;
+  }
+
+  .about .why-star .row {
+    padding: 0px !important;
+  }
+
+  .expect-con {
+    margin: 0px !important;
+  }
+
+  .about-hero {
+    min-height: 60vh !important;
+    // background-position-x: -100px !important;
+  }
+}
+
+@media (min-width: 425px) {
+  body {
+    min-width: 425px !important;
+  }
+}
+@media (max-width: 425px) {
+  body {
+    min-width: 375px !important;
+  }
+  .cursor {
+    width: 30px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  body {
+    min-width: 360px !important;
+  }
+  .cursor {
+    width: 30px !important;
+  }
+  .courses {
+    padding: 0px !important;
+  }
+  .left-head {
+    h4 {
+      font-size: 17px !important;
+    }
+  }
 }

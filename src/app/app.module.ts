@@ -13,6 +13,7 @@ import { HireTalentComponent } from './components/hire-talent/hire-talent.compon
 import { FooterComponent } from './shared/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CustomPreloadingStrategy } from './shared/services-comp/custom-preloading-strategy';
 
 
 @NgModule({
@@ -34,9 +35,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     BrowserAnimationsModule
     // HeaderModule
-
   ],
-  providers: [],
+  providers: [CustomPreloadingStrategy],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

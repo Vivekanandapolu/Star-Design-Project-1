@@ -9,7 +9,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
     min-height: 78vh;
     .position-absolute {
       bottom: 60px;
@@ -50,7 +49,7 @@
         text-align: center;
       }
       .first-text {
-        font-size: var(--twenty) !important;
+        font-size: var(--twenty);
         font-weight: bold;
       }
     }
@@ -304,10 +303,10 @@
       min-width: 230px;
     }
     flex-wrap: wrap;
-    // flex-direction: column !important;
     gap: 30px;
   }
   .about-hero {
+    background-position-x: 65% !important;
     .position-absolute {
       h1 {
         font-size: 40px !important;

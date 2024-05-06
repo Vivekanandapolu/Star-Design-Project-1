@@ -36,23 +36,24 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterContentInit {
     this.windowWidth = window.innerWidth <= 1024;
     window.addEventListener('resize', () => {
       this.windowWidth = window.innerWidth <= 1024;
-      if (this.windowWidth) {
-        console.log("yess");
-      }
     });
 
   }
 
-
   openMenu() {
-    // this.routerSubscription = this.router.events.subscribe(event => {
-    //   console.log(event);
-    //   if (event instanceof NavigationEnd && this.routerSubscription) {
-    //     document.getElementsByClassName('offcanvas')[0]?.classList.add('d-none')
-    //     document.getElementsByClassName('offcanvas')[0]?.classList.remove('show')
-    //   }
-    // });
+    this.routerSubscription = this.router.events.subscribe(event => {
+      console.log(event);
+      if (event instanceof NavigationEnd && this.routerSubscription) {
+        // Close offcanvas menu
+        document.getElementsByClassName('offcanvas')[0]?.classList.add('d-none');
+        document.getElementsByClassName('offcanvas')[0]?.classList.remove('show');
+
+        // Reload the page from the top
+        window.location.reload();
+      }
+    });
   }
+
 
   handleRouteChange() {
     this.course = window.location.href.split('/').includes('Courses')

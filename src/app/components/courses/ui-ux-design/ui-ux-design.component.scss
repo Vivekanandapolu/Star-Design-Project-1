@@ -1,7 +1,4 @@
 .container-fluid {
-  // *.container {
-  //   margin-top: 100px;
-  // }
   background-color: white;
 }
 
@@ -13,8 +10,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
     min-height: 78vh;
+
     .position-absolute {
       bottom: 60px;
       left: 70px;
@@ -54,7 +51,7 @@
         text-align: center;
       }
       .first-text {
-        font-size: var(--twenty) !important;
+        font-size: var(--twenty);
         font-weight: bold;
       }
     }
@@ -280,6 +277,10 @@
   }
 }
 @media (max-width: 768px) {
+  .about-hero {
+    background-position-x: -100px;
+  }
+
   .footer {
     .card {
       min-width: 230px;

@@ -6,6 +6,7 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { PlacementsComponent } from './components/placements/placements.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { HireTalentComponent } from './components/hire-talent/hire-talent.component';
+import { CustomPreloadingStrategy } from './shared/services-comp/custom-preloading-strategy';
 // import { HeaderComponent } from './shared/header/header.component';
 
 const routes: Routes = [
@@ -41,7 +42,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled',
+      preloadingStrategy: CustomPreloadingStrategy
+    })
+  ], exports: [RouterModule]
 })
 export class AppRoutingModule { }

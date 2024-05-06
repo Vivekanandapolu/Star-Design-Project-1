@@ -94,13 +94,16 @@ a.active {
     background-color: rgb(255 255 255 / 100%);
   }
   100% {
-    top: 0px;
+    top: -1px;
   }
 }
 
-@media (max-width: 512px) {
+@media (max-width: 786px) {
   .container-fluid {
     padding: 5px !important;
+  }
+  .header {
+    margin: 0px 10px !important;
   }
   .header > div {
     flex: auto;
@@ -122,6 +125,13 @@ a.active {
     gap: 60px !important;
   }
 }
+
+@media (min-width: 1440px) {
+  .list {
+    gap: 60px !important;
+  }
+}
+
 .ri-menu-line {
   font-size: 30px;
 }

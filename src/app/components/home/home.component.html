@@ -486,10 +486,10 @@
                 <div class="d-flex align-items-center gap-4 mb-3">
                     <!-- <i class="ri-arrow-left-line " ></i> -->
                     <img width="20px" src="../../../assets/arrow/Group 76396.svg" alt="" (click)="slide1('left')"
-                        [ngClass]="{'img-scroll':!isLeftScrollable}"
+                        (click)="slide('left')" [ngClass]="{'img-scroll':!isLeftScrollable}"
                         [style.pointer-events]="isLeftScrollable ? 'auto' : 'none'">
                     <img width="20px" src="../../../assets/arrow/Group 75711.svg" alt="" (click)="slide1('right')"
-                        [ngClass]="{'img-scroll':!isRightScrollable}"
+                        (click)="slide('right')" [ngClass]="{'img-scroll':!isRightScrollable}"
                         [style.pointer-events]="isRightScrollable ? 'auto' : 'none'">
                     <!-- <i class="ri-arrow-right-line" ></i> -->
                 </div>

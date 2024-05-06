@@ -51,7 +51,7 @@
         text-align: center;
       }
       .first-text {
-        font-size: var(--twenty) !important;
+        font-size: var(--twenty);
         font-weight: bold;
       }
     }
@@ -235,7 +235,7 @@
   }
   // height: 311px;
   li {
-    font-size: var(--sixteen) !important;
+    font-size: var(--sixteen);
     color: white;
   }
   .row {
@@ -265,6 +265,7 @@
     gap: 30px;
   }
   .about-hero {
+    background-position-x: 60% !important;
     .position-absolute {
       h1 {
         font-size: 40px !important;

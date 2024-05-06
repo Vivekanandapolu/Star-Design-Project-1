@@ -31,8 +31,11 @@ export class HomeComponent implements OnInit {
   slide(direction: string) {
     if (this.cardsContainers)
       if (direction === 'left') {
+        this.cardsContainers.nativeElement.scrollLeft -= 350;
+
       }
       else if (direction === 'right') {
+        this.cardsContainers.nativeElement.scrollLeft += 350;
       }
   }
 
@@ -43,12 +46,11 @@ export class HomeComponent implements OnInit {
       const scrollStep = 1140; // Adjust as needed
 
       if (direction === 'left') {
-        this.cardsContainers.nativeElement.scrollLeft -= 350;
+        // this.cardsContainers.nativeElement.scrollLeft -= 350;
         const newScrollLeft = cards.scrollLeft - scrollStep;
         cards.scrollLeft = Math.max(newScrollLeft, 0); // Ensure scrollLeft doesn't go below 0
       } else if (direction === 'right') {
         const newScrollLeft = cards.scrollLeft + scrollStep;
-        this.cardsContainers.nativeElement.scrollLeft += 350;
         cards.scrollLeft = Math.min(newScrollLeft, cards.scrollWidth - cards.clientWidth); // Ensure scrollLeft doesn't exceed scrollWidth
       }
 
