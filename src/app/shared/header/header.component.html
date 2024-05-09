@@ -66,6 +66,12 @@
 
 <div class="offcanvas offcanvas-start" id="offcanvas" data-bs-backdrop="true" id="offcanvasScrolling"
     aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+        <button type="button" class="text-white fs-1 p-0 btn border-none" data-bs-dismiss="offcanvas"
+            aria-label="Close">
+            <i class="ri-close-line"></i>
+        </button>
+    </div>
     <div class="offcanvas-body d-flex align-items-start justify-content-between">
         <ul class="navbar-nav off-ul list">
             <li class="list-tem nav-item dropdown">
@@ -108,9 +114,6 @@
             <li class="list-tem nav-item"><a routerLink="/Contact-Us" routerLinkActive="active"
                     [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Contact us</a></li>
         </ul>
-        <button type="button" class="text-white fs-1 p-0 btn border-none" data-bs-dismiss="offcanvas"
-            aria-label="Close">
-            <i class="ri-close-line"></i>
-        </button>
+
     </div>
 </div>

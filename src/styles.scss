@@ -470,4 +470,13 @@ button.btn {
     background-color: transparent !important;
     border: 0px;
   }
+  position: relative;
+  bottom: 1px;
+}
+
+.offcanvas-header {
+  background: var(--bg-blue);
+  border-bottom: none;
+  display: flex;
+  justify-content: flex-end;
 }

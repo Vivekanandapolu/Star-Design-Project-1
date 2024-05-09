@@ -364,7 +364,7 @@
       .card {
         border: 1px solid #c3ad10bf;
         padding: 20px;
-        background: #ffffff5e;
+        // background: #ffffff5e;
         height: 100%;
         .card-title {
           font-size: var(--fourteen) !important;
@@ -382,6 +382,10 @@
 
   h1 {
     font-size: var(--thirty) !important;
+  }
+  .image {
+    width: fit-content;
+    margin: auto;
   }
 }
 
@@ -428,7 +432,7 @@
       margin-bottom: 40px !important;
     }
     padding-top: 0px !important;
-    background-color: transparent !important;
+    // background-color: transparent !important;
 
     .row {
       display: flex;

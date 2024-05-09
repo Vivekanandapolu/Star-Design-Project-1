@@ -198,32 +198,47 @@ a.active {
   display: flex;
   gap: 15px;
   align-items: flex-start;
+  width: 100%;
+  position: relative;
+  bottom: 30px;
+  .nav-item {
+    width: 100%;
+    .nav-link {
+      border-bottom: 1px solid #ffffffb3 !important;
+      border-radius: 0px;
+      font-size: 20px;
+    }
+  }
   .dropdown-menu {
-    transform: translate3d(0px, 27px, 0px) translateY(-38px) !important;
-
+    margin: 0px;
+    transform: translateX(-9px) !important;
     li {
+      width: 100%;
       a {
         font-size: var(--fourteen);
         font-weight: 500;
         background-color: transparent !important;
+        // border-bottom: 1px solid #ffffffb3 !important;
+        border-radius: 0px;
+        font-size: 18px;
       }
       position: relative;
 
-      a::before {
-        content: "";
-        width: 0%;
-        transition: all 0.4s ease !important;
-      }
+      // a::before {
+      //   content: "";
+      //   width: 0%;
+      //   transition: all 0.4s ease !important;
+      // }
 
-      a:hover::before {
-        content: "";
-        position: absolute;
-        height: 3px;
-        width: 100%;
-        bottom: 0px;
-        left: 0px;
-        background-color: var(--bg-blue);
-      }
+      // a:hover::before {
+      //   content: "";
+      //   position: absolute;
+      //   height: 3px;
+      //   width: 100%;
+      //   bottom: 0px;
+      //   left: 0px;
+      //   background-color: var(--bg-blue);
+      // }
     }
   }
 }
