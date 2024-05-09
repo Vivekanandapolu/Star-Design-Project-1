@@ -19,7 +19,6 @@ import { CustomPreloadingStrategy } from './shared/services-comp/custom-preloadi
 @NgModule({
   declarations: [
     AppComponent,
-
     HeaderComponent,
     HomeComponent,
     ServicesComponent,
