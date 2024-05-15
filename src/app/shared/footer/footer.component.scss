@@ -251,5 +251,8 @@
 }
 
 .accordion-button::after {
-  filter: brightness(14);
+  filter: brightness(3);
+}
+button.accordion-button:not(.collapsed) {
+  color: var(--bg-blue) !important;
 }
