@@ -326,28 +326,33 @@
                                     alt="">
                             </div>
                             <form class="form">
-                                <input type="text" placeholder="First Name" class="form-control shadow-none mb-3">
-                                <input type="text" placeholder="Last Name" class="form-control shadow-none mb-3">
-                                <input type="email" placeholder="Email Address" class="form-control shadow-none mb-3">
-                                <input type="number" placeholder="Mobile Number" class="form-control shadow-none mb-3">
-                                <select class="form-select shadow-none mb-3 w-100" placeholder="">
+                                <input type="text" placeholder="First Name" class="form-control shadow-none mb-3"
+                                    name="firstName" autocomplete="given-name">
+                                <input type="text" placeholder="Last Name" class="form-control shadow-none mb-3"
+                                    name="lastName" autocomplete="family-name">
+                                <input type="email" placeholder="Email Address" class="form-control shadow-none mb-3"
+                                    name="email" autocomplete="email">
+                                <input type="tel" placeholder="Mobile Number" class="form-control shadow-none mb-3"
+                                    name="mobileNumber" autocomplete="tel">
+                                <select class="form-select shadow-none mb-3 w-100" placeholder="" name="levelOfStudy"
+                                    autocomplete="education-level">
                                     <option value="" disabled selected>Level of study</option>
-                                    <option value="">Under Graduation</option>
-                                    <option value="">Post Graduation</option>
+                                    <option value="undergrad">Under Graduation</option>
+                                    <option value="postgrad">Post Graduation</option>
                                 </select>
-                                <select class="form-select shadow-none mb-3 w-100">
+                                <select class="form-select shadow-none mb-3 w-100" name="gender" autocomplete="sex">
                                     <option selected disabled>I am a..</option>
-                                    <option value="">Male</option>
-                                    <option value="">Female</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
                                 </select>
 
                                 <p class="terms mb-4">
                                     By downloading this course guide I accept the terms of the Star Design institute
-                                    <span class="text-primary text-decoration-underline">Privacy
-                                        Policy</span>.
+                                    <span class="text-primary text-decoration-underline">Privacy Policy</span>.
                                 </p>
                                 <button class="btn submit-btn w-100">Submit</button>
                             </form>
+
                         </div>
                     </div>
                 </div>

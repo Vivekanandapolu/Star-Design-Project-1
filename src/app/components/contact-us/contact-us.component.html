@@ -97,7 +97,7 @@
                             <form noValidate="false">
                                 <p class="m-0 mb-4 fw-bold">Or send us your questions</p>
                                 <label class="form-label" for="name">Your name <span>*</span></label>
-                                <input id="name" type="text" class="form-control shadow-none mb-3">
+                                <input autocomplete="name" id="name" type="text" class="form-control shadow-none mb-3">
                                 <p class="m-0 mb-3 fw-bold">How may we contact you? <span>*</span></p>
                                 <div class="checks mb-3 d-flex align-items-center gap-3">
                                     <div class="form-check">
@@ -113,15 +113,16 @@
                                         <label class="form-check-label" for="phonecall">Phone call</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input shadow-none" type="radio"
+                                        <input autocomplete="name" class="form-check-input shadow-none" type="radio"
                                             name="communicationMethod" id="email" [(ngModel)]="selectedMethod"
                                             value="email" (change)="updatePlaceholder()">
                                         <label class="form-check-label" for="email">E-mail</label>
                                     </div>
                                 </div>
 
-                                <label class="form-label" for="email">Your {{ placeholderText }} <span>*</span></label>
-                                <input id="email" type="text" class="form-control shadow-none mb-3">
+                                <label class="form-label" for="Email">Your {{ placeholderText }} <span>*</span></label>
+                                <input autocomplete="email" id="Email" type="text"
+                                    class="form-control shadow-none mb-3">
 
 
 

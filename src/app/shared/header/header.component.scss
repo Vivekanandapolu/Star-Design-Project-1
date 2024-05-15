@@ -69,8 +69,7 @@ a {
 }
 li:hover,
 a:hover {
-  color: var(--bg-blue);
-  // font-weight: 600 !important;
+  color: var(--bg-blue) !important;
 }
 .active {
   color: var(--bg-blue) !important;
