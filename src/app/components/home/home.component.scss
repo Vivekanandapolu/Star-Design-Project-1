@@ -274,11 +274,11 @@
       align-items: center;
 
       .logos {
-        min-width: 100%;
+        min-width: auto;
         display: block;
         max-height: 100px;
-        object-fit: contain;
         object-fit: scale-down;
+        margin: inherit;
       }
     }
     .logos-div {
