@@ -1,27 +1,57 @@
 .container-fluid {
   background-color: var(--white);
 }
+
 .about {
   padding: 0px;
-  .about-hero {
-    position: relative;
-    background: url("/assets/Bachelor of Design/Bachelor of Design . star design institute.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 78vh;
-    .position-absolute {
-      bottom: 60px;
-      left: 70px;
-      * {
-        color: #ffcc09;
-      }
+  // .about-hero {
+  //   position: relative;
+  //   background: url("/assets/Bachelor of Design/Bachelor of Design . star design institute.png");
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  //   min-height: 78vh;
+  //   .position-absolute {
+  //     bottom: 60px;
+  //     left: 70px;
+  //     * {
+  //       color: #ffcc09;
+  //     }
+  //     h1 {
+  //       font-size: var(--sixty);
+  //     }
+  //     p {
+  //       font-size: var(--thirty);
+  //     }
+  //   }
+  // }
+  .img-sec {
+    .container-fluid {
+      background-color: var(--bg-red);
+    }
+    // .container-fluid {
+    background-color: var(--bg-red);
+    // }
+    .container {
+      background-color: var(--bg-red);
+    }
+    // padding-top: 40px;
+    overflow: hidden;
+    .row {
+      color: var(--white);
       h1 {
-        font-size: var(--sixty);
+        font-size: var(--seventyFive);
       }
       p {
-        font-size: var(--thirty);
+        font-size: 28px;
       }
+    }
+    .image {
+      max-width: 100%;
+      display: block;
+      height: 526px;
+      position: relative;
+      bottom: 0px;
     }
   }
   .overlap-sec {
@@ -31,7 +61,7 @@
     border: 1px solid #0000003b;
     background: white;
     position: relative;
-    bottom: 110px;
+    bottom: 40px;
     .vr {
       // width: 2px;
       margin: 30px 0px;
@@ -264,7 +294,13 @@
     transform: translateY(-5px) scale(1.03);
   }
 }
-
+@media (min-width: 1024px) {
+  .img-sec {
+    h1 {
+      line-height: 75px !important;
+    }
+  }
+}
 @media (max-width: 1024px) {
   .Glimpses {
     .cards {
@@ -274,7 +310,31 @@
       }
     }
   }
+  .img-sec {
+    h1 {
+      position: relative;
+      top: 40px;
+      margin-bottom: 40px !important;
+    }
+    padding-top: 0px !important;
+    // background-color: transparent !important;
 
+    .row {
+      display: flex;
+      // flex-direction: column-reverse;
+      .col-md-12:last-child {
+        width: 100%;
+        margin-bottom: 30px;
+        background-color: var(--bg-blue) !important;
+        justify-content: flex-end !important;
+      }
+      .col-md-12:first-child > * {
+        width: 100%;
+
+        color: black;
+      }
+    }
+  }
   .why-star {
     h1 {
       font-size: var(--fifty) !important;
@@ -285,10 +345,21 @@
   }
 }
 @media (max-width: 768px) {
+  .img-sec {
+    h1 {
+      position: relative;
+      top: 0px !important;
+      margin-bottom: 50px !important;
+    }
+  }
   .Glimpses {
     .cards {
       flex-direction: column;
     }
+  }
+
+  .overlap-sec {
+    bottom: 40px !important;
   }
   .about-hero {
     .position-absolute {
@@ -306,6 +377,11 @@
   }
   .first-text {
     font-size: var(--thirteen) !important;
+  }
+  .tools {
+    .container {
+      padding: 0px !important;
+    }
   }
 }
 

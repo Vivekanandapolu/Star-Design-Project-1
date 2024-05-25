@@ -5,7 +5,8 @@
   padding: 0px;
   .about-hero {
     position: relative;
-    background: url("/assets/Graphic Designing/Graphic\ Designing.star\ design\ institute.png");
+    background: url("../../../../assets/Hero\ images/graphice. star design instutute.png.jpg");
+    // background: url("/assets/Graphic Designing/Graphic\ Designing.star\ design\ institute.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -85,15 +86,15 @@
     .container {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 15px;
+      justify-content: space-between !important;
+      flex-wrap: wrap;
+      padding: 0px !important;
+
+      gap: 30px;
       img {
-        width: 250px;
-        height: 93px;
-        object-fit: contain;
-      }
-      img:first-child {
-        object-fit: cover !important;
+        max-width: 250px;
+        // height: 93px;
+        // object-fit: none !important;
       }
     }
   }
@@ -282,15 +283,26 @@
   .tools {
     .container {
       flex-wrap: wrap !important;
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(150px, 1fr)) !important;
+      img {
+        max-width: 150px !important;
+      }
     }
   }
 }
 @media (max-width: 768px) {
   .tools {
     .container {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(150px, 1fr)) !important;
       margin: 0px !important;
-      gap: 30px 0px !important;
-      justify-content: center !important;
+      gap: 30px 20px !important;
+      justify-content: space-around !important;
+      img {
+        object-fit: contain !important;
+        max-width: 150px !important;
+      }
     }
   }
   .bgcolor {

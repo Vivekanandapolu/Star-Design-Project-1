@@ -10,6 +10,8 @@
   --li: #000000fc;
   --grey: #9b9b9b;
   --red: #ed1941;
+
+  --bg-red: #d92224;
   --yellow: #ffcc09;
   --twentyTwo: 22px;
   --twenty: 20px;
@@ -330,7 +332,7 @@ ul {
       font-size: var(--sixteen);
       font-weight: 500;
       border-radius: 0px;
-      background: rgb(0 0 0 / 2%) !important;
+      background: #f7f9fa !important;
       color: #000000;
     }
     .accordion-button:not(.collapsed) {
@@ -379,9 +381,26 @@ button.btn {
       font-size: 15px !important;
     }
   }
+  .bgcolor {
+    padding: 20px !important;
+  }
 }
 
 @media (max-width: 786px) {
+  .expect-1 {
+    .expect-div {
+      .expect-list {
+        li {
+          img {
+            width: 30px !important;
+          }
+          font-size: 16px !important;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
   .overlap-sec {
     padding: 0px !important;
     bottom: 80px !important;
@@ -408,16 +427,13 @@ button.btn {
 
   .tools {
     .container {
-      flex-direction: column !important;
-
+      // flex-direction: column !important;
       gap: 30px !important;
       img {
         flex: 1 !important;
         // max-width: fit-content !important;
-        max-width: -webkit-fill-available;
-      }
-      img:first-child {
-        object-fit: none;
+        object-fit: cover !important;
+        max-width: 79px;
       }
     }
   }
