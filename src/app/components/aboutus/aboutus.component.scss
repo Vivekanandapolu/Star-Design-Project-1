@@ -6,14 +6,17 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
+    .layered-section {
+      background: linear-gradient(to right, var(--bg-blue), transparent);
+    }
     min-height: 78vh;
     .position-absolute {
+      z-index: 2;
       bottom: 30px;
       left: 70px;
       * {
-        color: rgb(143, 230, 3);
-        filter: drop-shadow(3px 3px 2px rgba(0, 0, 255, 0.504));
+        color: white;
+        // filter: drop-shadow(3px 3px 2px rgba(0, 0, 255, 0.504));
       }
       h1 {
         font-size: var(--seventyFive);

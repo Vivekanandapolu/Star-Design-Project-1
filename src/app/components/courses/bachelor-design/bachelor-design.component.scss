@@ -263,7 +263,7 @@
 .accordion-div {
   .accordion {
     border: none;
-    border-radius: 25px;
+    // border-radius: 25px;
     overflow: hidden;
   }
   .accordion-item {
@@ -347,9 +347,17 @@
 @media (max-width: 768px) {
   .img-sec {
     h1 {
+      span {
+        font-size: 40px !important;
+      }
       position: relative;
       top: 0px !important;
       margin-bottom: 50px !important;
+      font-size: 35px !important;
+      margin-bottom: 10px !important;
+    }
+    img {
+      bottom: 14px;
     }
   }
   .Glimpses {
@@ -363,33 +371,41 @@
   }
   .about-hero {
     .position-absolute {
+      left: 30px !important;
+      bottom: 30px !important;
       h1 {
-        font-size: 35px !important;
+        font-size: 40px !important;
       }
       p {
-        font-size: 20px !important;
+        font-size: 25px !important;
       }
-      bottom: 27px;
     }
   }
   .first-label {
-    font-size: var(--ten) !important;
+    font-size: var(--ten);
   }
   .first-text {
-    font-size: var(--thirteen) !important;
+    font-size: var(--thirteen);
   }
   .tools {
     .container {
       padding: 0px !important;
     }
   }
+  .image {
+    bottom: -14px !important;
+  }
 }
 
 @media (max-width: 512px) {
+  .dropping-text {
+    position: relative;
+    top: 30px;
+  }
   .overlap-sec {
     flex-direction: column;
     width: fit-content;
-    margin: auto;
+    margin: 20px;
 
     padding: 10px 80px !important;
 

@@ -22,6 +22,7 @@
   --thirtyFive: 35px;
   --thirty: 30px;
   --twentyFive: 25px;
+  --twentyFour: 24px;
   --eleven: 11px;
   --twelve: 12px;
   --fourteen: 14px;
@@ -31,6 +32,7 @@
   --light: #f9f9f9;
   --fourtyFive: 45px;
   --siventeen: 17px;
+  --eighteen: 18px;
   --ten: 10px;
   --thirteen: 13px;
   --seventyFive: 75px;
@@ -187,8 +189,9 @@ ul {
     display: flex;
     gap: 10px;
     flex-wrap: nowrap;
-    overflow: hidden;
+    // overflow: hidden;
     overflow-x: auto;
+
     .card {
       min-width: 350px;
     }
@@ -378,7 +381,7 @@ button.btn {
   .first {
     padding: 20px !important;
     .first-text {
-      font-size: 15px !important;
+      font-size: 16px !important;
     }
   }
   .bgcolor {
@@ -400,16 +403,43 @@ button.btn {
       }
     }
   }
+  p {
+    font-size: var(--seventeen) !important;
+  }
+  .footer {
+    p {
+      font-size: var(--twelve) !important;
+    }
+    .last-foot {
+      p {
+        font-size: var(--ten) !important;
+      }
+      padding: 20px !important;
+    }
+    .col:last-child .foot-1 {
+      margin-bottom: 60px !important;
+    }
+  }
+  // .about-course {
+  //   p {
+  //   }
+  // }
 
   .overlap-sec {
     padding: 0px !important;
     bottom: 80px !important;
+    border-radius: 5px !important;
+    border: 1px solid white;
+    box-shadow: 2px 2px 20px rgba(78, 76, 76, 0.22);
   }
   .first {
     padding: 10px 0px !important;
-    .first-text {
-      font-size: 15px !important;
+    * {
+      font-size: var(--sixteen) !important;
     }
+  }
+  .first:last-child {
+    border-bottom: none !important;
   }
 
   .bgcolor {
@@ -428,7 +458,7 @@ button.btn {
   .tools {
     .container {
       // flex-direction: column !important;
-      gap: 30px !important;
+      gap: 20px !important;
       img {
         flex: 1 !important;
         // max-width: fit-content !important;
@@ -526,4 +556,14 @@ button.btn {
   border-bottom: none;
   display: flex;
   justify-content: flex-end;
+}
+
+.layered-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 1; /* Ensure it's above the background image */
 }

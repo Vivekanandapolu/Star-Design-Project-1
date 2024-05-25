@@ -1,19 +1,25 @@
 .container-fluid {
   padding: 0px;
   .img-sec {
+    position: relative;
     background-color: var(--bg-blue);
     padding-top: 40px;
     overflow: hidden;
+    .container-fluid {
+      position: relative;
+      z-index: 2;
+    }
     .row {
       color: var(--white);
       h1 {
-        font-size: var(--sixty);
+        font-size: 70px;
         font-weight: 800 !important;
       }
       p {
         font-size: var(--thirtyFive);
       }
     }
+
     .image {
       max-width: 100%;
       display: block;
@@ -21,8 +27,18 @@
       position: relative;
       bottom: 0px;
     }
-  }
 
+    .layered-section {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, var(--bg-blue), transparent);
+      /* Linear gradient from left (#000080) to transparent */
+      z-index: 1; /* Ensure it's above the background image */
+    }
+  }
   .card {
     box-shadow: 1px 1px 8px #00000025;
     border-radius: 0px;
@@ -30,7 +46,7 @@
     transition: all 0.4s;
     .card-img-top {
       border-radius: 0px;
-      min-height: 300px;
+      min-height: 240px;
       overflow: hidden;
 
       img {
@@ -52,8 +68,11 @@
   }
   .experience {
     .card {
-      box-shadow: none !important;
-      border: 1px solid rgba(0, 0, 0, 0.183) !important;
+      // border: 1px solid rgba(0, 0, 0, 0.183) !important;
+      box-shadow: 2px 2px 10px #e2e2e2;
+    }
+    .cards {
+      padding: 10px;
     }
     .cards > * {
       flex: auto !important;
@@ -61,16 +80,18 @@
   }
   .content1 {
     h1 {
-      font-size: var(--fiftyFive) !important;
+      font-size: var(--fiftyFive);
     }
     p {
-      font-size: var(--twentyFive) !important;
+      font-size: var(--twentyFive);
     }
   }
   .courses {
     .card {
+      border-radius: 5px;
+      overflow: hidden;
       .card-title {
-        font-size: var(--twentyTwo);
+        font-size: 25px;
         font-weight: bold;
       }
       .card-body {
@@ -79,12 +100,12 @@
         justify-content: space-between;
       }
       .card-text {
-        font-size: var(--fourteen);
+        font-size: var(--sixteen);
       }
       .duration {
         padding: 20px 15px;
         background-color: var(--light);
-        font-size: var(--fourteen);
+        font-size: var(--sixteen);
         .pb-2 {
           border-bottom: 1px solid #e2e2e2;
         }
@@ -96,6 +117,7 @@
         padding: 8px 15px;
         font-weight: 500;
         transition: all 0.7s ease;
+        font-size: var(--sixteen) !important;
         .black {
           display: block;
         }
@@ -300,10 +322,10 @@
   .organization {
     .content1 {
       h1 {
-        font-size: var(--fourtyFive) !important;
+        font-size: var(--fourtyFive);
       }
       p {
-        font-size: var(--twenty) !important;
+        font-size: var(--twenty);
       }
     }
   }
@@ -314,11 +336,12 @@
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 30px 20px;
+      gap: 30px;
       white-space: nowrap;
     }
     .org-logos > img {
       max-width: 200px;
+      height: 70px;
     }
   }
 }
@@ -376,7 +399,7 @@
       padding: 0px !important;
       .card {
         border: 1px solid #c3ad10bf;
-        padding: 20px;
+        padding: 5px 20px;
         // background: #ffffff5e;
         height: 100%;
         .star-1 {
@@ -385,10 +408,10 @@
           }
         }
         .card-title {
-          font-size: var(--fourteen) !important;
+          font-size: var(--eighteen) !important;
         }
         .card-text {
-          font-size: var(--twelve) !important;
+          font-size: var(--fourteen) !important;
         }
       }
     }
@@ -400,7 +423,7 @@
   }
 
   h1 {
-    font-size: var(--thirty) !important;
+    font-size: 33px !important;
   }
   .image {
     width: fit-content;
@@ -413,11 +436,17 @@
     justify-content: center !important;
     flex-direction: column !important;
   }
+  .display-5.fw-light {
+    font-size: var(--twentyFour) !important;
+  }
+  h1 {
+    line-height: normal !important;
+  }
 }
 @media (min-width: 1024px) {
   .img-sec {
     h1 {
-      line-height: 75px !important;
+      line-height: 80px !important;
     }
   }
 }
@@ -425,7 +454,6 @@
 @media (max-width: 1024px) {
   .container-fluid {
     position: relative;
-    bottom: 1rem;
   }
   .logos-div {
     grid-template-columns: repeat(auto-fit, minmax(150px, 176px));
@@ -480,8 +508,14 @@
   .image {
     height: 300px !important;
   }
-  h1 {
-    font-size: var(--thirty) !important;
+
+  .content1 {
+    h1 {
+      font-size: var(--thirtyFive) !important;
+    }
+    p {
+      font-size: var(--eighteen) !important;
+    }
   }
 }
 
@@ -489,4 +523,24 @@
   .chat {
     bottom: 8.5% !important;
   }
+}
+
+.img-sec::before {
+  .container-fluid {
+    div {
+      position: relative;
+      z-index: 10;
+    }
+  }
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #3a3737, transparent);
+  z-index: 0;
+  // opacity: 0.7;
 }

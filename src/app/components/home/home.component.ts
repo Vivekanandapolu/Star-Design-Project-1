@@ -1,5 +1,4 @@
-
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, HostListener, OnInit, OnDestroy } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
@@ -15,42 +14,41 @@ import { trigger, transition, style, animate } from '@angular/animations';
     ]),
   ]
 })
-export class HomeComponent implements OnInit {
-  windowWidth: boolean = false;
+export class HomeComponent implements OnInit, OnDestroy {
+  windowWidth: number = window.innerWidth;
+  isLeftScrollable: boolean = false;
+  isRightScrollable: boolean = false;
+  @ViewChild('cards') cardsContainers: ElementRef | undefined;
+  scrollIntervalId: any;
+  scrollDirection: string = 'right';
   windowWidth786: boolean = false;
 
-  isLeftScrollable: boolean = false;
-  isRightScrollable: boolean = true;
-  @ViewChild('cards') cardsContainers: ElementRef | undefined;
   ngOnInit(): void {
-    this.windowWidth = window.innerWidth <= 1024;
+    this.updateScrollState();
+    this.startAutoScroll();
     this.windowWidth786 = window.innerWidth <= 786;
     window.addEventListener('resize', () => {
-      this.windowWidth = window.innerWidth <= 1024;
       this.windowWidth786 = window.innerWidth <= 786;
+      this.updateScrollState();
     });
   }
 
-
-  slide(direction: string) {
-    if (this.cardsContainers)
-      if (direction === 'left') {
-        this.cardsContainers.nativeElement.scrollLeft -= 350;
-
-      }
-      else if (direction === 'right') {
-        this.cardsContainers.nativeElement.scrollLeft += 350;
-      }
+  ngOnDestroy(): void {
+    this.clearAutoScroll();
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.windowWidth = event.target.innerWidth;
+    this.updateScrollState();
+  }
 
-  slide1(direction: string) {
+  slide(direction: string) {
     if (this.cardsContainers) {
       const cards = this.cardsContainers.nativeElement;
-      const scrollStep = 1140; // Adjust as needed
+      const scrollStep = this.calculateScrollStep(); // Calculate scroll step dynamically
 
       if (direction === 'left') {
-        // this.cardsContainers.nativeElement.scrollLeft -= 350;
         const newScrollLeft = cards.scrollLeft - scrollStep;
         cards.scrollLeft = Math.max(newScrollLeft, 0); // Ensure scrollLeft doesn't go below 0
       } else if (direction === 'right') {
@@ -68,9 +66,65 @@ export class HomeComponent implements OnInit {
 
       // Check if scroll is at the leftmost position
       this.isLeftScrollable = cards.scrollLeft > 0;
-
       // Check if scroll is at the rightmost position
       this.isRightScrollable = cards.scrollLeft < (cards.scrollWidth - cards.offsetWidth);
+
+      if (!this.isRightScrollable) {
+        this.scrollDirection = 'left';
+      } else if (!this.isLeftScrollable) {
+        this.scrollDirection = 'right';
+      }
+    }
+  }
+
+  startAutoScroll() {
+    this.clearAutoScroll(); // Clear any existing intervals
+    this.scrollIntervalId = setInterval(() => {
+      this.slide(this.scrollDirection);
+      this.updateScrollState();
+
+      // Change direction if we've reached the end of the scrollable area
+      if (!this.isRightScrollable) {
+        this.scrollDirection = 'left';
+      } else if (!this.isLeftScrollable) {
+        this.scrollDirection = 'right';
+      }
+    }, 1500); // Trigger every second
+  }
+
+  clearAutoScroll() {
+    if (this.scrollIntervalId) {
+      clearInterval(this.scrollIntervalId);
+      this.scrollIntervalId = null;
+    }
+  }
+
+  calculateScrollStep(): number {
+    // Calculate scroll step based on the width of each card
+    if (this.cardsContainers && this.cardsContainers.nativeElement) {
+      const cardWidth = this.cardsContainers.nativeElement.children[0].offsetWidth + 15; // Assuming all cards have the same width
+      console.log(cardWidth, "/////");
+      return cardWidth;
+    } else {
+      return 0;
+    }
+  }
+
+  slide1(direction: string) {
+    if (this.cardsContainers) {
+      const cards = this.cardsContainers.nativeElement;
+      const scrollStep = 1140; // Adjust as needed
+
+      if (direction === 'left') {
+        // this.cardsContainers.nativeElement.scrollLeft -= 350;
+        const newScrollLeft = cards.scrollLeft - scrollStep;
+        cards.scrollLeft = Math.max(newScrollLeft, 0); // Ensure scrollLeft doesn't go below 0
+      } else if (direction === 'right') {
+        const newScrollLeft = cards.scrollLeft + scrollStep;
+        cards.scrollLeft = Math.min(newScrollLeft, cards.scrollWidth - cards.clientWidth); // Ensure scrollLeft doesn't exceed scrollWidth
+      }
     }
   }
 }
+
+

@@ -1,9 +1,12 @@
 <!-- <app-header></app-header> -->
 <div class="container-fluid">
     <div class="img-sec">
+        <div class="layered-section"></div>
+
         <div class="" [ngClass]="{'container':!windowWidth,'mt-0':!windowWidth,'container-fluid':windowWidth}">
             <div class="row h-100 pt-sm-5">
-                <div class="col-lg-7 col-xl-7 col-xxl-7 col-md-7 col-sm-12 " [ngClass]="{'mb-3':windowWidth}">
+                <div class="d-flex align-items-center justify-content-center col-lg-7 col-xl-7 col-xxl-7 col-md-7 col-sm-12 "
+                    [ngClass]="{'mb-3':windowWidth}">
                     <div [ngClass]="{'px-3': windowWidth}"
                         class="h-100 left-col d-flex flex-column gap-2 align-items-start justify-content-center">
                         <h1 class="m-0 mb-4 fw-bold" [@dropAnimation]>LEARN, CERTIFY,<br>MAKE AN IMPACT.</h1>
@@ -16,6 +19,7 @@
                         src="/assets/Landing Page/heroimage.stardesigninstitute.png" alt="">
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -197,7 +201,7 @@
     </div>
 
     <div class="container-fluid  why-star py-5">
-        <div class="container pb-5">
+        <div class="container ">
             <h1 class="m-0  fw-bold text-center ">Why Star design Institute ?</h1>
             <div class="row">
                 <div class="col-lg-6 col-xl-6   col-xxl-4 col-md-6 col-12 "
@@ -382,7 +386,7 @@
         </div>
     </div> -->
 
-    <div class="container-fluid bg-white  py-5">
+    <div class="container-fluid bg-white  pt-5">
         <div class="container work mt-0">
             <div class="content1 text-center ">
                 <h1 class="fw-bold m-0">
@@ -469,21 +473,19 @@
         <div class="container experience">
             <div class="content1 text-center mt-5 mb-4">
                 <h1 class="fw-bold m-0">
-                    Student Experiences
+                    Placement Stories
                 </h1>
-                <p class="m-0">Here’s what they have to say about their based on the respective course & Learning
-                    experience…</p>
+                <p class="m-0">Let’s hear from our students who were placed with different firms based on the respective
+                    courses.</p>
             </div>
             <div class="arrows d-flex justify-content-end ">
                 <div class="d-flex align-items-center gap-4 mb-3">
-                    <!-- <i class="ri-arrow-left-line " ></i> -->
                     <img width="20px" src="/assets/arrow/Group 76396.svg" alt="" (click)="slide1('left')"
                         (click)="slide('left')" [ngClass]="{'img-scroll':!isLeftScrollable}"
                         [style.pointer-events]="isLeftScrollable ? 'auto' : 'none'">
                     <img width="20px" src="/assets/arrow/Group 75711.svg" alt="" (click)="slide1('right')"
                         (click)="slide('right')" [ngClass]="{'img-scroll':!isRightScrollable}"
                         [style.pointer-events]="isRightScrollable ? 'auto' : 'none'">
-                    <!-- <i class="ri-arrow-right-line" ></i> -->
                 </div>
             </div>
             <div class="cards" #cards>
@@ -585,7 +587,7 @@
                 alt="">
             <img src="/assets/Landing Page/Affiliations, Accreditations & Recognitions/adobe.star design institute.svg"
                 alt="">
-            <img src="/assets/JFANU.svg" alt="">
+            <img src="/assets/JNAFAU_logo.png" alt="">
             <img src="/assets/Landing Page/Affiliations, Accreditations & Recognitions/chitkara university..star design institute.svg"
                 alt="">
         </div>

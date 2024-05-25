@@ -6,6 +6,18 @@
   box-shadow: 0px 3px 6px #00000029;
   background-position-x: 65%;
   min-height: 78vh;
+  position: relative;
+  .layered-section {
+    background: linear-gradient(
+      to right,
+      var(--bg-red) 20%,
+      transparent 80%
+    ); /* Linear gradient from left (#000080) to transparent */
+  }
+  .row {
+    position: relative;
+    z-index: 2;
+  }
 }
 .mainheader {
   position: relative;
@@ -17,12 +29,18 @@
     color: #ffffff;
     text-transform: capitalize;
     opacity: 1;
+    line-height: 70px;
   }
   p {
     letter-spacing: 0px;
     color: #ffffff;
     opacity: 1;
   }
+}
+
+.slash {
+  position: relative;
+  right: 11px;
 }
 .content1 {
   h1 {
@@ -412,6 +430,6 @@
     grid-template-columns: repeat(5, minmax(200px, 1fr)) !important;
   }
   .mainheader {
-    top: 30vh !important;
+    top: 25vh !important;
   }
 }

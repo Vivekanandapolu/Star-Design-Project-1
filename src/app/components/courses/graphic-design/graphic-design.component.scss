@@ -35,7 +35,6 @@
     position: relative;
     bottom: 110px;
     .vr {
-      // width: 2px;
       margin: 30px 0px;
     }
     .first {
@@ -230,7 +229,6 @@
 .accordion-div {
   .accordion {
     border: none;
-    border-radius: 25px;
     overflow: hidden;
   }
   .accordion-item {
@@ -320,19 +318,21 @@
   .about-hero {
     background-position-x: 65% !important;
     .position-absolute {
+      left: 30px !important;
+      bottom: 30px !important;
       h1 {
         font-size: 40px !important;
       }
       p {
-        font-size: 30px !important;
+        font-size: 25px !important;
       }
     }
   }
   .first-label {
-    font-size: var(--ten) !important;
+    font-size: var(--ten);
   }
   .first-text {
-    font-size: var(--thirteen) !important;
+    font-size: var(--thirteen);
   }
 }
 

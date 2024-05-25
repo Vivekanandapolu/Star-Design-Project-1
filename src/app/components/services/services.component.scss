@@ -7,7 +7,15 @@
 
 .bgimg1 {
   background: url("/assets/Hero images/services. star design instutute.png.jpg");
+  position: relative;
 
+  .layered-section {
+    background: linear-gradient(
+      to right,
+      #ffd700 20%,
+      transparent 80%
+    ); /* Linear gradient from left (#000080) to transparent */
+  }
   min-height: 78vh;
   width: 100%;
   background-repeat: no-repeat;
@@ -23,6 +31,7 @@
   h1 {
     font: normal normal bold 75px / 92px Montserrat;
     letter-spacing: 0px;
+    line-height: 80px;
     color: #ffffff;
     opacity: 1;
   }
@@ -30,6 +39,11 @@
     font: normal normal normal var(--thirtyFive) / 52px Montserrat;
     letter-spacing: 0px;
     opacity: 1;
+  }
+  .container {
+    z-index: 2;
+    position: relative;
+    bottom: 10vh;
   }
 }
 
