@@ -64,16 +64,14 @@
 }
 .service {
   h1 {
-    font: normal normal bold var(--fiftyFive) / 68px Montserrat;
-    letter-spacing: 0px;
     color: #000000;
     opacity: 1;
+    font-size: var(--fiftyFive);
+    font-weight: bold;
   }
   p {
-    font: normal normal 600 var(--twentyFive) / 50px Nunito;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
+    font-size: var(--twentyFive);
+    font-weight: 600;
   }
 }
 .design {
@@ -288,6 +286,15 @@ p {
   .codeingh1 {
     font-size: 16px;
   }
+
+  .number {
+    display: none;
+  }
+  .number-div {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -295,11 +302,20 @@ p {
     font-size: 20px;
   }
 
+  .service {
+    h1 {
+      font-size: 40px !important;
+      font-weight: 600;
+    }
+    p {
+      font-size: 17px !important;
+    }
+  }
   p {
     font-size: 12px;
   }
   .image {
-    height: 326px !important;
+    height: 200px !important;
   }
 
   .card {

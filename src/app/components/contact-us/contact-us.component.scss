@@ -22,10 +22,10 @@
   display: flex;
   align-items: flex-end;
   h1 {
-    font-size: var(--fifty) !important;
+    font-size: var(--fifty);
   }
   p {
-    font-size: var(--twenty) !important;
+    font-size: var(--twenty);
   }
 }
 
@@ -120,6 +120,14 @@
   .right {
     .card {
       width: 450px;
+    }
+  }
+}
+
+@media (max-width: 786px) {
+  .bgimg1 {
+    p {
+      font-size: var(--twentyFive) !important;
     }
   }
 }

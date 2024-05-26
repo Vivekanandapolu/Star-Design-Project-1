@@ -24,11 +24,7 @@
   top: 20vh;
 
   h1 {
-    font: normal normal bold var(--sixty) / 60px Montserrat;
-    letter-spacing: 0px;
     color: #ffffff;
-    text-transform: capitalize;
-    opacity: 1;
     line-height: 70px;
   }
   p {
@@ -343,9 +339,10 @@
 @media (max-width: 768px) {
   .mainheader {
     h1 {
-      text-wrap: balance;
       font-size: 30px !important;
+      line-height: 50px;
     }
+    top: 0vh;
   }
   .footertext {
     h1 {

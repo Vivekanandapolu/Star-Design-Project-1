@@ -7,10 +7,10 @@
       <p class=" m-0  fw-medium">We Can Help From Concept to Launch</p>
     </div>
   </div>
-  <div class="container-fluid bg-white  py-5">
+  <div class="container-fluid bg-white  pt-5">
     <div class="container mt-4 py-3 mb-4">
       <div class="service ">
-        <h1 class="m-0">UI UX Design Service</h1>
+        <h1 class="m-0 mb-3">UI UX Design Service</h1>
         <p class="m-0 fw-medium">We design products and experiences that accomplish <br> business goals and meet user
           expectations.</p>
       </div>
@@ -20,49 +20,57 @@
       <div class="row mt-4 mb-4">
         <div class="col-lg-3 col-md-6 col-sm-6 ">
           <div class="mt-3">
-            <img src="/assets/Services/UI UX Design Service/Understand Users.star design institute.svg">
+            <p class="number">1.</p>
           </div>
-          <div class="mt-4">
-            <p>1.</p>
-            <h4>Understand Users</h4>
-            <p class="fw-medium">Systematically record the specific needs of your customers</p>
+          <div class="mt-4 number-div">
+            <img class="mb-3" src="/assets/Services/UI UX Design Service/Understand Users.star design institute.svg">
+            <div>
+              <h4>Understand Users</h4>
+              <p class="fw-medium">Systematically record the specific needs of your customers</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="mt-3 ">
+            <p class="number">2.</p>
+          </div>
+          <div class="mt-4 number-div">
+            <img class="mb-3" src="/assets/Services/UI UX Design Service/Develop Prototypes.star design institute.svg">
+            <div>
+              <h4>Develop Prototypes</h4>
+              <p class="fw-medium">Validate your vision with interactive prototypes</p>
+            </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="mt-3">
-            <img src="/assets/Services/UI UX Design Service/Develop Prototypes.star design institute.svg">
+            <p class="number">3.</p>
           </div>
-          <div class="mt-4">
-            <p>2.</p>
-            <h4>Develop Prototypes</h4>
-            <p class="fw-medium">Validate your vision with interactive prototypes</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div class="mt-3">
-            <img src="/assets/Services/UI UX Design Service/Build A New Product.star design institute.svg">
-          </div>
-          <div class="mt-4">
-            <p>3.</p>
-            <h4>Build A New Product</h4>
-            <p class="fw-medium">Start in the market with a fresh UX design</p>
+          <div class="mt-4 number-div">
+            <img class="mb-3" src="/assets/Services/UI UX Design Service/Build A New Product.star design institute.svg">
+            <div>
+              <h4>Build A New Product</h4>
+              <p class="fw-medium">Start in the market with a fresh UX design</p>
+            </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="mt-3">
-            <img src="/assets/Services/UI UX Design Service/Improve A Product.star design institute.svg">
+            <p class="number">4.</p>
           </div>
-          <div class="mt-4">
-            <p>4.</p>
-            <h4>Improve A Product</h4>
-            <p class="fw-medium">Gain market share with strategic UX/UI design</p>
+          <div class="mt-4 number-div">
+            <img class="mb-3" src="/assets/Services/UI UX Design Service/Improve A Product.star design institute.svg">
+            <div>
+              <h4>Improve A Product</h4>
+              <p class="fw-medium">Gain market share with strategic UX/UI design</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container-fluid bg-white  py-5">
+  <div class="container-fluid bg-white  pt-5">
     <div class="container ">
       <div class="recent">
         <h1>Our Recent Work</h1>
@@ -110,7 +118,7 @@
     </div>
   </div>
 
-  <div class="container-fluid bg-grey py-5">
+  <div class="container-fluid bg-grey ">
     <div class="container">
       <div class="row burnoncode">
         <div class="col-lg-9 col-xxl-9 col-sm-12 col-md-12 mb-4">
@@ -146,25 +154,28 @@
       <p class="fw-medium">User experiences are the literal connection between your brand and your customer.</p>
     </div>
     <div class="mt-4">
-      <div class="row h-100">
-        <div class="col-lg-4 overflow-hidden col-xxl-4 col-sm-12 col-6 col-md-6 mb-4  pe-0">
+      <div class="row h-100" [ngClass]="{'px-3':windowWidth786}">
+        <div class="col-lg-4 overflow-hidden col-xxl-4 col-sm-12 col-6 col-md-6  pe-0"
+          [ngClass]="{'mb-4':!windowWidth786}">
           <img class="img-fluid first" src="/assets/Services/Learning. Innovating. Delivering/temp4.png">
         </div>
         <div
-          class="col-lg-4 overflow-hidden d-flex flex-column justify-content-between  col-xxl-4 col-sm-12 col-6 col-md-6 mb-4 pe-0">
+          class="col-lg-4 overflow-hidden d-flex flex-column justify-content-between  col-xxl-4 col-sm-12 col-6 col-md-6 pe-0"
+          [ngClass]="{'mb-4':!windowWidth786}">
           <div class="flex">
             <img class="img-fluid" src="/assets/Services/Learning. Innovating. Delivering/temp1.png">
           </div>
           <div class="flex">
-            <img class='img-fluid ' src="/assets//Services/Learning. Innovating. Delivering/temp2.png">
+            <img class='img-fluid' src="/assets//Services/Learning. Innovating. Delivering/temp2.png">
           </div>
         </div>
         <div class="col-lg-4 overflow-hidden d-flex flex-xl-column
-           justify-content-between  col-xxl-4 col-sm-12 col-6 col-md-6 mb-4 ">
+           justify-content-between  col-xxl-4 col-sm-12 col-md-6 mb-4 "
+          [ngClass]="{'p-0':windowWidth786,'col-12':windowWidth786}">
           <div class="flex">
             <img class="img-fluid" src="/assets/Services/Learning. Innovating. Delivering/temp.png">
           </div>
-          <div class="flex">
+          <div class="flex ps-2">
             <img class='img-fluid' src="/assets//Services/Learning. Innovating. Delivering/temp3.png">
           </div>
         </div>
@@ -181,19 +192,19 @@
             <p class="fw-medium mb-5">Our services are tailored to your specific needs & budget </p>
 
             <div class="row" style="width: -webkit-fill-available;">
-              <div class="col-sm-6 col-6 col-lg-4 col-md-6 col-xl-4 col-xxl-4">
+              <div class="col-sm-6 col-6 col-lg-4 col-md-6 col-xl-3 col-xxl-3">
                 <img src="../../../assets/Services New icon/We Guarantee.svg">
                 <p class="fs-6 mt-3">We Guarantee <br><b class="fw-bold">High Quality</b> <br> On all jobs</p>
               </div>
-              <div class="col-sm-6 col-6 col-lg-4 col-md-6 col-xl-4 col-xxl-4">
+              <div class="col-sm-6 col-6 col-lg-4 col-md-6 col-xl-3 col-xxl-3">
                 <img src="../../../assets/Services New icon/Instant_Quoting.svg">
                 <p class="fs-6 mt-3">Instant Quoting <br><b class="fw-bold">Competitive Prices</b><br> Every Time</p>
               </div>
-              <div class="col-sm-6 col-6 col-lg-4 col-md-6 col-xl-4 col-xxl-4">
+              <div class="col-sm-6 col-6 col-lg-4 col-md-6 col-xl-3 col-xxl-3">
                 <img src="../../../assets/Services New icon/Always on time.svg">
                 <p class="fs-6 mt-3">Always on time <br><b class="fw-bold">Fast Turnaround</b><br> On all jobs</p>
               </div>
-              <div class="col-sm-6 col-6 col-lg-4 col-md-6 col-xl-4 col-xxl-4">
+              <div class="col-sm-6 col-6 col-lg-4 col-md-6 col-xl-3 col-xxl-3">
                 <img src="../../../assets/Services New icon/_20_Year_of.svg">
                 <p class="fs-6 mt-3">12+Year of <br><b class="fw-bold">Experience</b><br> in product design</p>
               </div>
