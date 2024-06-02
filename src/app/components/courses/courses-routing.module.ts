@@ -21,26 +21,34 @@ const routes: Routes = [
     children: [
       {
         path: 'UI-UX-Design',
-        component: UIUXDesignComponent
+        component: UIUXDesignComponent,
+        data: { title: 'UI/UX Design' }
       },
       {
         path: 'UI-VI-Design',
-        component: UiViDesignComponent
-      }, {
+        component: UiViDesignComponent,
+        data: { title: 'UI/VI Design' }
+      },
+      {
         path: 'AR-VR-UX-Design',
-        component: ArVrUxDesignComponent
-      }, {
+        component: ArVrUxDesignComponent,
+        data: { title: 'AR/VR UX Design' }
+      },
+      {
         path: 'Product-Management',
-        component: ProductManagementComponent
-      }, {
+        component: ProductManagementComponent,
+        data: { title: 'Product Management' }
+      },
+      {
         path: 'Bachelor-of-Design',
-        component: BachelorDesignComponent
+        component: BachelorDesignComponent,
+        data: { title: 'Bachelor of Design' }
       },
       {
         path: 'Graphic-Design',
-        component: GraphicDesignComponent
-      },
-
+        component: GraphicDesignComponent,
+        data: { title: 'Graphic Design' }
+      }
     ]
   }
 ];

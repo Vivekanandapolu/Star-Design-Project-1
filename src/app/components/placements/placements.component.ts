@@ -46,5 +46,4 @@ export class PlacementsComponent implements OnInit {
       this.isRightScrollable = cards.scrollLeft < (cards.scrollWidth - cards.offsetWidth);
     }
   }
-
 }

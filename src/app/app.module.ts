@@ -1,5 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,7 +35,7 @@ import { CustomPreloadingStrategy } from './shared/services-comp/custom-preloadi
     BrowserAnimationsModule
     // HeaderModule
   ],
-  providers: [CustomPreloadingStrategy],
+  providers: [CustomPreloadingStrategy, Title],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

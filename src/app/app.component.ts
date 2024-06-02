@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TitleService } from './shared/title.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'star-design';
+  constructor(private titleService: TitleService) {
+
+  }
 }

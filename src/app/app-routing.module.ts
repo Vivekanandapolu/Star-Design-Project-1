@@ -12,33 +12,39 @@ import { CustomPreloadingStrategy } from './shared/services-comp/custom-preloadi
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    data: { title: 'Home' }
   },
   {
     path: 'Services',
-    component: ServicesComponent
+    component: ServicesComponent,
+    data: { title: 'Services' }
   },
   {
     path: 'Aboutus',
-    component: AboutusComponent
+    component: AboutusComponent,
+    data: { title: 'About Us' }
   },
   {
     path: 'Placements',
-    component: PlacementsComponent
+    component: PlacementsComponent,
+    data: { title: 'Placements' }
   },
   {
     path: 'Contact-Us',
-    component: ContactUsComponent
+    component: ContactUsComponent,
+    data: { title: 'Contact Us' }
   },
   {
     path: 'Hire-Talent',
-    component: HireTalentComponent
+    component: HireTalentComponent,
+    data: { title: 'Hire Talent' }
   },
   {
     path: 'Courses',
-    loadChildren: () => import("./components/courses/courses.module").then(m => m.CoursesModule)
+    loadChildren: () => import("./components/courses/courses.module").then(m => m.CoursesModule),
+    data: { title: 'Courses' }
   }
-
 ];
 
 @NgModule({

@@ -488,7 +488,7 @@
                         [style.pointer-events]="isRightScrollable ? 'auto' : 'none'">
                 </div>
             </div>
-            <div class="cards" #cards>
+            <div class="cards" #cards (scroll)="updateScrollState()">
                 <div class="card ">
                     <div class="card-body">
                         <p class="card-text mb-3">

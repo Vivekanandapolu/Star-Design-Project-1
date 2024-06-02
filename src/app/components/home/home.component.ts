@@ -33,9 +33,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
-  ngOnDestroy(): void {
-    this.clearAutoScroll();
-  }
+
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
@@ -63,7 +61,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   updateScrollState() {
     if (this.cardsContainers) {
       const cards = this.cardsContainers.nativeElement;
-
       // Check if scroll is at the leftmost position
       this.isLeftScrollable = cards.scrollLeft > 0;
       // Check if scroll is at the rightmost position
@@ -80,16 +77,14 @@ export class HomeComponent implements OnInit, OnDestroy {
   startAutoScroll() {
     this.clearAutoScroll(); // Clear any existing intervals
     this.scrollIntervalId = setInterval(() => {
-      this.slide(this.scrollDirection);
+      this.slide1(this.scrollDirection);
       this.updateScrollState();
-
-      // Change direction if we've reached the end of the scrollable area
       if (!this.isRightScrollable) {
         this.scrollDirection = 'left';
       } else if (!this.isLeftScrollable) {
         this.scrollDirection = 'right';
       }
-    }, 1500); // Trigger every second
+    }, 1700);
   }
 
   clearAutoScroll() {
@@ -100,7 +95,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   calculateScrollStep(): number {
-    // Calculate scroll step based on the width of each card
+
     if (this.cardsContainers && this.cardsContainers.nativeElement) {
       const cardWidth = this.cardsContainers.nativeElement.children[0].offsetWidth + 15; // Assuming all cards have the same width
       console.log(cardWidth, "/////");
@@ -108,15 +103,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     } else {
       return 0;
     }
+
   }
 
   slide1(direction: string) {
     if (this.cardsContainers) {
       const cards = this.cardsContainers.nativeElement;
-      const scrollStep = 1140; // Adjust as needed
+      const scrollStep = 362;
 
       if (direction === 'left') {
-        // this.cardsContainers.nativeElement.scrollLeft -= 350;
         const newScrollLeft = cards.scrollLeft - scrollStep;
         cards.scrollLeft = Math.max(newScrollLeft, 0); // Ensure scrollLeft doesn't go below 0
       } else if (direction === 'right') {
@@ -124,6 +119,10 @@ export class HomeComponent implements OnInit, OnDestroy {
         cards.scrollLeft = Math.min(newScrollLeft, cards.scrollWidth - cards.clientWidth); // Ensure scrollLeft doesn't exceed scrollWidth
       }
     }
+  }
+
+  ngOnDestroy(): void {
+    this.clearAutoScroll();
   }
 }
 
