@@ -16,34 +16,34 @@ const routes: Routes = [
     data: { title: 'Home' }
   },
   {
-    path: 'Services',
+    path: 'services',
     component: ServicesComponent,
-    data: { title: 'Services' }
+    data: { title: 'ervices' }
   },
   {
-    path: 'Aboutus',
+    path: 'aboutus',
     component: AboutusComponent,
-    data: { title: 'About Us' }
+    data: { title: 'about us' }
   },
   {
-    path: 'Placements',
+    path: 'placements',
     component: PlacementsComponent,
-    data: { title: 'Placements' }
+    data: { title: 'placements' }
   },
   {
-    path: 'Contact-Us',
+    path: 'contact-us',
     component: ContactUsComponent,
-    data: { title: 'Contact Us' }
+    data: { title: 'contact us' }
   },
   {
-    path: 'Hire-Talent',
+    path: 'hire-talent',
     component: HireTalentComponent,
-    data: { title: 'Hire Talent' }
+    data: { title: 'hire talent' }
   },
   {
-    path: 'Courses',
+    path: 'courses',
     loadChildren: () => import("./components/courses/courses.module").then(m => m.CoursesModule),
-    data: { title: 'Courses' }
+    data: { title: 'courses' }
   }
 ];
 
@@ -51,8 +51,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes, {
       scrollPositionRestoration: 'enabled',
-      preloadingStrategy: CustomPreloadingStrategy,
-      useHash: true
+      preloadingStrategy: CustomPreloadingStrategy
     })
   ], exports: [RouterModule]
 })

@@ -12,7 +12,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'UI-UX-Design',
+    redirectTo: 'ui-ux-design',
     pathMatch: 'full',
   },
   {
@@ -20,34 +20,34 @@ const routes: Routes = [
     component: CoursesComponent,
     children: [
       {
-        path: 'UI-UX-Design',
+        path: 'ui-ux-design',
         component: UIUXDesignComponent,
-        data: { title: 'UI/UX Design' }
+        data: { title: 'ui-ux-design' }
       },
       {
-        path: 'UI-VI-Design',
+        path: 'ui-vi-design',
         component: UiViDesignComponent,
-        data: { title: 'UI/VI Design' }
+        data: { title: 'ui-vi-design' }
       },
       {
-        path: 'AR-VR-UX-Design',
+        path: 'ar-vr-ux-design',
         component: ArVrUxDesignComponent,
-        data: { title: 'AR/VR UX Design' }
+        data: { title: 'ar-vr-ux-design' }
       },
       {
-        path: 'Product-Management',
+        path: 'product-management',
         component: ProductManagementComponent,
-        data: { title: 'Product Management' }
+        data: { title: 'product-management' }
       },
       {
-        path: 'Bachelor-of-Design',
+        path: 'bachelor-of-design',
         component: BachelorDesignComponent,
-        data: { title: 'Bachelor of Design' }
+        data: { title: 'bachelor-of-design' }
       },
       {
-        path: 'Graphic-Design',
+        path: 'graphic-design',
         component: GraphicDesignComponent,
-        data: { title: 'Graphic Design' }
+        data: { title: 'graphic-design' }
       }
     ]
   }
