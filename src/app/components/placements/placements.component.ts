@@ -1,4 +1,5 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-placements',
@@ -16,6 +17,17 @@ export class PlacementsComponent implements OnInit {
       this.windowWidth = window.innerWidth <= 1024;
     });
   }
+  constructor(private metaService: Meta) {
+    this.setMeta()
+  }
+
+  setMeta() {
+    this.metaService.updateTag({
+      name: 'description',
+      content: "Get Your Offer Letter With 100% Placements Guaranteed *Program"
+    });
+  }
+
 
 
   slide(direction: string) {

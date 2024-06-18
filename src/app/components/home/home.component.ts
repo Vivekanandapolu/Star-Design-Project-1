@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef, HostListener, OnInit, OnDestroy } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -22,6 +23,16 @@ export class HomeComponent implements OnInit, OnDestroy {
   scrollIntervalId: any;
   scrollDirection: string = 'right';
   windowWidth786: boolean = false;
+  constructor(private metaService: Meta) {
+    this.setMeta()
+  }
+
+  setMeta() {
+    this.metaService.updateTag({
+      name: 'description',
+      content: "Learn, Certify, Make an Impact. Skills for a Better Future. Discover essential skills and certifications for career advancement. Enhance your expertise in product management, software development, data science, and more. Start your journey today!"
+    });
+  }
 
   ngOnInit(): void {
     this.updateScrollState();
