@@ -14,6 +14,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomPreloadingStrategy } from './shared/services-comp/custom-preloading-strategy';
+import { UrlSerializer } from '@angular/router';
+import { LowerCaseUrlSerializer } from './shared/LowerCaseUrlSerializer';
 
 
 @NgModule({
@@ -35,7 +37,7 @@ import { CustomPreloadingStrategy } from './shared/services-comp/custom-preloadi
     BrowserAnimationsModule
     // HeaderModule
   ],
-  providers: [CustomPreloadingStrategy, Title],
+  providers: [CustomPreloadingStrategy, Title, { provide: UrlSerializer, useClass: LowerCaseUrlSerializer }],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

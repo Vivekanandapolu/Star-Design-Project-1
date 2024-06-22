@@ -10,41 +10,18 @@ import { CustomPreloadingStrategy } from './shared/services-comp/custom-preloadi
 // import { HeaderComponent } from './shared/header/header.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent,
-    data: { title: 'Home' }
-  },
-  {
-    path: 'services',
-    component: ServicesComponent,
-    data: { title: 'ervices' }
-  },
-  {
-    path: 'aboutus',
-    component: AboutusComponent,
-    data: { title: 'about us' }
-  },
-  {
-    path: 'placements',
-    component: PlacementsComponent,
-    data: { title: 'placements' }
-  },
-  {
-    path: 'contact-us',
-    component: ContactUsComponent,
-    data: { title: 'contact us' }
-  },
-  {
-    path: 'hire-talent',
-    component: HireTalentComponent,
-    data: { title: 'hire talent' }
-  },
+  { path: '', component: HomeComponent, data: { title: 'ui ux design course | ui ux design course in hyderabad with 100% placements | star design institute, staruiux.com' } },
+  { path: 'services', component: ServicesComponent, data: { title: 'Services' } },
+  { path: 'aboutus', component: AboutusComponent, data: { title: 'About Us' } },
+  { path: 'placements', component: PlacementsComponent, data: { title: 'Placements' } },
+  { path: 'contact-us', component: ContactUsComponent, data: { title: 'Contact Us' } },
+  { path: 'hire-talent', component: HireTalentComponent, data: { title: 'Hire Talent' } },
   {
     path: 'courses',
-    loadChildren: () => import("./components/courses/courses.module").then(m => m.CoursesModule),
-    data: { title: 'courses' }
-  }
+    loadChildren: () => import('./components/courses/courses.module').then(m => m.CoursesModule),
+    data: { title: 'Courses' }
+  },
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({

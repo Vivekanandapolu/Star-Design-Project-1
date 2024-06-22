@@ -33,8 +33,12 @@ export class ContactUsComponent {
     }
     else if (location === 'Ameerpet') {
       destinationAddress = 'Meghamala Apartment road, Kumar Basti, Srinivasa Nagar, Ameerpet, Hyderabad, Telangana 500082';
-    } else if (location === 'Himayat Nagar') {
+    }
+    else if (location === 'Himayat Nagar') {
       destinationAddress = '2nd Floor, Om Towers, Opposite McDonald’s, Himayatnagar Main Road, Hyderabad-500029 India';
+    }
+    else if (location === 'Hitech') {
+      destinationAddress = 'Sowbagyas Amulyas Complex, Hitech City Rd, Jaihind Enclave, HITEC City, Hyderabad, Telangana 500081';
     }
     const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destinationAddress)}`;
 
