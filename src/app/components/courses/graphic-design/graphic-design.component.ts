@@ -13,7 +13,7 @@ export class GraphicDesignComponent {
   setMeta() {
     this.metaService.updateTag({
       name: 'description',
-      content: "Graphic Designing - design your future. Discover the essential skills and techniques of graphic design. Learn about typography, color theory, layout design, and more. Start your journey to become a professional graphic designer."
+      content: "graphic design - graphic design course - Best Graphic Design Course - Graphic Design Certification - Graphic Design Training"
     });
   }
 }

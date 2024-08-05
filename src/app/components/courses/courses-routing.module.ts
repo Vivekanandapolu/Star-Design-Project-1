@@ -22,32 +22,32 @@ const routes: Routes = [
       {
         path: 'ui-ux-design',
         component: UIUXDesignComponent,
-        data: { title: 'ui-ux-design' }
+        data: { title: 'ux design course - user experience design course - learn ui ux design - User experience design' }
       },
       {
         path: 'ui-vi-design',
         component: UiViDesignComponent,
-        data: { title: 'ui-vi-design' }
+        data: { title: 'ux-vi design course - user experience design course - learn ux vi design - User experience design' }
       },
       {
         path: 'ar-vr-ux-design',
         component: ArVrUxDesignComponent,
-        data: { title: 'ar-vr-ux-design' }
+        data: { title: 'vr ux design - ux design for vr - virtual reality - augmented reality designer - ar ux' }
       },
       {
         path: 'product-management',
         component: ProductManagementComponent,
-        data: { title: 'product-management' }
+        data: { title: 'product management - product manager - Best UX Product Management Certification - Product Management Bootcamp - Learn UX Product Management' }
       },
       {
         path: 'bachelor-of-design',
         component: BachelorDesignComponent,
-        data: { title: 'bachelor-of-design' }
+        data: { title: 'top b.des courses in ux design - bachelor of design in ux - bdes ux design - B.Design in User Experience' }
       },
       {
         path: 'graphic-design',
         component: GraphicDesignComponent,
-        data: { title: 'graphic-design' }
+        data: { title: 'graphic design - graphic design course - Best Graphic Design Course - Graphic Design Certification - Graphic Design Training' }
       }
     ]
   }

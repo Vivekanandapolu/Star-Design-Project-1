@@ -25,6 +25,7 @@
   min-height: 72px;
   padding: 15px 0px;
   position: relative;
+  max-width: 100%;
 }
 .header > * {
   flex: 1;
@@ -102,7 +103,7 @@ a.active {
     padding: 5px !important;
   }
   .header {
-    margin: 0px 10px !important;
+    // margin: 0px 10px !important;
   }
   .header > div {
     flex: auto;
