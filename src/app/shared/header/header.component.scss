@@ -131,10 +131,13 @@ a.active {
 
 @media (min-width: 1440px) {
   .list {
-    gap: 60px !important;
+    gap: 0px !important;
+  }
+
+  .list > li {
+    max-width: 150px;
   }
 }
-
 .ri-menu-line {
   font-size: 30px;
 }
