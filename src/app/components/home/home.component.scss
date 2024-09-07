@@ -198,10 +198,7 @@
   .why-star {
     background-color: var(--white);
     .display-5 {
-      font-size: 45px;
-    }
-    .row {
-      // padding: 0px 70px;
+      font-size: 48px;
     }
     .card-img-top {
       height: 100%;
@@ -382,6 +379,7 @@
     }
     // grid-template-columns: repeat(2, minmax(0px, 1fr));
   }
+
   .footer {
     .foot-1 {
       .bottom {
@@ -414,10 +412,13 @@
     .row {
       padding: 0px !important;
       .card {
-        border: 1px solid #c3ad10bf;
-        padding: 5px 20px;
+        padding: 20px 20px;
         // background: #ffffff5e;
         height: 100%;
+        border: 1px solid #eee !important;
+        border-radius: 25px;
+        box-shadow: 5px 5px 10px #eee !important;
+
         .star-1 {
           img {
             min-width: 70px !important;

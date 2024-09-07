@@ -534,19 +534,26 @@ button.btn {
     }
   }
 }
-
+.offcanvas {
+  background: var(--bg-blue) !important;
+  border-radius: 0px 25px 25px 0px;
+  overflow: hidden;
+}
 .offcanvas-body {
   // background-color: rgba(0, 0, 255, 0.8) !important;
   background: var(--bg-blue) !important;
   a:is(.active) {
-    color: black !important;
+    color: white !important;
+    font-size: 30px !important;
+    border-bottom: 1px solid white;
+    width: fit-content;
   }
   a {
     color: white !important;
   }
-  a:hover {
-    color: var(--black) !important;
-  }
+  // a:hover {
+  //   color: var(--black) !important;
+  // }
   .dropdown-menu {
     background-color: transparent !important;
     border: 0px;
@@ -556,10 +563,13 @@ button.btn {
 }
 
 .offcanvas-header {
-  background: var(--bg-blue);
   border-bottom: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    height: auto !important;
+  }
 }
 
 .layered-section {
