@@ -33,7 +33,7 @@ export class PlacementsComponent implements OnInit {
   slide(direction: string) {
     if (this.cardsContainers) {
       const cards = this.cardsContainers.nativeElement;
-      const scrollStep = 1400; // Adjust as needed
+      const scrollStep = 345; // Adjust as needed
 
       if (direction === 'left') {
         const newScrollLeft = cards.scrollLeft - scrollStep;
@@ -42,7 +42,6 @@ export class PlacementsComponent implements OnInit {
         const newScrollLeft = cards.scrollLeft + scrollStep;
         cards.scrollLeft = Math.min(newScrollLeft, cards.scrollWidth - cards.clientWidth); // Ensure scrollLeft doesn't exceed scrollWidth
       }
-
       this.updateScrollState();
     }
   }
@@ -50,7 +49,6 @@ export class PlacementsComponent implements OnInit {
   updateScrollState() {
     if (this.cardsContainers) {
       const cards = this.cardsContainers.nativeElement;
-
       // Check if scroll is at the leftmost position
       this.isLeftScrollable = cards.scrollLeft > 0;
 

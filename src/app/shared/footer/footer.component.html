@@ -15,7 +15,7 @@
                         <div class="bottom-div">
                             <img src="/assets/Landing Page/Footer/iso.svg" alt="Image in the footer component">
                             <div class="d-flex gap-2 flex-column">
-                                <h4 class="fw-bold m-0">ISO 9001-2015</h4>
+                                <h4 class="fw-bold m-0">ISO 21001 : 2018</h4>
                                 <p class="m-0">CERTIFIED</p>
                             </div>
                         </div>
@@ -36,7 +36,7 @@
                                 <li routerLink="/placements">Placements</li>
                                 <li routerLink="/services">Services</li>
                                 <li>Verify certificate</li>
-                                <li routerLink="/hire-talent">Hire Talent</li>
+                                <!-- <li routerLink="/hire-talent">Hire Talent</li> -->
                                 <li>Events</li>
                                 <li>Blogs</li>
                             </ul>
@@ -57,7 +57,7 @@
                                 <li routerLink="/courses/graphic-design">Graphic Design</li>
                                 <li routerLink="/courses/bachelor-of-design">Bachelor Of Design</li>
                                 <li routerLink="/courses/product-management">Product Management</li>
-                                <li>Photography & Digital Imaging</li>
+                                <li routerLink="/courses/photography&digital-imaging">Photography & DI</li>
                             </ul>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                                 <li class="d-flex gap-2 text-start"><i class="ri-phone-line"></i> +91 9985280011</li>
                                 <li class="d-flex gap-2 text-start"><i class="ri-phone-fill"></i> +91( 40) 35592277
                                 </li>
-                                <li class="d-flex gap-2 text-start"><i class="ri-mail-line"></i> info@stardi.in</li>
+                                <li class="d-flex gap-2 text-start"><i class="ri-mail-line"></i> info@staruiux.com</li>
                             </ul>
                         </div>
                     </div>
@@ -110,12 +110,17 @@
                             <h4 class="fw-bold m-0 foot-title mb-3" style="white-space: nowrap;">STAY CONNECTED WITH US
                             </h4>
                             <div class=" foot-icons">
-                                <img src="/assets/Landing Page/Footer/X.svg" alt="Image in the footer component">
+                                <!-- <img src="/assets/Landing Page/Footer/X.svg" alt="Image in the footer component">
                                 <img src="/assets/Landing Page/Footer/facebook.svg" alt="Image in the footer component">
                                 <img src="/assets/Landing Page/Footer/instagram.svg"
                                     alt="Image in the footer component">
                                 <img src="/assets/Landing Page/Footer/youtube.svg" alt="Image in the footer component">
-                                <img src="/assets/Landing Page/Footer/linkedin.svg" alt="Image in the footer component">
+                                <img src="/assets/Landing Page/Footer/linkedin.svg" alt="Image in the footer component"> -->
+                                <i (click)="navigateTo('twitter')" class="ri-twitter-x-line"></i>
+                                <i (click)="navigateTo('facebook')" class="ri-facebook-fill"></i>
+                                <i (click)="navigateTo('instagram')" class="ri-instagram-fill"></i>
+                                <i (click)="navigateTo('youtube')" class="ri-youtube-fill"></i>
+                                <i (click)="navigateTo('linked')" class="ri-linkedin-box-line"></i>
                             </div>
                         </div>
                     </div>
@@ -143,7 +148,7 @@
                                         <li routerLink="/placements">Placements</li>
                                         <li routerLink="/services">Services</li>
                                         <li>Verify certificate</li>
-                                        <li routerLink="/hire-talent">Hire Talent</li>
+                                        <!-- <li routerLink="/hire-talent">Hire Talent</li> -->
                                         <li>Events</li>
                                         <li>Blogs</li>
                                     </ul>
@@ -166,9 +171,10 @@
                                     <li routerLink="/courses/ui-ux-design">UI/UX Design</li>
                                     <li routerLink="/courses/ar-vr-ux-design">AR-VR/UX Design</li>
                                     <li routerLink="/courses/ui-vi-design">VUI Design</li>
+                                    <li routerLink="/courses/graphic-design">Graphic Design</li>
                                     <li routerLink="/courses/bachelor-of-design">Bachelor Of Design</li>
                                     <li routerLink="/courses/product-management">Product Management</li>
-                                    <li routerLink="/courses/graphic-design">Graphic Design</li>
+                                    <li routerLink="/courses/photography&digital-imaging">Photography & DI</li>
                                 </ul>
                             </div>
                         </div>
@@ -223,7 +229,8 @@
                                     </li>
                                     <li class="d-flex gap-2 text-start"><i class="ri-phone-fill"></i> +91( 40) 35592277
                                     </li>
-                                    <li class="d-flex gap-2 text-start"><i class="ri-mail-line"></i> info@stardi.in</li>
+                                    <li class="d-flex gap-2 text-start"><i class="ri-mail-line"></i> info@staruiux.com
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -250,7 +257,7 @@
     </div>
     <div class="last-foot">
         <p class="m-0">ALL RIGHTS RESERVED © 2024 STAR DESIGN INSTITUTE</p>
-        <p class="m-0">REFUND POLICY | TERMS & CONDITIONS | DISCLAIMERS | PRIVACY POLICY</p>
+        <p class="m-0">SITE MAP | REFUND POLICY | TERMS & CONDITIONS | DISCLAIMERS | PRIVACY POLICY</p>
     </div>
     <p class="m-0">
         <a (click)="openWhatsApp()" target="_blank" class="btn-whatsapp-pulse btn-whatsapp-pulse-border">

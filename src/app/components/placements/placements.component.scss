@@ -21,16 +21,16 @@
 }
 .mainheader {
   position: relative;
-  top: 20vh;
+  top: 15vh;
 
   h1 {
-    color: #ffffff;
-    line-height: 70px;
-    font-size: 60px;
+    color: var(--white);
+    line-height: 95px;
+    font-size: 75px;
   }
   p {
     letter-spacing: 0px;
-    color: #ffffff;
+    color: var(--white);
     opacity: 1;
   }
 }
@@ -160,8 +160,8 @@
   height: max-content;
   // line-height: 59px !important;
 
-  background: url("/assets/Placements/polygon\ background.svg") 0% 0% no-repeat
-    padding-box;
+  // background: url("/assets/Placements/polygon\ background.svg") 0% 0% no-repeat
+  //   padding-box;
   h1 {
     font: normal normal bold var(--fourtyFive) / 30px Montserrat;
     letter-spacing: 0px;
@@ -170,12 +170,12 @@
     margin-top: 4rem;
   }
   p {
-    margin-top: 2rem;
-    font: normal normal normal var(--twenty) / 25px Montserrat;
-    letter-spacing: 0px;
-    color: #000000;
-    text-transform: capitalize;
-    opacity: 1;
+    // margin-top: 2rem;
+    // font: normal normal normal var(--twenty) / 25px Montserrat;
+    // letter-spacing: 0px;
+    // color: #000000;
+    // text-transform: capitalize;
+    // opacity: 1;
   }
   .cardtext1 {
     h1 {
@@ -242,6 +242,27 @@
 .cardhover {
   transition: transform 0.3s ease;
   overflow: hidden !important;
+  .card-body {
+    padding: 0px;
+  }
+  p {
+    font-size: 15px;
+  }
+  .circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    background-color: #ffe63b;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .cardhover:hover {
@@ -277,14 +298,24 @@
 }
 .cards {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   flex-wrap: nowrap;
   overflow: hidden;
   overflow-x: auto;
   .card {
+    position: relative;
     overflow: hidden;
-    min-width: 100%;
+    // max-width: 345px !important;
+    min-width: 345px;
+    .card-img-overlay {
+      top: unset;
+      background: rgba(0, 0, 0, 0.7);
+    }
   }
+}
+
+.display-5 + p {
+  font-size: 20px;
 }
 
 .cards::-webkit-scrollbar {
@@ -316,21 +347,39 @@
     background-color: var(--bg-blue);
   }
 }
-.ri-arrow-left-line {
-  background: #0247fe;
-  color: white;
-  padding: 5px 8px;
-  font-size: 15px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-.ri-arrow-right-line {
-  cursor: pointer;
-  border-radius: 50%;
-  background: #0247fe;
-  color: white;
-  padding: 5px 8px;
-  font-size: 15px;
+
+.arrows {
+  div {
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    i {
+      position: relative;
+    }
+    p {
+      pointer-events: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      padding: 0px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      justify-content: center;
+      position: relative;
+      background-color: white;
+      color: black;
+      font-size: 24px;
+    }
+    p:first-child {
+      left: 15px;
+    }
+    p:last-child {
+      right: 40px;
+    }
+  }
 }
 
 .place-text {

@@ -83,6 +83,11 @@ body {
 .table {
   white-space: nowrap;
   border: 1px solid #e2e2e2;
+  thead {
+    tr > th {
+      background-color: #f0f2f2;
+    }
+  }
   * {
     font-size: var(--fourteen) !important;
   }
@@ -252,11 +257,11 @@ ul {
   }
 }
 
-.cardtext1 {
-  p {
-    padding: 0px 55px !important;
-  }
-}
+// .cardtext1 {
+//   p {
+//     padding: 0px 55px !important;
+//   }
+// }
 
 .upcoming {
   h1 {

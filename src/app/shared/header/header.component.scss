@@ -89,6 +89,8 @@ a.active {
 @keyframes navbar {
   0%,
   100% {
+    box-shadow: 5px 5px 10px #eee;
+
     padding: 0px 30px;
     backdrop-filter: blur(0.3rem);
     background-color: rgb(255 255 255 / 80%);

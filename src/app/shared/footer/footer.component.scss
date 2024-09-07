@@ -31,9 +31,10 @@
 
       ul li:hover {
         cursor: pointer;
-        scale: 1.1;
+        scale: 1.05;
         font-weight: 500;
         transition: all 0.2s ease-out;
+        color: var(--bg-blue);
       }
 
       ul li::before {
@@ -42,8 +43,8 @@
         position: absolute;
         left: 0;
         bottom: -5px;
-        height: 1px;
-        background-color: blue;
+        height: 0.1px !important;
+        background-color: white;
         transition: all 0.4s ease !important;
       }
 
@@ -82,13 +83,23 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-
-      img {
-        border: 2px solid transparent;
-        cursor: pointer;
-        width: 30px;
-        height: 30px;
+      font-size: 30px;
+      i:nth-child(3),
+      i:nth-child(4),
+      i:nth-child(5) {
+        font-size: 33px;
       }
+      i:hover {
+        cursor: pointer;
+        color: var(--bg-blue);
+      }
+      // img {
+      //   border: 2px solid transparent;
+      //   cursor: pointer;
+      //   width: 30px;
+      //   height: 30px;
+      //   filter: brightness(2);
+      // }
     }
   }
 
