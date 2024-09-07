@@ -321,6 +321,7 @@
         img {
           transition: filter 0.5s;
           max-width: 100%;
+          scale: 0.8;
         }
       }
     }
@@ -342,16 +343,21 @@
 
   .organization {
     .org-logos {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      // align-items: center;
+      // justify-content: center;
+      // flex-wrap: wrap;
       gap: 30px;
       white-space: nowrap;
+      img {
+        max-width: 100% !important;
+      }
     }
     .org-logos > img {
       max-width: 200px;
       height: 70px;
+      scale: 0.8;
     }
     .org-logos > img:first-child {
       height: 60px !important;
@@ -450,8 +456,8 @@
 
 @media (max-width: 512px) {
   .org-logos {
-    justify-content: center !important;
-    flex-direction: column !important;
+    // justify-content: center !important;
+    // flex-direction: column !important;
   }
   .display-5.fw-light {
     font-size: var(--twentyFour) !important;
@@ -465,6 +471,9 @@
     h1 {
       line-height: 95px !important;
     }
+  }
+  .org-logos > img {
+    scale: 1 !important;
   }
   // .logos-div {
   //   gap: 30px;
@@ -570,6 +579,18 @@
   .logos-div {
     grid-template-columns: repeat(6, 1fr) !important; /* 6 columns layout */
     gap: 50px 20px !important;
+    .card-img {
+      transition: all 0.5s;
+      img {
+        scale: 1 !important;
+      }
+    }
+  }
+  .org-logos {
+    grid-template-columns: repeat(6, 1fr) !important;
+  }
+  .org-logos > img {
+    scale: 1 !important;
   }
 }
 
@@ -578,6 +599,18 @@
   .logos-div {
     grid-template-columns: repeat(3, 1fr) !important; /* 3 columns layout */
     gap: 30px 20px !important;
+    .card-img {
+      transition: all 0.5s;
+      img {
+        scale: 1 !important;
+      }
+    }
+  }
+  .org-logos > img {
+    scale: 1 !important;
+  }
+  .org-logos {
+    grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 

@@ -99,7 +99,7 @@
             <i class="ri-close-line"></i>
         </button>
     </div>
-    <div class="offcanvas-body d-flex align-items-start justify-content-between">
+    <div class="offcanvas-body d-flex align-items-start justify-content-between position-relative">
         <ul class="navbar-nav off-ul list">
             <li class="list-tem nav-item dropdown">
                 <a class="nav-link btn dropdown-toggle ps-0 border-0" type="button" data-bs-toggle="dropdown"
@@ -148,5 +148,10 @@
                     [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Contact us</a></li>
         </ul>
 
+        <p class="m-0 position-absolute bottom-0 end-50">
+            <a (click)="openWhatsApp()" target="_blank" class="btn-whatsapp-pulse btn-whatsapp-pulse-border">
+                <i class="ri-whatsapp-line text-white"></i>
+            </a>
+        </p>
     </div>
 </div>

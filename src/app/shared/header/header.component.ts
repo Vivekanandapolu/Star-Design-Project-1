@@ -8,6 +8,8 @@ import { Subscription, takeUntil } from 'rxjs';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
+  phoneNumber = '+91 9985280011';
+
   showDropdown = false;
   dropdownItems = [
     'UI/UX Design',
@@ -50,6 +52,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
         window.location.reload();
       }
     });
+  }
+
+  openWhatsApp() {
+    const url = `https://web.whatsapp.com/send?phone=${this.phoneNumber}`;
+    window.open(url);
   }
 
 
