@@ -17,6 +17,17 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      const content = document.querySelector('.content');
+
+      if (preloader) {
+        preloader.style.display = 'none';
+      }
+      if (content) {
+        content.classList.remove('d-none');
+      }
+    });
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
       map(() => this.activatedRoute),
@@ -31,3 +42,5 @@ export class AppComponent implements OnInit {
 
   }
 }
+
+
