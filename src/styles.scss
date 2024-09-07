@@ -3,15 +3,15 @@
 @import "~@fortawesome/fontawesome-free/css/all.css";
 
 :root {
-  --bg-blue: #0866ff;
+  --bg-blue: #0165ff;
   --black: #000000;
   --white: white;
   --link: #0247fe;
   --li: #000000fc;
   --grey: #9b9b9b;
   --red: #ed1941;
-
-  --bg-red: #d92224;
+  --photo-yello-bg: #ffe00a;
+  --bg-red: #8b0000;
   --yellow: #ffcc09;
   --twentyTwo: 22px;
   --twenty: 20px;
@@ -299,11 +299,11 @@ ul {
 @keyframes dropAnimation {
   0% {
     opacity: 0;
-    transform: translateY(-100px);
+    transform: translateX(100px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 

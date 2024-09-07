@@ -7,7 +7,7 @@ import { Subscription, takeUntil } from 'rxjs';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit, OnDestroy, AfterContentInit {
+export class HeaderComponent implements OnInit, OnDestroy {
   showDropdown = false;
   dropdownItems = [
     'UI/UX Design',
@@ -29,8 +29,6 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterContentInit {
         this.handleRouteChange();
       }
     });
-  }
-  ngAfterContentInit(): void {
   }
   ngOnInit(): void {
     this.windowWidth = window.innerWidth <= 1024;

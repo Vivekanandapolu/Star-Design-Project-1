@@ -9,11 +9,12 @@ import { UiViDesignComponent } from './ui-vi-design/ui-vi-design.component';
 import { BachelorDesignComponent } from './bachelor-design/bachelor-design.component';
 import { ProductManagementComponent } from './product-management/product-management.component';
 import { GraphicDesignComponent } from './graphic-design/graphic-design.component';
+import { PhotographyComponent } from './photography/photography.component';
 // import { HeaderModule } from 'src/app/shared/header/header.module';
 
 
 @NgModule({
-  declarations: [CoursesComponent, UIUXDesignComponent, ArVrUxDesignComponent, UiViDesignComponent, BachelorDesignComponent, ProductManagementComponent, GraphicDesignComponent],
+  declarations: [CoursesComponent, UIUXDesignComponent, ArVrUxDesignComponent, UiViDesignComponent, BachelorDesignComponent, ProductManagementComponent, GraphicDesignComponent, PhotographyComponent],
   imports: [
     CommonModule,
     CoursesRoutingModule,

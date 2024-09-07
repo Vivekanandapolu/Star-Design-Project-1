@@ -44,8 +44,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
-
-
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.windowWidth = event.target.innerWidth;
@@ -95,7 +93,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       } else if (!this.isLeftScrollable) {
         this.scrollDirection = 'right';
       }
-    }, 1700);
+    }, 2000);
   }
 
   clearAutoScroll() {
@@ -106,10 +104,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   calculateScrollStep(): number {
-
     if (this.cardsContainers && this.cardsContainers.nativeElement) {
       const cardWidth = this.cardsContainers.nativeElement.children[0].offsetWidth + 15; // Assuming all cards have the same width
-      console.log(cardWidth, "/////");
       return cardWidth;
     } else {
       return 0;
@@ -120,8 +116,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   slide1(direction: string) {
     if (this.cardsContainers) {
       const cards = this.cardsContainers.nativeElement;
-      const scrollStep = 362;
-
+      cards.style.transition = 'all 2s ease-in-out';
+      console.log(cards.style.transition);
+      const scrollStep = 365;
       if (direction === 'left') {
         const newScrollLeft = cards.scrollLeft - scrollStep;
         cards.scrollLeft = Math.max(newScrollLeft, 0); // Ensure scrollLeft doesn't go below 0

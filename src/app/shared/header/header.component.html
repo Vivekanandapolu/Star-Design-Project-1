@@ -1,7 +1,7 @@
 <div class="container-fluid track-con">
     <div class="header m-0" [ngClass]="{'container':!windowWidth}">
         <div class="left-head d-flex align-items-center gap-3 " routerLink="/">
-            <img width="42" class="cursor" src="/assets/Landing Page/logo-icons/STAR DESIGN INSTITUTE.svg" alt="">
+            <img width="42" class="cursor ms-lg-3" src="../../../assets/new_logo/logo star design institute.svg" alt="">
             <h4 class="fw-bold logo-text m-0">STAR DESIGN INSTITUTE</h4>
         </div>
         <div class="right-head" [ngClass]="{'menu':windowWidth}">
@@ -25,6 +25,10 @@
                         <li><a routerLink="/courses/ui-vi-design" [routerLinkActiveOptions]="{ exact: true }"
                                 routerLinkActive="active" class="dropdown-item">UX/VI DESIGN
                             </a></li>
+                        <li><a routerLink="/courses/graphic-design" [routerLinkActiveOptions]="{ exact: true }"
+                                routerLinkActive="active" class="dropdown-item">GRAPHIC DESIGN
+
+                            </a></li>
                         <li><a routerLink="/courses/bachelor-of-design" [routerLinkActiveOptions]="{ exact: true }"
                                 routerLinkActive="active" class="dropdown-item">BACHELOR OF DESIGN
 
@@ -33,27 +37,43 @@
                                 routerLinkActive="active" class="dropdown-item">PRODUCT MANAGEMENT
 
                             </a></li>
-                        <li><a routerLink="/courses/graphic-design" [routerLinkActiveOptions]="{ exact: true }"
-                                routerLinkActive="active" class="dropdown-item">GRAPHIC DESIGN
-
+                        <li><a routerLink="/courses/photography&digital-imaging"
+                                [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"
+                                class="dropdown-item text-uppercase">
+                                Photography & DI
                             </a></li>
                     </ul>
                 </li>
-                <li class="list-tem" routerLink="/placements" [routerLinkActiveOptions]="{ exact: true }"
-                    routerLinkActive="active">Placements</li>
-                <li routerLink="/services" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"
-                    class="list-tem">Services</li>
-                <li class="list-tem" routerLink="/hire-talent" routerLinkActive="active"
-                    [routerLinkActiveOptions]="{ exact: true }">Hire Talent</li>
-                <li class="list-tem" routerLink="/contact-us" routerLinkActive="active"
-                    [routerLinkActiveOptions]="{ exact: true }">Contact us
+                <li class="list-tem">
+                    <a routerLink="/placements" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"
+                        class="btn border-0 px-1" role="button" aria-expanded="false">
+                        Placements
+                    </a>
+                </li>
+                <li class="list-tem">
+                    <a routerLink="/services" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active"
+                        class="btn border-0 px-1" role="button" aria-expanded="false">
+                        Services
+                    </a>
+                </li>
+                <li class="list-tem">
+                    <a routerLink="/aboutus" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                        class="btn border-0 px-1" role="button" aria-expanded="false">
+                        About Us
+                    </a>
+                </li>
+                <li class="list-tem">
+                    <a routerLink="/contact-us" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                        class="btn border-0 px-1" role="button" aria-expanded="false">
+                        Contact us
+                    </a>
                 </li>
             </ul>
             <div class="dropdown">
                 <button *ngIf="windowWidth" (click)="openMenu()" [ngClass]="{'menu':windowWidth}"
                     class="btn shadow-none p-0" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i
-                        class="ri-menu-line"></i></button>
+                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="ri-menu-line"></i>
+                </button>
             </div>
 
         </div>
@@ -88,6 +108,12 @@
                             [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">UX/VI
                             DESIGN
                         </a></li>
+                    <li>
+                        <a routerLink="/courses/graphic-design" routerLinkActive="active"
+                            [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">GRAPHIC
+                            DESIGN
+                        </a>
+                    </li>
                     <li><a routerLink="/courses/bachelor-of-design" routerLinkActive="active"
                             [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">BACHELOR OF DESIGN
 
@@ -96,10 +122,10 @@
                             [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">PRODUCT MANAGEMENT
 
                         </a></li>
-                    <li><a routerLink="/courses/graphic-design" routerLinkActive="active"
-                            [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">GRAPHIC
-                            DESIGN
 
+
+                    <li><a routerLink="/courses/photography&digital-imaging" routerLinkActive="active"
+                            [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">Photography & DI
                         </a></li>
                 </ul>
             </li>
