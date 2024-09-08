@@ -104,6 +104,10 @@ a.active {
   .container-fluid {
     padding: 5px !important;
   }
+  li,
+  a {
+    font-weight: 500;
+  }
   .header {
     // margin: 0px 10px !important;
   }

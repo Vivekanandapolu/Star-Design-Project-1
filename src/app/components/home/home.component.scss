@@ -197,9 +197,6 @@
   }
   .why-star {
     background-color: var(--white);
-    .display-5 {
-      font-size: 48px;
-    }
     .card-img-top {
       height: 100%;
       display: block;
@@ -208,12 +205,6 @@
     }
     .card:hover {
       box-shadow: none !important;
-      // transform: translateY(-10px) scale(1, 1.03);
-      .star-1 {
-        img {
-          // filter: saturate(0.1);
-        }
-      }
     }
 
     .card {
@@ -344,20 +335,19 @@
   .organization {
     .org-logos {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      // align-items: center;
-      // justify-content: center;
-      // flex-wrap: wrap;
-      gap: 30px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
       white-space: nowrap;
       img {
         max-width: 100% !important;
+        margin: auto;
       }
     }
     .org-logos > img {
       max-width: 200px;
       height: 70px;
       scale: 0.8;
+      margin: auto !important;
     }
     .org-logos > img:first-child {
       height: 60px !important;
@@ -383,7 +373,6 @@
       display: flex;
       justify-content: center;
     }
-    // grid-template-columns: repeat(2, minmax(0px, 1fr));
   }
 
   .footer {
@@ -429,6 +418,7 @@
           img {
             min-width: 70px !important;
           }
+          gap: 10px;
         }
         .card-title {
           font-size: var(--eighteen) !important;
@@ -455,15 +445,18 @@
 }
 
 @media (max-width: 512px) {
-  .org-logos {
-    // justify-content: center !important;
-    // flex-direction: column !important;
-  }
   .display-5.fw-light {
     font-size: var(--twentyFour) !important;
   }
   h1 {
     line-height: normal !important;
+  }
+  .why-star {
+    .row {
+      .card {
+        padding: 20px 10px 0px 10px !important;
+      }
+    }
   }
 }
 @media (min-width: 1024px) {
@@ -617,6 +610,6 @@
 /* Small screens (sm) */
 @media (max-width: 767px) {
   .logos-div {
-    grid-template-columns: repeat(2, 1fr) !important; /* 2 columns layout */
+    grid-template-columns: repeat(3, 1fr) !important; /* 2 columns layout */
   }
 }
