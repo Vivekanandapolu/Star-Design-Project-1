@@ -10,7 +10,9 @@ import { filter, map, mergeMap } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  currentPath: any = true
+  currentPath: any = true;
+  showHeaderFooter: boolean = true;
+
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -18,9 +20,6 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log();
-    window.location.pathname != '/login' ? this.currentPath = true : this.currentPath = false
-
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
       map(() => this.activatedRoute),
@@ -31,6 +30,13 @@ export class AppComponent implements OnInit {
       mergeMap(route => route.data)
     ).subscribe(event => {
       this.titleService.setTitle(event['title']);
+    });
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.currentPath = event.urlAfterRedirects;
+        // Hide header and footer if on the login page
+        this.showHeaderFooter = !this.currentPath.includes('/login');
+      }
     });
   }
 }

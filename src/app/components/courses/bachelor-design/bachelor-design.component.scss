@@ -4,56 +4,61 @@
 
 .about {
   padding: 0px;
-  // .about-hero {
-  //   position: relative;
-  //   background: url("/assets/Bachelor of Design/Bachelor of Design . star design institute.png");
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  //   min-height: 78vh;
-  //   .position-absolute {
-  //     bottom: 60px;
-  //     left: 70px;
-  //     * {
-  //       color: #ffcc09;
-  //     }
-  //     h1 {
-  //       font-size: var(--sixty);
-  //     }
-  //     p {
-  //       font-size: var(--thirty);
-  //     }
-  //   }
-  // }
-  .img-sec {
-    .container-fluid {
-      background-color: var(--bg-red);
-    }
-    // .container-fluid {
-    background-color: var(--bg-red);
+  .about-hero {
+    position: relative;
+    // .layered-section {
+    //   background: linear-gradient(to top, black, transparent);
     // }
-    .container {
-      background-color: var(--bg-red);
-    }
-    // padding-top: 40px;
-    overflow: hidden;
-    .row {
-      color: var(--white);
+    position: relative;
+    background: url("../../../../assets/B.Des/BachelorDesign.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 78vh;
+    .position-absolute {
+      bottom: 115px;
+      left: 70px;
+      * {
+        color: var(--white);
+      }
       h1 {
         font-size: var(--seventyFive);
       }
       p {
-        font-size: 28px;
+        font-size: 35px;
       }
     }
-    .image {
-      max-width: 100%;
-      display: block;
-      height: 526px;
-      position: relative;
-      bottom: 0px;
-    }
   }
+
+  // .img-sec {
+  //   .container-fluid {
+  //     background-color: var(--bg-red);
+  //   }
+  //   // .container-fluid {
+  //   background-color: var(--bg-red);
+  //   // }
+  //   .container {
+  //     background-color: var(--bg-red);
+  //   }
+  //   // padding-top: 40px;
+  //   overflow: hidden;
+  //   .row {
+  //     color: var(--white);
+  //     h1 {
+  //       font-size: var(--seventyFive);
+  //     }
+  //     p {
+  //       font-size: 28px;
+  //     }
+  //   }
+  //   .image {
+  //     max-width: 100%;
+  //     display: block;
+  //     height: 526px;
+  //     position: relative;
+  //     bottom: 0px;
+  //   }
+  // }
   .overlap-sec {
     display: flex;
     align-items: center;
@@ -61,9 +66,9 @@
     border: 1px solid #0000003b;
     background: white;
     position: relative;
-    bottom: 40px;
+    bottom: 110px;
+    z-index: 2;
     .vr {
-      // width: 2px;
       margin: 30px 0px;
     }
     .first {
@@ -295,11 +300,11 @@
   }
 }
 @media (min-width: 1024px) {
-  .img-sec {
-    h1 {
-      line-height: 75px !important;
-    }
-  }
+  // .img-sec {
+  //   h1 {
+  //     line-height: 75px !important;
+  //   }
+  // }
 }
 @media (max-width: 1024px) {
   .Glimpses {
@@ -310,31 +315,31 @@
       }
     }
   }
-  .img-sec {
-    h1 {
-      position: relative;
-      top: 40px;
-      margin-bottom: 40px !important;
-    }
-    padding-top: 0px !important;
-    // background-color: transparent !important;
+  // .img-sec {
+  //   h1 {
+  //     position: relative;
+  //     top: 40px;
+  //     margin-bottom: 40px !important;
+  //   }
+  //   padding-top: 0px !important;
+  //   // background-color: transparent !important;
 
-    .row {
-      display: flex;
-      // flex-direction: column-reverse;
-      .col-md-12:last-child {
-        width: 100%;
-        margin-bottom: 30px;
-        background-color: var(--bg-blue) !important;
-        justify-content: flex-end !important;
-      }
-      .col-md-12:first-child > * {
-        width: 100%;
+  //   .row {
+  //     display: flex;
+  //     // flex-direction: column-reverse;
+  //     .col-md-12:last-child {
+  //       width: 100%;
+  //       margin-bottom: 30px;
+  //       background-color: var(--bg-blue) !important;
+  //       justify-content: flex-end !important;
+  //     }
+  //     .col-md-12:first-child > * {
+  //       width: 100%;
 
-        color: black;
-      }
-    }
-  }
+  //       color: black;
+  //     }
+  //   }
+  // }
   .why-star {
     h1 {
       font-size: var(--fifty) !important;
@@ -345,21 +350,21 @@
   }
 }
 @media (max-width: 768px) {
-  .img-sec {
-    h1 {
-      span {
-        font-size: 40px !important;
-      }
-      position: relative;
-      top: 0px !important;
-      margin-bottom: 50px !important;
-      font-size: 35px !important;
-      margin-bottom: 10px !important;
-    }
-    img {
-      bottom: 14px;
-    }
-  }
+  // .img-sec {
+  //   h1 {
+  //     span {
+  //       font-size: 40px !important;
+  //     }
+  //     position: relative;
+  //     top: 0px !important;
+  //     margin-bottom: 50px !important;
+  //     font-size: 35px !important;
+  //     margin-bottom: 10px !important;
+  //   }
+  //   img {
+  //     bottom: 14px;
+  //   }
+  // }
   .Glimpses {
     .cards {
       flex-direction: column;
