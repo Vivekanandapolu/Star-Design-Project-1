@@ -28,7 +28,7 @@
   max-width: 100%;
 }
 .header > * {
-  flex: 1;
+  flex: auto;
 }
 
 .left-head {
@@ -107,9 +107,6 @@ a.active {
   li,
   a {
     font-weight: 500;
-  }
-  .header {
-    // margin: 0px 10px !important;
   }
   .header > div {
     flex: auto;
@@ -298,4 +295,41 @@ a.active {
   width: 100%;
   background-color: blue;
   height: 10px;
+}
+
+.list-tem.dropdown:has(a.active) > a::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  background-color: var(--bg-blue);
+  transition: all 0.4s ease !important;
+}
+.list-tem.dropdown:has(a.active) > a {
+  font-weight: bold !important;
+  color: var(--bg-blue);
+}
+
+.login-btn {
+  color: var(--bg-blue);
+  border: 1px solid var(--bg-blue);
+  font-weight: normal;
+  border-radius: 25px;
+  max-width: 111px;
+  font-size: 16px;
+  height: 35px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-btn:hover {
+  color: white;
+  font-weight: 500;
+  background-color: var(--bg-blue);
 }

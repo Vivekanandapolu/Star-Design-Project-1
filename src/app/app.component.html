@@ -1,9 +1,4 @@
-<div id="preloader">
-    <div class="spinner-border"></div>
-</div>
-<div class="content d-none">
-    <app-header></app-header>
-    <router-outlet>
-    </router-outlet>
-    <app-footer></app-footer>
-</div>
+<app-header *ngIf="currentPath"></app-header>
+<router-outlet>
+</router-outlet>
+<app-footer *ngIf="currentPath"></app-footer>

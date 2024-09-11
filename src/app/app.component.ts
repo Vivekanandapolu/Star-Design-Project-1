@@ -10,6 +10,7 @@ import { filter, map, mergeMap } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  currentPath: any = true
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -17,17 +18,9 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.addEventListener('load', () => {
-      const preloader = document.getElementById('preloader');
-      const content = document.querySelector('.content');
+    console.log();
+    window.location.pathname != '/login' ? this.currentPath = true : this.currentPath = false
 
-      if (preloader) {
-        preloader.style.display = 'none';
-      }
-      if (content) {
-        content.classList.remove('d-none');
-      }
-    });
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
       map(() => this.activatedRoute),
@@ -39,7 +32,6 @@ export class AppComponent implements OnInit {
     ).subscribe(event => {
       this.titleService.setTitle(event['title']);
     });
-
   }
 }
 

@@ -6,10 +6,6 @@
         </div>
         <div class="right-head" [ngClass]="{'menu':windowWidth}">
             <ul class="list normal-ul" *ngIf="!windowWidth">
-                <!-- <li class="list-tem">
-                        <a class="nav-link" routerLink="/" [routerLinkActiveOptions]="{ exact: true }"
-                            routerLinkActive="active">Home</a>
-                    </li> -->
                 <li class="list-tem dropdown">
                     <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="btn border-0"
                         [ngClass]="{'active':course}" role="button" aria-expanded="false">
@@ -56,7 +52,7 @@
                         Services
                     </a>
                 </li>
-                <li class="list-tem">
+                <!-- <li class="list-tem">
                     <a routerLink="/aboutus" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
                         class="btn border-0 px-1" role="button" aria-expanded="false">
                         About Us
@@ -67,6 +63,21 @@
                         class="btn border-0 px-1" role="button" aria-expanded="false">
                         Contact us
                     </a>
+                </li> -->
+                <li class="list-tem dropdown">
+                    <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="btn border-0"
+                        [ngClass]="{'active':course}" role="button" aria-expanded="false">
+                        Know More <i class="ri-arrow-down-s-line"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a routerLink="/aboutus" [routerLinkActiveOptions]="{ exact: true }"
+                                routerLinkActive="active" class="dropdown-item">About Us</a>
+                        </li>
+                        <li><a routerLink="/contact-us" [routerLinkActiveOptions]="{ exact: true }"
+                                routerLinkActive="active" class="dropdown-item">Contact us
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <div class="dropdown">
@@ -77,6 +88,7 @@
             </div>
 
         </div>
+        <button *ngIf="!windowWidth" class="btn login-btn">Login</button>
     </div>
 </div>
 
@@ -144,10 +156,26 @@
                     [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">Services</a></li>
             <!-- <li class="list-tem nav-item"><a routerLink="/hire-talent" routerLinkActive="active"
                     [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Hire Talent</a></li> -->
-            <li class="list-tem nav-item"><a routerLink="/aboutus" routerLinkActive="active"
+            <!-- <li class="list-tem nav-item"><a routerLink="/aboutus" routerLinkActive="active"
                     [routerLinkActiveOptions]="{ exact: true }" class="nav-link">About Us</a></li>
             <li class="list-tem nav-item"><a routerLink="/contact-us" routerLinkActive="active"
-                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Contact us</a></li>
+                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Contact us</a></li> -->
+            <li class="list-tem nav-item dropdown">
+                <a class="nav-link btn dropdown-toggle ps-0 border-0" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false" [ngClass]="{'active':course}">
+                    Know More
+                </a>
+                <ul class="dropdown-menu position-relative">
+                    <li>
+                        <a routerLink="/aboutus" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                            class="dropdown-item">About Us</a>
+                    </li>
+                    <li><a routerLink="/contact-us" routerLinkActive="active"
+                            [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">Contact us
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
 
         <p class="m-0 position-absolute bottom-0 end-50">

@@ -117,7 +117,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     if (this.cardsContainers) {
       const cards = this.cardsContainers.nativeElement;
       cards.style.transition = 'all 2s ease-in-out';
-      console.log(cards.style.transition);
       const scrollStep = 365;
       if (direction === 'left') {
         const newScrollLeft = cards.scrollLeft - scrollStep;

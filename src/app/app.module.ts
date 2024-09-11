@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomPreloadingStrategy } from './shared/services-comp/custom-preloading-strategy';
 import { UrlSerializer } from '@angular/router';
 import { LowerCaseUrlSerializer } from './shared/LowerCaseUrlSerializer';
+import { LoginComponent } from './components/Auth/login/login.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { LowerCaseUrlSerializer } from './shared/LowerCaseUrlSerializer';
     ContactUsComponent,
     HireTalentComponent,
     FooterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
