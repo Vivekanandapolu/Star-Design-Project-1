@@ -17,6 +17,7 @@ import { CustomPreloadingStrategy } from './shared/services-comp/custom-preloadi
 import { UrlSerializer } from '@angular/router';
 import { LowerCaseUrlSerializer } from './shared/LowerCaseUrlSerializer';
 import { LoginComponent } from './components/Auth/login/login.component';
+import { SitemapComponent } from './shared/sitemap/sitemap.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { LoginComponent } from './components/Auth/login/login.component';
     HireTalentComponent,
     FooterComponent,
     LoginComponent,
+    SitemapComponent,
   ],
   imports: [
     BrowserModule,
