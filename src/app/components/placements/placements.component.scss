@@ -10,7 +10,7 @@
   .layered-section {
     background: linear-gradient(
       to right,
-      var(--bg-red) 20%,
+      var(--bg-blue) 10%,
       transparent 80%
     ); /* Linear gradient from left (#000080) to transparent */
   }
@@ -68,12 +68,11 @@
   }
   .logos-div {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px 10px;
     .card-img {
       transition: all 0.5s;
       img {
-        // filter: contrast(0);
         transition: filter 0.5s;
       }
     }
@@ -119,7 +118,6 @@
 .bgcolor2 {
   background: var(--bg-blue) 0% 0% no-repeat padding-box !important;
   color: white;
-
   opacity: 1;
   height: 323px;
 }
@@ -389,7 +387,7 @@
 @media (max-width: 768px) {
   .mainheader {
     h1 {
-      font-size: 30px !important;
+      // font-size: 30px !important;
       line-height: 50px;
     }
     top: 0vh;
@@ -401,6 +399,22 @@
   }
   .bgcolor1 {
     height: 650px;
+  }
+  .bgcolor2 {
+    height: 200px;
+  }
+  .logos-div {
+    grid-template-columns: repeat(3, 1fr);
+    img {
+      scale: 0.8;
+      max-width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .logos-div {
+    grid-template-columns: repeat(4, 1fr) !important;
   }
 }
 
@@ -423,7 +437,7 @@
     }
   }
   .logos-div {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 176px));
+    grid-template-columns: repeat(4, 1fr);
   }
   .mainheader {
     h1 {
@@ -437,8 +451,8 @@
   }
 
   .logos-div {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 50px 10px;
     .card-img {
       transition: all 0.5s;

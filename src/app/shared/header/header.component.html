@@ -1,7 +1,7 @@
 <div class="container-fluid track-con">
     <div class="header m-0" [ngClass]="{'container':!windowWidth}">
         <div class="left-head d-flex align-items-center gap-3 " routerLink="/">
-            <img width="42" class="cursor ms-lg-3" src="../../../assets/new_logo/logo star design institute.svg" alt="">
+            <img width="42" class="cursor ms-2" src="../../../assets/new_logo/logo star design institute.svg" alt="">
             <h4 class="fw-bold logo-text m-0">STAR DESIGN INSTITUTE</h4>
         </div>
         <div class="right-head" [ngClass]="{'menu':windowWidth}">
@@ -81,9 +81,9 @@
                 </li>
             </ul>
             <div class="dropdown">
-                <button *ngIf="windowWidth" (click)="openMenu()" [ngClass]="{'menu':windowWidth}"
-                    class="btn shadow-none p-0" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="ri-menu-line"></i>
+                <button *ngIf="windowWidth" [ngClass]="{'menu':windowWidth}" class="btn shadow-none p-0" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                    aria-controls="offcanvasScrolling"><i class="ri-menu-line"></i>
                 </button>
             </div>
 
@@ -119,46 +119,49 @@
                     Courses
                 </a>
                 <ul class="dropdown-menu position-relative">
-                    <li><a routerLink="/courses/ui-ux-design" routerLinkActive="active"
+                    <li><a routerLink="/courses/ui-ux-design" routerLinkActive="active" data-bs-dismiss="offcanvas"
                             [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">UI/UX
                             DESIGN</a></li>
-                    <li><a routerLink="/courses/ar-vr-ux-design" routerLinkActive="active"
+                    <li><a routerLink="/courses/ar-vr-ux-design" routerLinkActive="active" data-bs-dismiss="offcanvas"
                             [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">AR-VR/UX DESIGN
                         </a></li>
-                    <li><a routerLink="/courses/ui-vi-design" routerLinkActive="active"
+                    <li><a routerLink="/courses/ui-vi-design" routerLinkActive="active" data-bs-dismiss="offcanvas"
                             [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">UX/VI
                             DESIGN
                         </a></li>
                     <li>
-                        <a routerLink="/courses/graphic-design" routerLinkActive="active"
+                        <a routerLink="/courses/graphic-design" routerLinkActive="active" data-bs-dismiss="offcanvas"
                             [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">GRAPHIC
                             DESIGN
                         </a>
                     </li>
                     <li><a routerLink="/courses/bachelor-of-design" routerLinkActive="active"
-                            [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">BACHELOR OF DESIGN
+                            data-bs-dismiss="offcanvas" [routerLinkActiveOptions]="{ exact: true }"
+                            class="dropdown-item">BACHELOR OF DESIGN
 
                         </a></li>
                     <li><a routerLink="/courses/product-management" routerLinkActive="active"
-                            [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">PRODUCT MANAGEMENT
+                            data-bs-dismiss="offcanvas" [routerLinkActiveOptions]="{ exact: true }"
+                            class="dropdown-item">PRODUCT MANAGEMENT
 
                         </a></li>
 
 
                     <li><a routerLink="/courses/photography&digital-imaging" routerLinkActive="active"
-                            [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">Photography & DI
+                            data-bs-dismiss="offcanvas" [routerLinkActiveOptions]="{ exact: true }"
+                            class="dropdown-item">Photography & DI
                         </a></li>
                 </ul>
             </li>
-            <li class="list-tem nav-item"><a class="nav-link" routerLink="/placements"
+            <li class="list-tem nav-item"><a class="nav-link" routerLink="/placements" data-bs-dismiss="offcanvas"
                     [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">Placements</a></li>
-            <li class="list-tem nav-item"><a class="nav-link" routerLink="/services"
+            <li class="list-tem nav-item"><a class="nav-link" routerLink="/services" data-bs-dismiss="offcanvas"
                     [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">Services</a></li>
-            <!-- <li class="list-tem nav-item"><a routerLink="/hire-talent" routerLinkActive="active"
+            <!-- <li class="list-tem nav-item"><a  routerLink="/hire-talent" routerLinkActive="active" data-bs-dismiss="offcanvas"
                     [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Hire Talent</a></li> -->
-            <!-- <li class="list-tem nav-item"><a routerLink="/aboutus" routerLinkActive="active"
+            <!-- <li class="list-tem nav-item"><a  routerLink="/aboutus" routerLinkActive="active" data-bs-dismiss="offcanvas"
                     [routerLinkActiveOptions]="{ exact: true }" class="nav-link">About Us</a></li>
-            <li class="list-tem nav-item"><a routerLink="/contact-us" routerLinkActive="active"
+            <li class="list-tem nav-item"><a  routerLink="/contact-us" routerLinkActive="active" data-bs-dismiss="offcanvas"
                     [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Contact us</a></li> -->
             <li class="list-tem nav-item dropdown">
                 <a class="nav-link btn dropdown-toggle ps-0 border-0" type="button" data-bs-toggle="dropdown"
@@ -167,11 +170,13 @@
                 </a>
                 <ul class="dropdown-menu position-relative">
                     <li>
-                        <a routerLink="/aboutus" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                        <a data-bs-dismiss="offcanvas" routerLink="/aboutus" routerLinkActive="active"
+                            [routerLinkActiveOptions]="{ exact: true }" data-bs-dismiss="offcanvas"
                             class="dropdown-item">About Us</a>
                     </li>
-                    <li><a routerLink="/contact-us" routerLinkActive="active"
-                            [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">Contact us
+                    <li><a data-bs-dismiss="offcanvas" routerLink="/contact-us" routerLinkActive="active"
+                            data-bs-dismiss="offcanvas" [routerLinkActiveOptions]="{ exact: true }"
+                            class="dropdown-item">Contact us
                         </a>
                     </li>
                 </ul>

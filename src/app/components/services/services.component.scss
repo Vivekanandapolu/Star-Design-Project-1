@@ -115,7 +115,7 @@
     opacity: 1;
   }
   p {
-    font: normal normal normal var(--fourteen) / 18px Messina Sans;
+    // font: normal normal normal var(--fourteen) / 18px Messina Sans;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
@@ -151,7 +151,7 @@
     font: normal normal bold var(--fourtyFive) / 81px Montserrat;
 
     letter-spacing: 0px;
-    color: #ffcb05;
+    color: green;
     opacity: 1;
   }
   .testingh1 {
@@ -242,12 +242,18 @@ p {
 }
 @media (max-width: 654px) {
   .bgimg1 {
+    min-height: 50dvh !important;
     h1 {
       font-size: 40px;
       line-height: 50px;
     }
     p {
       font-size: 20px;
+    }
+    .container {
+      z-index: 2;
+      position: relative;
+      bottom: -8vh;
     }
   }
 }
