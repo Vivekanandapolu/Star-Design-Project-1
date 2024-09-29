@@ -162,6 +162,7 @@
     opacity: 1;
   }
 }
+
 .container-fluid {
   padding: 0px;
   .img-sec {
@@ -258,6 +259,20 @@ p {
   }
 }
 
+@media (min-width: 1024px) {
+  .grid-sec {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid-sec {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 992px) {
   h1 {
     font-size: 28px;
@@ -302,13 +317,21 @@ p {
   .number-div {
     display: flex;
     align-items: flex-start;
-    gap: 30px;
+    gap: 10px;
   }
 }
 
 @media (max-width: 576px) {
   h1 {
     font-size: 20px;
+  }
+
+  .bulb-column {
+    position: absolute;
+    top: 0px;
+    .image {
+      width: 100px;
+    }
   }
 
   .service {
@@ -330,8 +353,17 @@ p {
   .card {
     margin-bottom: 10px;
   }
-}
 
+  .grid-sec {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow: auto;
+    .card {
+      min-width: 270px;
+    }
+  }
+}
 .seeall {
   width: 40px;
   height: 40px;

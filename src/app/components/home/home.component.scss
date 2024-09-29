@@ -207,7 +207,10 @@
     .card:hover {
       box-shadow: none !important;
     }
-
+    .inner-star {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
     .card {
       background: transparent;
       border: 0px;
@@ -445,7 +448,7 @@
   }
 }
 
-@media (max-width: 512px) {
+@media (max-width: 567px) {
   .display-5.fw-light {
     font-size: var(--twentyFour) !important;
   }
@@ -455,9 +458,19 @@
   .why-star {
     .row {
       .card {
-        padding: 20px 10px 0px 10px !important;
+        min-width: 250px;
+        padding: 20px !important;
+      }
+      .inner-star {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 20px;
       }
     }
+  }
+  .chat {
+    bottom: 8.5% !important;
   }
 }
 @media (min-width: 1024px) {
@@ -543,12 +556,6 @@
   }
 }
 
-@media (max-width: 425px) {
-  .chat {
-    bottom: 8.5% !important;
-  }
-}
-
 .img-sec::before {
   .container-fluid {
     div {
@@ -566,7 +573,6 @@
   bottom: 0;
   background: linear-gradient(to right, #3a3737, transparent);
   z-index: 0;
-  // opacity: 0.7;
 }
 
 @media (min-width: 992px) {

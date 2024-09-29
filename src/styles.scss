@@ -677,4 +677,21 @@ button.btn {
   .position-absolute {
     bottom: 50px !important;
   }
+
+  .main > div {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .offcanvas-body {
+    a:is(.active) {
+      font-size: 20px !important;
+    }
+  }
+}
+
+table .status {
+  font-size: 10px !important;
+  * {
+    font-size: 10px !important;
+  }
 }

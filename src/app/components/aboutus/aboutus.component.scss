@@ -132,7 +132,12 @@
   .about-hero {
     background-position-x: -10rem !important;
     .position-absolute {
-      left: 60px;
+      left: 30px;
     }
   }
+}
+
+.container-fluid.about.main > div {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
