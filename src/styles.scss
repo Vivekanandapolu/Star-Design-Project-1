@@ -159,6 +159,10 @@ body {
           justify-content: space-between;
           button {
             margin-right: 15px !important;
+            flex: 1;
+          }
+          span:has(button) {
+            flex: 1;
           }
         }
       }

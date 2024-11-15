@@ -195,20 +195,11 @@
 .card img {
   transition: transform 0.3s ease;
 }
-
-.card:hover img {
-  transform: scale(1.1); /* Increase image size on hover */
-}
-
-/* Card hover effect */
 .card {
   transition: transform 0.3s ease;
   overflow: hidden !important;
 }
 
-.card:hover {
-  transform: translateY(-10px); /* Move card up slightly on hover */
-}
 h1,
 h4 {
   transition: color 0.3s ease;
@@ -333,6 +324,9 @@ p {
       width: 100px;
     }
   }
+  .bulb-arrow {
+    width: 50px;
+  }
 
   .service {
     h1 {
@@ -361,6 +355,10 @@ p {
     overflow: auto;
     .card {
       min-width: 270px;
+      border-radius: 10px;
+      border: 1px solid #eee !important;
+      padding: 0px 10px;
+      box-shadow: 3px 3px 5px #eee;
     }
   }
 }

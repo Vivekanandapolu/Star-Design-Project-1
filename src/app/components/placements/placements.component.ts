@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-placements',
@@ -17,14 +17,18 @@ export class PlacementsComponent implements OnInit {
       this.windowWidth = window.innerWidth <= 1024;
     });
   }
-  constructor(private metaService: Meta) {
-    this.setMeta()
+  constructor(private metaService: Meta, private titleService: Title) {
+    this.setMeta();
   }
 
   setMeta() {
+    // Set the meta title
+    this.titleService.setTitle('100% Placements Guaranteed Program - Get Your Offer Letter');
+
+    // Set the meta description
     this.metaService.updateTag({
       name: 'description',
-      content: "Get Your Offer Letter With 100% Placements Guaranteed *Program"
+      content: "Get Your Offer Letter With 100% Placements Guaranteed Program. Secure your career today with top industry experts."
     });
   }
 

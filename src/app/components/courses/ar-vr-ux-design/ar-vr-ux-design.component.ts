@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-ar-vr-ux-design',
@@ -7,13 +7,25 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./ar-vr-ux-design.component.scss']
 })
 export class ArVrUxDesignComponent {
-  constructor(private metaService: Meta) {
-    this.setMeta()
+  constructor(private metaService: Meta, private titleService: Title) {
+    this.setMeta();
   }
+
   setMeta() {
+    // Set the meta title with keywords
+    this.titleService.setTitle('Best AR/VR Courses and Coaching Centres in Hyderabad | Top AR/VR Training Institute');
+
+    // Set the meta description with keywords
     this.metaService.updateTag({
       name: 'description',
-      content: 'Explore AR/VR design and bring the future to life. Learn essential techniques in augmented and virtual reality to create immersive experiences.'
+      content: 'Join the best AR/VR coaching institute in Hyderabad. Explore top AR/VR courses to master augmented and virtual reality. Enroll in leading AR/VR coaching centers for immersive learning experiences.'
+    });
+
+    // Optional: Add meta keywords
+    this.metaService.updateTag({
+      name: 'keywords',
+      content: 'AR/VR courses in Hyderabad, AR/VR coaching centres in Hyderabad, Top AR/VR coaching centres in Hyderabad, Best AR/VR coaching institute in Hyderabad'
     });
   }
+
 }

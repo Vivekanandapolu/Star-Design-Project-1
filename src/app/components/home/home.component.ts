@@ -1,6 +1,6 @@
 import { Component, ViewChild, ElementRef, HostListener, OnInit, OnDestroy } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -23,16 +23,11 @@ export class HomeComponent implements OnInit, OnDestroy {
   scrollIntervalId: any;
   scrollDirection: string = 'right';
   windowWidth786: boolean = false;
-  constructor(private metaService: Meta) {
-    this.setMeta()
+
+  constructor(private titleService: Title, private metaService: Meta) {
+
   }
 
-  setMeta() {
-    this.metaService.updateTag({
-      name: 'description',
-      content: "Learn, Certify, Make an Impact. Skills for a Better Future. Discover essential skills and certifications for career advancement. Enhance your expertise in product management, software development, data science, and more. Start your journey today!"
-    });
-  }
 
   ngOnInit(): void {
     this.updateScrollState();
@@ -42,7 +37,26 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.windowWidth786 = window.innerWidth <= 786;
       this.updateScrollState();
     });
+    this.setMeta()
   }
+
+  setMeta() {
+    // Set the meta title with keywords
+    this.titleService.setTitle('Best UI/UX Design and Graphic Design Institute in Hyderabad | AR/VR Training');
+
+    // Set the meta description with keywords
+    this.metaService.updateTag({
+      name: 'description',
+      content: "Join the top UI/UX design institute in Hyderabad offering the best graphic design and AR/VR courses with placement. Discover your potential at the best coaching center for UI/UX, graphic design, and AR/VR training."
+    });
+
+    // Set additional meta keywords for SEO
+    this.metaService.updateTag({
+      name: 'keywords',
+      content: 'UI/UX Design institute in Hyderabad, Best UI/UX coaching institute in Hyderabad, Best graphic design institute with placement, AR/VR UX design course Hyderabad, Top UX/VI institute in Hyderabad, Graphic design coaching Hyderabad'
+    });
+  }
+
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
