@@ -12,7 +12,7 @@ import { SitemapComponent } from './shared/sitemap/sitemap.component';
 // import { HeaderComponent } from './shared/header/header.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, data: { title: 'ui ux design course | ui ux design course in hyderabad with 100% placements | star design institute, staruiux.com' } },
+  { path: '', component: HomeComponent },
   { path: 'services', component: ServicesComponent, data: { title: 'Services' } },
   { path: 'aboutus', component: AboutusComponent, data: { title: 'About Us' } },
   { path: 'placements', component: PlacementsComponent, data: { title: 'Placements' } },
