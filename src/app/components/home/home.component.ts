@@ -1,6 +1,12 @@
-import { Component, ViewChild, ElementRef, HostListener, OnInit, OnDestroy } from '@angular/core';
+import { Component, ViewChild, ElementRef, HostListener, OnInit, OnDestroy, TemplateRef } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { Meta, Title } from '@angular/platform-browser';
+import { HttpClient } from '@angular/common/http';
+import { apis } from 'src/app/shared/apiUrls';
+import { environment } from 'src/app/shared/environments/environment.development';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ToastrService } from 'ngx-toastr';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +21,8 @@ import { Meta, Title } from '@angular/platform-browser';
     ]),
   ]
 })
+
+
 export class HomeComponent implements OnInit, OnDestroy {
   windowWidth: number = window.innerWidth;
   isLeftScrollable: boolean = false;
@@ -23,8 +31,20 @@ export class HomeComponent implements OnInit, OnDestroy {
   scrollIntervalId: any;
   scrollDirection: string = 'right';
   windowWidth786: boolean = false;
+  image: any
 
-  constructor(private titleService: Title, private metaService: Meta) {
+  domain = environment.domain
+
+
+  courseFiles: any = {
+    bg_img: '',
+    course_img: ""
+  }
+
+
+  addCourseForm: any = {}
+
+  constructor(private titleService: Title, private metaService: Meta, private http: HttpClient, private modalService: NgbModal, private toastr: ToastrService) {
 
   }
 
@@ -37,7 +57,74 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.windowWidth786 = window.innerWidth <= 786;
       this.updateScrollState();
     });
-    this.setMeta()
+    this.setMeta();
+  }
+
+  openCourseModal(content: any) {
+    this.modalService.open(content, {
+      // size: 'lg',
+      backdrop: 'static',
+      keyboard: false
+    })
+  }
+
+
+  uploadFile(e: any, type: any) {
+
+    if (type == 'bg') {
+      this.courseFiles.bg_img = ''
+    }
+    else {
+      this.courseFiles.course_img = ''
+    }
+
+    const file = e.target.files[0]
+    const fileformData = new FormData();
+    fileformData.append('file', file, file?.name);
+    this.http.post(apis.upload_file, fileformData).subscribe((res: any) => {
+      if (res.success) {
+        if (type == 'bg') {
+          this.courseFiles.bg_img = res.file_url
+        }
+        else {
+          this.courseFiles.course_img = res.file_url
+        }
+        this.toastr.success(res.message)
+      }
+      else {
+        if (type == 'bg') {
+          this.courseFiles.bg_img = res.file_url
+        }
+        else {
+          this.courseFiles.course_img = res.file_url
+        }
+        this.toastr.error(res.message)
+      }
+    })
+  }
+
+  removeImg(type: any) {
+    if (type == 'course') {
+      this.courseFiles.course_img = "";
+      return
+    }
+    else {
+      this.courseFiles.bg_img = ""
+
+    }
+  }
+
+  addCourseCard(form: NgForm) {
+    console.log(form);
+    if (form.invalid || (!this.courseFiles.bg_img || !this.courseFiles.course_img)) {
+      form.form.markAllAsTouched();
+      return
+    }
+    else {
+      this.http.post(apis.add_course, form.value).subscribe((res: any) => {
+        console.log(res);
+      })
+    }
   }
 
   setMeta() {

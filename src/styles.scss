@@ -170,9 +170,54 @@ body {
   }
 }
 
+.upload-div {
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  label {
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    background: blue;
+    color: white;
+    padding: 5px 10px;
+    width: fit-content;
+    cursor: pointer;
+  }
+  .file {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .ri-close-line {
+    cursor: pointer;
+  }
+}
+
+input.ng-touched.ng-invalid:not(form) {
+  border: 1px solid var(--red);
+  /* red */
+}
+
+select.ng-touched.ng-invalid:not(form) {
+  border: 1px solid var(--red);
+  /* red */
+}
+
+textarea.ng-touched.ng-invalid:not(form) {
+  border: 1px solid var(--red);
+  /* red */
+}
+
+.nofile {
+  border: 1px solid var(--red);
+}
+
 ul {
   list-style-type: disc;
-  // margin-left: 20px;
   li {
     font-size: 14px;
     font-weight: 400;

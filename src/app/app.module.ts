@@ -18,6 +18,12 @@ import { UrlSerializer } from '@angular/router';
 import { LowerCaseUrlSerializer } from './shared/LowerCaseUrlSerializer';
 import { LoginComponent } from './components/Auth/login/login.component';
 import { SitemapComponent } from './shared/sitemap/sitemap.component';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AuthInterceptor } from './shared/auth.interceptor';
+import { NgbModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { NumberInputDirectiveModule } from './shared/directive/number-input.directive';
+import { TrimPipeModule } from './shared/pipes/trim.pipe';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -38,10 +44,15 @@ import { SitemapComponent } from './shared/sitemap/sitemap.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
-    // HeaderModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    NgbModule,
+    NumberInputDirectiveModule,
+    TrimPipeModule,
+    ToastrModule.forRoot({ timeOut: 2000 }),
+    NgbTooltipModule
   ],
-  providers: [CustomPreloadingStrategy, Title, { provide: UrlSerializer, useClass: LowerCaseUrlSerializer }],
+  providers: [CustomPreloadingStrategy, Title, { provide: UrlSerializer, useClass: LowerCaseUrlSerializer }, { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

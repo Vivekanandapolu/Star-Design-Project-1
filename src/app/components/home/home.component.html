@@ -26,8 +26,9 @@
     <div class="container-fluid bg-white pt-5">
         <div class="container">
             <div class=" content1 mt-0 mb-4">
-                <h2 class="fw-bold display-5 m-0">
-                    Explore Featured Courses
+                <h2 class="fw-bold display-5 d-flex align-items-center justify-content-between m-0">
+                    Explore Featured Courses <button (click)="openCourseModal(addCourse)"
+                        class="btn-sm btn btn-primary fw-medium">Add Course</button>
                 </h2>
                 <p class="m-0">Learn in-demand skills to future-proof your career.</p>
             </div>
@@ -827,3 +828,75 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<ng-template let-modal #addCourse>
+    <div class="modal-header">
+        <h5 class="m-0">
+            Add Course
+        </h5>
+        <button class="btn btn-close shadow-none" (click)="modal.dismiss()"></button>
+    </div>
+    <div class="modal-body">
+        <form #form="ngForm" (ngSubmit)="addCourseCard(form)">
+            <label for="title" class="form-label m-0">Course Title</label>
+            <input required #title="ngModel" [(ngModel)]="addCourseForm.title" type="text" id="title"
+                class="form-control mb-3 form-control-sm shadow-none" name="title" placeholder="Enter course Name">
+
+            <label for="des" class="form-label">Description</label>
+            <textarea required #description="ngModel" [(ngModel)]="addCourseForm.description" id="des"
+                class="form-control mb-3 form-control-sm shadow-none" name="description"
+                placeholder="Enter course description"></textarea>
+            <!-- <div class="container-fluid"> -->
+
+            <!-- <div class="row">
+                <div class="col-6">
+
+                </div>
+            </div> -->
+            <label for="duration" class="form-label m-0">Duration</label>
+            <input required #duration="ngModel" [(ngModel)]="addCourseForm.duration" type="text" id="duration"
+                class="form-control mb-3 form-control-sm shadow-none" name="duration"
+                placeholder="Enter Duration in Months" appNumberInput>
+
+            <label for="Fee" class="form-label m-0">Course Fee</label>
+            <input required #duration="ngModel" [(ngModel)]="addCourseForm.duration" type="text" id="Fee"
+                class="form-control mb-3 form-control-sm shadow-none" name="course_fee" placeholder="Enter Course Fee"
+                appNumberInput>
+
+            <label for="eligibility" class="form-label m-0">Eligibility</label>
+            <input required #eligibility="ngModel" [(ngModel)]="addCourseForm.eligibility" type="text" id="eligibility"
+                class="form-control mb-3 form-control-sm shadow-none" name="eligibility"
+                placeholder="Enter Course Eligibility">
+
+            <label for="Batch" class="form-label m-0">Upcoming Batch</label>
+            <input required #upcoming_batch="ngModel" [(ngModel)]="addCourseForm.upcoming_batch" type="date" id="Batch"
+                class="form-control mb-3" name="upcoming_batch" placeholder="Enter Duration in Months">
+
+            <div [ngClass]="{'nofile':!courseFiles.bg_img}" class="upload-div">
+                <label for="img1" class="form-label ">Upload Background Image</label>
+                <input required type="file" (change)="uploadFile($event,'bg')" id="img1" class="d-none">
+
+                <span [ngbTooltip]="courseFiles.bg_img" container="body" placement="top" style="flex: 1;"
+                    *ngIf="courseFiles.bg_img" class="d-flex align-items-center justify-content-between px-2">
+                    <p class="file m-0">{{courseFiles.bg_img.split('/files/')[1] | trim:30}}</p>
+                    <span><i (click)="removeImg('bg')" class="text-danger ri-close-line"></i></span>
+                </span>
+            </div>
+            <div [ngClass]="{'nofile':!courseFiles.course_img}" class="upload-div mb-4">
+                <label for="img2" class="form-label ">Upload Course Image</label>
+                <input required type="file" (change)="uploadFile($event,'')" id="img2" class="d-none">
+                <span [ngbTooltip]="courseFiles.course_img.split('/files/')[1]" container="body" placement="top"
+                    style="flex: 1;" *ngIf="courseFiles.course_img"
+                    class="d-flex align-items-center justify-content-between px-2">
+                    <p class="file m-0">{{courseFiles.course_img.split('/files/')[1] | trim:30}}</p>
+                    <span><i (click)="removeImg('course')" class="text-danger ri-close-line"></i></span>
+                </span>
+            </div>
+
+            <button type="submit" class="btn btn-sm btn-dark w-100 text-center">Add Course</button>
+            <!-- </div> -->
+        </form>
+    </div>
+</ng-template>
