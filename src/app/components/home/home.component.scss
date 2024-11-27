@@ -55,6 +55,8 @@
         min-height: 100%;
         display: block;
         object-fit: cover;
+        height: 240px;
+        margin: auto;
       }
     }
   }
@@ -88,6 +90,20 @@
   }
   .courses {
     .card {
+      .edit {
+        position: absolute;
+        z-index: 1;
+        background: red;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        right: 2%;
+        top: 2%;
+        color: white;
+      }
       border-radius: 5px;
       overflow: hidden;
       .card-title {

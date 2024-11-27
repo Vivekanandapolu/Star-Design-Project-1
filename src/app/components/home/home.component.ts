@@ -41,8 +41,12 @@ export class HomeComponent implements OnInit, OnDestroy {
     course_img: ""
   }
 
+  type: any
 
-  addCourseForm: any = {}
+  addCourseForm: any = {
+    route: null
+  }
+  coursesData: any[] = [];
 
   constructor(private titleService: Title, private metaService: Meta, private http: HttpClient, private modalService: NgbModal, private toastr: ToastrService) {
 
@@ -58,9 +62,12 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.updateScrollState();
     });
     this.setMeta();
+    this.getAllCourses()
   }
 
   openCourseModal(content: any) {
+    this.type = 'add';
+
     this.modalService.open(content, {
       // size: 'lg',
       backdrop: 'static',
@@ -115,16 +122,68 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   addCourseCard(form: NgForm) {
-    console.log(form);
     if (form.invalid || (!this.courseFiles.bg_img || !this.courseFiles.course_img)) {
       form.form.markAllAsTouched();
       return
     }
     else {
-      this.http.post(apis.add_course, form.value).subscribe((res: any) => {
-        console.log(res);
-      })
+      form.value.bg_img = this.courseFiles.bg_img
+      form.value.course_img = this.courseFiles.course_img
+
+
+      if (this.type == 'add') {
+        this.http.post(apis.add_course, form.value).subscribe((res: any) => {
+          if (res.success) {
+            this.toastr.success(res.message);
+          }
+          else {
+            this.toastr.error(res.message)
+          }
+        })
+      }
+      else {
+        form.value.action = true
+        this.http.put(apis.updateCourse + '/' + this.addCourseForm?.id, form.value).subscribe((res: any) => {
+          if (res.success) {
+            this.toastr.success(res.message);
+          }
+          else {
+            this.toastr.error(res.message)
+          }
+        })
+      }
+      this.getAllCourses()
+      this.modalService.dismissAll();
+      this.addCourseForm = {
+        route: null
+      }
     }
+  }
+
+  editCourseModal(content: any, course: any) {
+    this.addCourseForm = { ...course }
+    this.type = 'edit'
+    this.courseFiles.bg_img = course.bg_img
+    this.courseFiles.course_img = course.course_img
+    this.modalService.open(content, {
+      backdrop: 'static'
+    });
+
+  }
+
+
+  getAllCourses() {
+    this.coursesData = []
+    this.http.get(apis.getCourses).subscribe((res: any) => {
+      if (res.success) {
+        if (res?.message.length > 0) {
+          this.coursesData = res.message
+        }
+      }
+      else {
+        this.toastr.error(res.message)
+      }
+    })
   }
 
   setMeta() {

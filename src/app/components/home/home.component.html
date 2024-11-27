@@ -33,177 +33,38 @@
                 <p class="m-0">Learn in-demand skills to future-proof your career.</p>
             </div>
             <div class="row courses p-0">
-                <div class="col-lg-4 mb-5 col-xl-4 col-xxl-4 col-md-6 col-sm-12">
-                    <div class="card h-100" routerLink="/courses/ui-ux-design">
-                        <div class="card-img-top">
-                            <img alt="Star Design Landing Page Image"
-                                src="assets/Landing Page/Course/ui ux design.star design institute.png"
-                                class="img-fluid">
-                        </div>
-                        <div class="card-body pb-0">
-                            <div class="course-title">
-                                <h4 class="card-title mb-2">
-                                    UI/UX DESIGN
-                                </h4>
-                                <p class="card-text mb-2">Learn from Scratch and design great experiences.</p>
+                <div class="col-lg-4 mb-5 col-xl-4 col-xxl-4 col-md-6 col-sm-12"
+                    *ngFor="let course of coursesData;let idx = index">
+                    <div class="card h-100">
+                        <span class="edit" (click)="editCourseModal(addCourse,course)">
+                            <i class="ri-pencil-fill"></i>
+                        </span>
+                        <div [routerLink]="course?.route">
+                            <div class="card-img-top">
+                                <img alt="Star Design Landing Page Image" [src]="domain+course?.course_img"
+                                    class="img-fluid">
                             </div>
-                            <div class="duration">
-                                <p class="m-0 pb-2"><span class="fw-bold">Duration</span> : 03 Months</p>
-                                <p class="m-0 mt-2"><span class="fw-bold ">Upcoming Batch </span> : 05 Oct 2024</p>
+                            <div class="card-body pb-0">
+                                <div class="course-title">
+                                    <h4 class="card-title mb-2">
+                                        {{course?.title}}
+                                    </h4>
+                                    <p class="card-text mb-2">{{course?.description}}</p>
+                                </div>
+                                <div class="duration">
+                                    <p class="m-0 pb-2"><span class="fw-bold">Duration</span> : {{course?.duration}}
+                                        Months</p>
+                                    <p class="m-0 mt-2"><span class="fw-bold ">Upcoming Batch </span> :
+                                        {{course?.upcoming_batch_name}}</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-footer">
-                            <!-- <button class="enroll-btn btn shadow-none ">ENROLL NOW</button> -->
-                            <button class="btn border-0 know-btn shadow-none d-flex gap-3 align-items-center">KNOW
-                                MORE <img alt="Star Design Landing Page Image" class="black"
-                                    src="/assets/arrow/Group 75711.svg"> <img alt="Star Design Landing Page Image"
-                                    class="blue" src="/assets/Blue arrow/arrow.svg">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-5 col-xl-4 col-xxl-4 col-md-6 col-sm-12">
-                    <div class="card h-100" routerLink="/courses/ar-vr-ux-design">
-                        <div class="card-img-top">
-                            <img alt="Star Design Landing Page Image"
-                                src="/assets/Landing Page/Course/ar vr-ux design.star design institute.png"
-                                class="img-fluid ">
-                        </div>
-                        <div class="card-body pb-0">
-                            <div class="course-title">
-                                <h4 class="card-title mb-2">
-                                    AR-VR/UX DESIGN
-                                </h4>
-                                <p class="card-text mb-2">Bring the future to life.</p>
+                            <div class="card-footer">
+                                <button class="btn border-0 know-btn shadow-none d-flex gap-3 align-items-center">KNOW
+                                    MORE <img alt="Star Design Landing Page Image" class="black"
+                                        src="/assets/arrow/Group 75711.svg"> <img alt="Star Design Landing Page Image"
+                                        class="blue" src="/assets/Blue arrow/arrow.svg">
+                                </button>
                             </div>
-                            <div class="duration">
-                                <p class="m-0 pb-2"><span class="fw-bold">Duration</span> : 05 Months</p>
-                                <p class="m-0 mt-2"><span class="fw-bold ">Upcoming Batch </span> : 15 Nov 2024</p>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <!-- <button class="enroll-btn btn shadow-none ">ENROLL NOW</button> -->
-                            <button class="btn border-0 know-btn shadow-none d-flex gap-3 align-items-center">KNOW
-                                MORE <img alt="Star Design Landing Page Image" class="black"
-                                    src="/assets/arrow/Group 75711.svg"> <img alt="Star Design Landing Page Image"
-                                    class="blue" src="/assets/Blue arrow/arrow.svg">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-5 col-xl-4 col-xxl-4 col-md-6 col-sm-12">
-                    <div class="card h-100" routerLink="/courses/ui-vi-design">
-                        <div class="card-img-top">
-                            <img alt="Star Design Landing Page Image"
-                                src="/assets/Landing Page/Course/ux vi design.star design institute.png"
-                                class="img-fluid ">
-                        </div>
-                        <div class="card-body pb-0">
-                            <div class="course-title">
-                                <h4 class="card-title mb-2">
-                                    UX/VI DESIGN
-                                </h4>
-                                <p class="card-text mb-2">Learn VI Design bring the future to life</p>
-                            </div>
-                            <div class="duration">
-                                <p class="m-0 pb-2"><span class="fw-bold">Duration</span> : 04 Months</p>
-                                <p class="m-0 mt-2"><span class="fw-bold ">Upcoming Batch </span> : 15 Nov 2024</p>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <!-- <button class="enroll-btn btn shadow-none ">ENROLL NOW</button> -->
-                            <button class="btn border-0 know-btn shadow-none d-flex gap-3 align-items-center">KNOW
-                                MORE <img alt="Star Design Landing Page Image" class="black"
-                                    src="/assets/arrow/Group 75711.svg"> <img alt="Star Design Landing Page Image"
-                                    class="blue" src="/assets/Blue arrow/arrow.svg">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-5 col-xl-4 col-xxl-4 col-md-6 col-sm-12">
-                    <div class="card h-100" routerLink="/courses/bachelor-of-design">
-                        <div class="card-img-top">
-                            <img alt="Star Design Landing Page Image"
-                                src="/assets/Landing Page/Course/Bachelor of Design.star design institute.png"
-                                class="img-fluid ">
-                        </div>
-                        <div class="card-body pb-0">
-                            <div class="course-title">
-                                <h4 class="card-title mb-2">
-                                    BACHELOR OF DESIGN
-                                </h4>
-                                <p class="card-text mb-2">B.Des 4 Year Full Time Program</p>
-                            </div>
-                            <div class="duration">
-                                <p class="m-0 pb-2"><span class="fw-bold">Duration</span> : 04 Year Programme</p>
-                                <p class="m-0 mt-2"><span class="fw-bold ">Upcoming Batch </span> : 11 Dec 2024</p>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <!-- <button class="enroll-btn btn shadow-none ">ENROLL NOW</button> -->
-                            <button class="btn border-0 know-btn shadow-none d-flex gap-3 align-items-center">KNOW
-                                MORE <img alt="Star Design Landing Page Image" class="black"
-                                    src="/assets/arrow/Group 75711.svg"> <img alt="Star Design Landing Page Image"
-                                    class="blue" src="/assets/Blue arrow/arrow.svg">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-5 col-xl-4 col-xxl-4 col-md-6 col-sm-12">
-                    <div class="card h-100" routerLink="/courses/product-management">
-                        <div class="card-img-top">
-                            <img alt="Star Design Landing Page Image"
-                                src="/assets/Landing Page/Course/Product Management.star design institute.png"
-                                class="img-fluid ">
-                        </div>
-                        <div class="card-body pb-0">
-                            <div class="course-title">
-                                <h4 class="card-title mb-2">
-                                    PRODUCT MANAGEMENT
-                                </h4>
-                                <p class="card-text mb-2">Become a next level with Product Manager</p>
-                            </div>
-                            <div class="duration">
-                                <p class="m-0 pb-2"><span class="fw-bold">Duration</span> : 06 Months</p>
-                                <p class="m-0 mt-2"><span class="fw-bold ">Upcoming Batch </span> : 11 Dec 2024</p>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <!-- <button class="enroll-btn btn shadow-none ">ENROLL NOW</button> -->
-                            <button class="btn border-0 know-btn shadow-none d-flex gap-3 align-items-center">KNOW
-                                MORE <img alt="Star Design Landing Page Image" class="black"
-                                    src="/assets/arrow/Group 75711.svg"> <img alt="Star Design Landing Page Image"
-                                    class="blue" src="/assets/Blue arrow/arrow.svg">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-5 col-xl-4 col-xxl-4 col-md-6 col-sm-12">
-                    <div class="card h-100" routerLink="/courses/graphic-design">
-                        <div class="card-img-top">
-                            <img alt="Star Design Landing Page Image"
-                                src="/assets/Landing Page/Course/Graphic Design.star design institute.png"
-                                class="img-fluid ">
-                        </div>
-                        <div class="card-body pb-0">
-                            <div class="course-title">
-                                <h4 class="card-title mb-2">
-                                    GRAPHIC DESIGN
-                                </h4>
-                                <p class="card-text mb-2">Ignite Your Creative Fire</p>
-                            </div>
-                            <div class="duration">
-                                <p class="m-0 pb-2"><span class="fw-bold">Duration</span> : 04 Months</p>
-                                <p class="m-0 mt-2"><span class="fw-bold ">Upcoming Batch </span> : 11 Dec 2024</p>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <!-- <button class="enroll-btn btn shadow-none ">ENROLL NOW</button> -->
-                            <button class="btn border-0 know-btn shadow-none d-flex gap-3 align-items-center">KNOW
-                                MORE <img alt="Star Design Landing Page Image" class="black"
-                                    src="/assets/arrow/Group 75711.svg"> <img alt="Star Design Landing Page Image"
-                                    class="blue" src="/assets/Blue arrow/arrow.svg">
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -834,7 +695,7 @@
 <ng-template let-modal #addCourse>
     <div class="modal-header">
         <h5 class="m-0">
-            Add Course
+            {{type=='add'?'Add':'Edit'}} Course
         </h5>
         <button class="btn btn-close shadow-none" (click)="modal.dismiss()"></button>
     </div>
@@ -861,9 +722,11 @@
                 placeholder="Enter Duration in Months" appNumberInput>
 
             <label for="Fee" class="form-label m-0">Course Fee</label>
-            <input required #duration="ngModel" [(ngModel)]="addCourseForm.duration" type="text" id="Fee"
+            <input required #course_fee="ngModel" [(ngModel)]="addCourseForm.course_fee" type="text" id="Fee"
                 class="form-control mb-3 form-control-sm shadow-none" name="course_fee" placeholder="Enter Course Fee"
                 appNumberInput>
+
+
 
             <label for="eligibility" class="form-label m-0">Eligibility</label>
             <input required #eligibility="ngModel" [(ngModel)]="addCourseForm.eligibility" type="text" id="eligibility"
@@ -874,6 +737,34 @@
             <input required #upcoming_batch="ngModel" [(ngModel)]="addCourseForm.upcoming_batch" type="date" id="Batch"
                 class="form-control mb-3" name="upcoming_batch" placeholder="Enter Duration in Months">
 
+            <label class="form-label m-0">Course Route</label>
+            <select class="mb-3 form-select form-select-sm" [(ngModel)]="addCourseForm.route" name="route"
+                #route="ngModel">
+                <option value=null disabled>
+                    Select route
+                </option>
+                <option value="/courses/ui-ux-design">
+                    UI/UX DESIGN
+                </option>
+                <option value="/courses/ar-vr-ux-design">
+                    AR-VR/UX DESIGN
+                </option>
+                <option value="/courses/ui-vi-design">
+                    UX/VI DESIGN
+                </option>
+                <option value="/courses/graphic-design">
+                    GRAPHIC DESIGN
+                </option>
+                <option value="/courses/bachelor-of-design">
+                    BACHELOR OF DESIGN
+                </option>
+                <option value="/courses/product-management">
+                    PRODUCT MANAGEMENT
+                </option>
+                <option value="/courses/photography&digital-imaging">
+                    Photography & DI
+                </option>
+            </select>
             <div [ngClass]="{'nofile':!courseFiles.bg_img}" class="upload-div">
                 <label for="img1" class="form-label ">Upload Background Image</label>
                 <input required type="file" (change)="uploadFile($event,'bg')" id="img1" class="d-none">
@@ -895,7 +786,8 @@
                 </span>
             </div>
 
-            <button type="submit" class="btn btn-sm btn-dark w-100 text-center">Add Course</button>
+            <button type="submit" class="btn btn-sm btn-dark w-100 text-center">{{type=='add'?'Add':'Edit'}}
+                Course</button>
             <!-- </div> -->
         </form>
     </div>
