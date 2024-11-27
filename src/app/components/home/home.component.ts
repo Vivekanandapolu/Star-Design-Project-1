@@ -42,12 +42,12 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   setMeta() {
     // Set the meta title with keywords
-    this.titleService.setTitle('Best UI/UX Design and Graphic Design Institute in Hyderabad | AR/VR Training');
+    this.titleService.setTitle('Best UI/UX Coaching Institute In Hyderabad | Ammerpet');
 
     // Set the meta description with keywords
     this.metaService.updateTag({
       name: 'description',
-      content: "Join the top UI/UX design institute in Hyderabad offering the best graphic design and AR/VR courses with placement. Discover your potential at the best coaching center for UI/UX, graphic design, and AR/VR training."
+      content: "Start Design Institute is one of the best UI/UX , Graphics designe instute in Hyderabad. We offer training in Graphic Designs , UI/UX Design , AR-VR/UX Design ,UI/UX Design  with quality training and placement"
     });
 
     // Set additional meta keywords for SEO

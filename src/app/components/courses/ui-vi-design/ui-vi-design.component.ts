@@ -13,12 +13,12 @@ export class UiViDesignComponent {
 
   setMeta() {
     // Set the meta title with keywords
-    this.titleService.setTitle('Best UX/VI Design Course and Training Institute in Hyderabad | Fees & Details');
+    this.titleService.setTitle('Best UX/VI Design Course in Hyderabad - Join Today');
 
     // Set the meta description with keywords
     this.metaService.updateTag({
       name: 'description',
-      content: 'Explore the best UX/VI design course in Hyderabad with affordable fees. Join the top UX/VI design training institute and advance your career with expert guidance and hands-on training.'
+      content: 'Join the best VI/UX design training institute in Hyderabad! Discover affordable VI/UX design course fees and industry-relevant skills for a thriving career.'
     });
 
     // Optional: Add meta keywords

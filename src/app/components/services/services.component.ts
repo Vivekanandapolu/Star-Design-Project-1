@@ -16,12 +16,12 @@ export class ServicesComponent implements OnInit {
 
   setMeta() {
     // Set the meta title
-    this.titleService.setTitle('Transforming Ideas into Successful Products');
+    this.titleService.setTitle('Best Online & Offline UI UX Design Institute inHyderabad | Our Service ');
 
     // Set the meta description
     this.metaService.updateTag({
       name: 'description',
-      content: "We turn ideas into products. From concept to launch, we specialize in transforming your vision into successful products. Our team offers comprehensive services including product strategy, development, market analysis, and more."
+      content: "Are you looking for best UI/UX design Institute with placement? You have come to the right place! Star Design Institute is the Best Institute  for UI/UX Design , AR-VR/UX, UX/VI , Graphic Design in Hyderabad | Ammerpet "
     });
   }
 

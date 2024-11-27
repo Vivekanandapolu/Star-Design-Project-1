@@ -13,12 +13,18 @@ export class AboutusComponent {
 
   setMeta() {
     // Set the meta title
-    this.titleService.setTitle('Exceptional Design and Research Services');
+    this.titleService.setTitle('Top UI UX Design Coaching Institute in Hyderabad | Ammerpet with Placement 2025');
 
-    // Set the meta description
+    // Set the meta description with updated content
     this.metaService.updateTag({
       name: 'description',
-      content: "Design, Research, Deep Dive – 12+ Years of Excellence. We are dedicated to delivering exceptional design and research services, specializing in deep dives to uncover insights and drive innovation."
+      content: "We are the best UI/UX design institute in Ameerpet, Hyderabad, with 12+ Years of Excellence and qualified training experts offering live interactive classes. Get details on UI/UX Design, AR/VR UX, and Graphic Design course fees, batch timings, and placement assistance."
+    });
+
+    // Optional: Add meta keywords
+    this.metaService.updateTag({
+      name: 'keywords',
+      content: 'Top UI/UX design coaching institute in Hyderabad, Best UI/UX design courses in Ameerpet, Graphic design course fees, AR/VR UX training, UI/UX design courses with placement'
     });
   }
 }

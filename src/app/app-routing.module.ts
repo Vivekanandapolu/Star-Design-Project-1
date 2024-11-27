@@ -13,9 +13,9 @@ import { SitemapComponent } from './shared/sitemap/sitemap.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, data: { title: 'ui ux design course | ui ux design course in hyderabad with 100% placements | star design institute, staruiux.com' } },
-  { path: 'services', component: ServicesComponent, data: { title: 'Services' } },
-  { path: 'aboutus', component: AboutusComponent, data: { title: 'About Us' } },
-  { path: 'placements', component: PlacementsComponent, data: { title: 'Placements' } },
+  { path: 'services', component: ServicesComponent, data: { title: 'Best Online & Offline UI UX Design Institute inHyderabad | Our Service ' } },
+  { path: 'aboutus', component: AboutusComponent, data: { title: 'Top UI/UX Design Coaching Institute in Hyderabad | Ameerpet with Placement 2025' } },
+  { path: 'placements', component: PlacementsComponent, data: { title: '100% Placements Guaranteed Program - Get Your Offer Letter' } },
   { path: 'contact-us', component: ContactUsComponent, data: { title: 'Contact Us' } },
   { path: 'hire-talent', component: HireTalentComponent, data: { title: 'Hire Talent' } },
   { path: 'login', component: LoginComponent, data: { title: 'Login' } },
