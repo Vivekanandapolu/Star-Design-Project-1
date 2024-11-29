@@ -19,13 +19,13 @@ export class UIUXDesignComponent {
     // Set the meta description with keywords
     this.metaService.updateTag({
       name: 'description',
-      content: "Looking for unique UI/UX design training? Explore premier institutes in Hyderabad that offer tailored courses to elevate your career!"
+      content: "Join the best UI/UX design training institute in Hyderabad. Learn UI/UX design courses in Ameerpet with placement. Enroll in offline UI/UX training to advance your career at the top design centers near you."
     });
 
     // Set additional meta keywords for SEO (optional)
     this.metaService.updateTag({
       name: 'keywords',
-      content: 'Best UI/UX design training institute in Hyderabad, UI/UX design course in Ameerpet, UI/UX design course with placement in Hyderabad, Offline UI/UX design course in Hyderabad, Top UI/UX coaching centers in Hyderabad, UI/UX institute near me, Best UI/UX institute near me'
+      content: 'Best UI/UX design training institute in Hyderabad, UI/UX design course in Ameerpet, UI/UX design course with placement in Hyderabad, Offline UI/UX design course in Hyderabad, Top UI/UX design centers in Hyderabad, UI/UX institute near me, Best UI/UX institute near me'
     });
   }
 

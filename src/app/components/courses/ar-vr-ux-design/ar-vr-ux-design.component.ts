@@ -13,18 +13,18 @@ export class ArVrUxDesignComponent {
 
   setMeta() {
     // Set the meta title with keywords
-    this.titleService.setTitle('Best AR/VR Courses in Hyderabad | Top Training Institutes');
+    this.titleService.setTitle('Best AR/VR Courses and Institutes in Hyderabad | Top AR/VR Training Institute');
 
     // Set the meta description with keywords
     this.metaService.updateTag({
       name: 'description',
-      content: "Enroll in Hyderabad's best AR/VR courses. Join top institutes and coaching centers for practical, career-ready virtual & augmented reality training."
+      content: 'Join the best AR/VR design institutes in Hyderabad. Explore top AR/VR courses to master augmented and virtual reality. Enroll in leading AR/VR design institutes for immersive learning experiences.'
     });
 
     // Optional: Add meta keywords
     this.metaService.updateTag({
       name: 'keywords',
-      content: 'AR/VR courses in Hyderabad, AR/VR coaching centres in Hyderabad, Top AR/VR coaching centres in Hyderabad, Best AR/VR coaching institute in Hyderabad'
+      content: 'AR/VR courses in Hyderabad, AR/VR design institutes in Hyderabad, Top AR/VR design institutes in Hyderabad, Best AR/VR design institutes in Hyderabad'
     });
   }
 

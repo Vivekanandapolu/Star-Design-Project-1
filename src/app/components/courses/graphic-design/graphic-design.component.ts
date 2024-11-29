@@ -13,18 +13,18 @@ export class GraphicDesignComponent {
 
   setMeta() {
     // Set the meta title with keywords
-    this.titleService.setTitle('Graphic Design Coaching  Center in Hyderabad - Fees & Placement');
+    this.titleService.setTitle('Best Graphic Design Institute in Hyderabad | Courses with Placement');
 
     // Set the meta description with keywords
     this.metaService.updateTag({
       name: 'description',
-      content: 'Join the best graphic design coaching center in Hyderabad! Enroll at Star Design Institute today and receive 100% job assistance to secure a position in top MNCs.'
+      content: 'Explore the best graphic design courses in Hyderabad, including Ameerpet. Join the top design institute with affordable fees and placement opportunities. Enroll today and kickstart your creative career.'
     });
 
     // Optional: Add meta keywords
     this.metaService.updateTag({
       name: 'keywords',
-      content: 'Best graphic design coaching center in Hyderabad, Graphic design courses in Hyderabad Ameerpet, Graphic design course with placement in Hyderabad, Best graphic design courses in Hyderabad fees structure'
+      content: 'Best graphic design institute in Hyderabad, Graphic design courses in Hyderabad Ameerpet, Graphic design course with placement in Hyderabad, Best graphic design courses in Hyderabad fees structure'
     });
   }
 
