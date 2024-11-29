@@ -193,13 +193,13 @@ export class HomeComponent implements OnInit, OnDestroy {
     // Set the meta description with keywords
     this.metaService.updateTag({
       name: 'description',
-      content: "Join the top UI/UX design institute in Hyderabad offering the best graphic design and AR/VR courses with placement. Discover your potential at the best coaching center for UI/UX, graphic design, and AR/VR training."
+      content: "Join the top UI/UX design institute in Hyderabad offering the best graphic design and AR/VR courses with placement. Discover your potential at the best design center for UI/UX, graphic design, and AR/VR training."
     });
 
     // Set additional meta keywords for SEO
     this.metaService.updateTag({
       name: 'keywords',
-      content: 'UI/UX Design institute in Hyderabad, Best UI/UX coaching institute in Hyderabad, Best graphic design institute with placement, AR/VR UX design course Hyderabad, Top UX/VI institute in Hyderabad, Graphic design coaching Hyderabad'
+      content: 'UI/UX Design institute in Hyderabad, Best ui ux design Institute In Hyderabad | Ammerpet , Best graphic design institute with placement, AR/VR UX design course Hyderabad, Top UX/VI institute in Hyderabad, Graphic design design Hyderabad'
     });
   }
 
