@@ -13,12 +13,12 @@ export class AboutusComponent {
 
   setMeta() {
     // Set the meta title
-    this.titleService.setTitle('Top UI UX Design Coaching Institute in Hyderabad | Ammerpet with Placement 2025');
+    this.titleService.setTitle('Top UI UX Design Institute in Hyderabad | Ameerpet | Placement 2025');
 
     // Set the meta description with updated content
     this.metaService.updateTag({
       name: 'description',
-      content: "We are the best UI/UX design institute in Ameerpet, Hyderabad, with 12+ Years of Excellence and qualified training experts offering live interactive classes. Get details on UI/UX Design, AR/VR UX, and Graphic Design course fees, batch timings, and placement assistance."
+      content: "We are the best UI/UX design institute in Ameerpet, Hyderabad, with 12+ Years of Excellence with qualified training experts offering live interactive classes. Get in touch for information on UI/UX Design, AR/VR UX, and Graphic Design course fees, batch timings, and placement assistance."
     });
 
     // Optional: Add meta keywords

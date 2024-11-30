@@ -13,12 +13,12 @@ export class GraphicDesignComponent {
 
   setMeta() {
     // Set the meta title with keywords
-    this.titleService.setTitle('Best Graphic Design Institute in Hyderabad | Courses with Placement');
+    this.titleService.setTitle('Graphic Design Institute in Hyderabad - Fees & Placement');
 
     // Set the meta description with keywords
     this.metaService.updateTag({
       name: 'description',
-      content: 'Explore the best graphic design courses in Hyderabad, including Ameerpet. Join the top design institute with affordable fees and placement opportunities. Enroll today and kickstart your creative career.'
+      content: 'Join the best graphic design coaching center in Hyderabad! Enroll at Star Design Institute today and receive 100% job assistance to secure a position in top MNCs.'
     });
 
     // Optional: Add meta keywords

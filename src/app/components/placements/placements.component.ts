@@ -23,12 +23,12 @@ export class PlacementsComponent implements OnInit {
 
   setMeta() {
     // Set the meta title
-    this.titleService.setTitle('UI/UX Course with placement guarantee | Best Design Institute in Hyderabad ');
+    this.titleService.setTitle('UI UX Course with placement guarantee | Best Design Institute in Hyderabad ');
 
     // Set the meta description
     this.metaService.updateTag({
       name: 'description',
-      content: "Get 100% JOB Oriented UI /UX Design Course in Hyderabad with .The best Graphic design institute in Hyderabad with Tools,Interview Skills ,100% Placements , Live Project & Practical classes"
+      content: "Get 100% JOB Oriented UI /UX Design Course in Hyderabad with .The best Graphic design institute in Hyderabad with Tools,Interview Skills ,100% Placements , Live Project & Practical classes "
     });
   }
 

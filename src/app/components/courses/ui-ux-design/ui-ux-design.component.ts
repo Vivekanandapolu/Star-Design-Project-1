@@ -14,12 +14,12 @@ export class UIUXDesignComponent {
 
   setMeta() {
     // Set the meta title with keywords
-    this.titleService.setTitle('Top UI/UX Design Institute in Hyderabad Awaits You');
+    this.titleService.setTitle('Top UI UX Design Institute in Hyderabad Awaits You');
 
     // Set the meta description with keywords
     this.metaService.updateTag({
       name: 'description',
-      content: "Join the best UI/UX design training institute in Hyderabad. Learn UI/UX design courses in Ameerpet with placement. Enroll in offline UI/UX training to advance your career at the top design centers near you."
+      content: "Looking for unique UI/UX design training? Explore premier institutes in Hyderabad that offer tailored courses to elevate your career!"
     });
 
     // Set additional meta keywords for SEO (optional)

@@ -13,7 +13,7 @@ export class UiViDesignComponent {
 
   setMeta() {
     // Set the meta title with keywords
-    this.titleService.setTitle('Best UX/VI Design Course in Hyderabad - Join Today');
+    this.titleService.setTitle('Best UX VI Design Course in Hyderabad - Join Today');
 
     // Set the meta description with keywords
     this.metaService.updateTag({

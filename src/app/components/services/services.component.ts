@@ -16,12 +16,12 @@ export class ServicesComponent implements OnInit {
 
   setMeta() {
     // Set the meta title
-    this.titleService.setTitle('Best Online & Offline UI UX Design Institute inHyderabad | Our Service ');
+    this.titleService.setTitle('Best Online & Offline UI UX Design Institute in Hyderabad | Our Services');
 
     // Set the meta description
     this.metaService.updateTag({
       name: 'description',
-      content: "Are you looking for best UI/UX design Institute with placement? You have come to the right place! Star Design Institute is the Best Institute  for UI/UX Design , AR-VR/UX, UX/VI , Graphic Design in Hyderabad | Ammerpet "
+      content: "Are you looking for best UI/UX design Institute with placement? You have come to the right place! Star Design Institute is the Best Institute  for UI UX Design , AR-VR UX, UX VI , Graphic Design in Hyderabad | Ameerpet "
     });
   }
 
