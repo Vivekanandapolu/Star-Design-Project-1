@@ -1,5 +1,10 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Meta, Title } from '@angular/platform-browser';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ToastrService } from 'ngx-toastr';
+import { apis } from 'src/app/shared/apiUrls';
 
 @Component({
   selector: 'app-ui-ux-design',
@@ -8,7 +13,22 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class UIUXDesignComponent {
   @ViewChild('cards') cardsContainers: ElementRef | undefined;
-  constructor(private metaService: Meta, private titleService: Title) {
+
+
+  batchDetails: any = {
+    from_day: null,
+    to_day: null,
+    training_type: null,
+    location: null
+  };
+
+
+  days: any[] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+  batches: any[] = [];
+
+  type: any;
+
+  constructor(private metaService: Meta, private titleService: Title, private http: HttpClient, private toastr: ToastrService, private modalService: NgbModal) {
     this.setMeta();
   }
 
@@ -39,4 +59,6 @@ export class UIUXDesignComponent {
         this.cardsContainers.nativeElement.scrollLeft += 350;
       }
   }
+
+
 }

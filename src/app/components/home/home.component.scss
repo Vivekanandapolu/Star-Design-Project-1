@@ -90,10 +90,10 @@
   }
   .courses {
     .card {
-      .edit {
+      .edit,
+      .delete {
         position: absolute;
         z-index: 1;
-        background: red;
         width: 30px;
         height: 30px;
         display: flex;
@@ -102,7 +102,13 @@
         border-radius: 50%;
         right: 2%;
         top: 2%;
+        background: red;
         color: white;
+      }
+      .delete {
+        right: 2%;
+        background: var(--bg-blue);
+        top: 11%;
       }
       border-radius: 5px;
       overflow: hidden;

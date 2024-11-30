@@ -61,12 +61,17 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.windowWidth786 = window.innerWidth <= 786;
       this.updateScrollState();
     });
+
     this.setMeta();
     this.getAllCourses()
   }
 
   openCourseModal(content: any) {
     this.type = 'add';
+    this.addCourseForm = {
+    }
+    this.courseFiles.course_img = ""
+    this.courseFiles.bg_img = ""
 
     this.modalService.open(content, {
       // size: 'lg',
@@ -121,50 +126,51 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   }
 
-  addCourseCard(form: NgForm) {
+  async addCourseCard(form: NgForm) {
     if (form.invalid || (!this.courseFiles.bg_img || !this.courseFiles.course_img)) {
       form.form.markAllAsTouched();
       return
     }
-    else {
-      form.value.bg_img = this.courseFiles.bg_img
-      form.value.course_img = this.courseFiles.course_img
 
+    form.value.bg_img = this.courseFiles.bg_img
+    form.value.course_img = this.courseFiles.course_img
 
-      if (this.type == 'add') {
-        this.http.post(apis.add_course, form.value).subscribe((res: any) => {
-          if (res.success) {
-            this.toastr.success(res.message);
-            this.addCourseForm = {
-              route: null
-            }
-          }
-          else {
-            this.toastr.error(res.message)
-          }
-        })
+    try {
+      if (this.type === 'add') {
+        const res: any = await this.http.post(apis.add_course, form.value).toPromise();
+        if (res.success) {
+          this.toastr.success(res.message);
+        } else {
+          this.toastr.error(res.message);
+          return;
+        }
+      } else {
+        form.value.action = true;
+        const res: any = await this.http.put(apis.updateCourse + '/' + this.addCourseForm?.id, form.value).toPromise();
+        if (res.success) {
+          this.toastr.success(res.message);
+        } else {
+          this.toastr.error(res.message);
+          return;
+        }
       }
-      else {
-        form.value.action = true
-        this.http.put(apis.updateCourse + '/' + this.addCourseForm?.id, form.value).subscribe((res: any) => {
-          if (res.success) {
-            this.toastr.success(res.message);
-            this.addCourseForm = {
-              route: null
-            }
-          }
-          else {
-            this.toastr.error(res.message)
-          }
-        })
-      }
-      this.addCourseForm = {
-        route: null
-      }
+
+      // Reset form and file values
+      this.addCourseForm = { route: null };
+      this.courseFiles.course_img = '';
+      this.courseFiles.bg_img = '';
       this.modalService.dismissAll();
-      this.getAllCourses()
+
+      // Fetch all courses after API call completes
+      await this.getAllCourses();
+    } catch (error) {
+      console.error('Error during API call:', error);
+      this.toastr.error('An error occurred while processing the request.');
     }
+
   }
+
+
 
   editCourseModal(content: any, course: any) {
     this.addCourseForm = { ...course }
@@ -190,6 +196,21 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.toastr.error(res.message)
       }
     })
+  }
+
+  async deleteCourse(course: any) {
+
+    course.action = false
+    const res: any = await this.http.put(apis.updateCourse + '/' + course?.id, course).toPromise();
+    if (res.success) {
+      this.toastr.success(res.message);
+    } else {
+      this.toastr.error(res.message);
+      return;
+    }
+
+    await this.getAllCourses()
+
   }
 
   setMeta() {
