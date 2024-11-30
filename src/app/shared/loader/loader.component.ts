@@ -12,7 +12,7 @@ export class LoaderComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    console.log("gfhjk", this.loadingService.loading$);
+    // console.log("gfhjk", this.loadingService.loading$);
   }
 
 }

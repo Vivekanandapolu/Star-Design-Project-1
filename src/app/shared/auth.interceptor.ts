@@ -1,31 +1,26 @@
 import { Injectable } from '@angular/core';
 import {
-  HttpRequest,
-  HttpHandler,
   HttpEvent,
-  HttpInterceptor
+  HttpHandler,
+  HttpInterceptor,
+  HttpRequest,
 } from '@angular/common/http';
-import { finalize, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
+import { finalize } from 'rxjs/operators';
 import { LoaderService } from './loader/loader.service';
-import { Router } from '@angular/router';
+// import { LoaderService } from './services/loader.service'; // Adjust path as needed
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
+  constructor(private loaderService: LoaderService) { }
 
-  constructor(public loadingService: LoaderService, private router: Router) { }
+  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    this.loaderService.show(); // Show loader when request starts
 
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    this.loadingService.show()
-
-    // Json Token Parsing
-
-    let data = JSON.parse(JSON.stringify(localStorage.getItem('token')));
-    request = request.clone({
-      setHeaders: { Authorization: `Bearer ${data}` }
-    })
-    return next.handle(request).pipe(finalize(() => {
-      this.loadingService.hide()
-    }
-    ))
+    return next.handle(req).pipe(
+      finalize(() => {
+        this.loaderService.hide(); // Hide loader when request completes
+      })
+    );
   }
 }

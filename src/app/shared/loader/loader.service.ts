@@ -1,30 +1,20 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LoaderService implements OnInit {
-
-
-  // Assign the behavioural subject to the variable and
-  private loadingSubject = new BehaviorSubject<boolean>(false);
-
-  //  create another variable and assign the value of the behavioural value for the purpose of show and hide
+export class LoaderService {
+  readonly loadingSubject = new BehaviorSubject<boolean>(false);
   public loading$ = this.loadingSubject.asObservable()
 
-
-  constructor() { }
-
-  ngOnInit(): void {
-    console.log(this.loading$);
-  }
-
-  show() {
+  show(): void {
+    console.log('LoaderService: show()'); // Debug log
     this.loadingSubject.next(true);
   }
 
-  hide() {
+  hide(): void {
+    console.log('LoaderService: hide()'); // Debug log
     this.loadingSubject.next(false);
   }
 }

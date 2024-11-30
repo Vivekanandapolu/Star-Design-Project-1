@@ -24,6 +24,8 @@ import { NgbModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { NumberInputDirectiveModule } from './shared/directive/number-input.directive';
 import { TrimPipeModule } from './shared/pipes/trim.pipe';
 import { ToastrModule } from 'ngx-toastr';
+import { LoaderService } from './shared/loader/loader.service';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 
 @NgModule({
@@ -39,6 +41,7 @@ import { ToastrModule } from 'ngx-toastr';
     FooterComponent,
     LoginComponent,
     SitemapComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,12 @@ import { ToastrModule } from 'ngx-toastr';
     ToastrModule.forRoot({ timeOut: 2000 }),
     NgbTooltipModule
   ],
-  providers: [CustomPreloadingStrategy, Title, { provide: UrlSerializer, useClass: LowerCaseUrlSerializer }, { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true,
+  }, LoaderService,
+    CustomPreloadingStrategy, Title, { provide: UrlSerializer, useClass: LowerCaseUrlSerializer }],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

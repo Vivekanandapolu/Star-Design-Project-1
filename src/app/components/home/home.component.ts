@@ -135,6 +135,9 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.http.post(apis.add_course, form.value).subscribe((res: any) => {
           if (res.success) {
             this.toastr.success(res.message);
+            this.addCourseForm = {
+              route: null
+            }
           }
           else {
             this.toastr.error(res.message)
@@ -146,17 +149,20 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.http.put(apis.updateCourse + '/' + this.addCourseForm?.id, form.value).subscribe((res: any) => {
           if (res.success) {
             this.toastr.success(res.message);
+            this.addCourseForm = {
+              route: null
+            }
           }
           else {
             this.toastr.error(res.message)
           }
         })
       }
-      this.getAllCourses()
-      this.modalService.dismissAll();
       this.addCourseForm = {
         route: null
       }
+      this.modalService.dismissAll();
+      this.getAllCourses()
     }
   }
 
