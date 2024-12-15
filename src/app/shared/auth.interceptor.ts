@@ -14,39 +14,46 @@ import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
-  constructor(private loaderService: LoaderService, private toastr: ToastrService, private router: Router) { }
+  constructor(
+    private loaderService: LoaderService,
+    private toastr: ToastrService,
+    private router: Router
+  ) {}
 
-  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+  intercept(
+    req: HttpRequest<any>,
+    next: HttpHandler
+  ): Observable<HttpEvent<any>> {
     this.loaderService.show(); // Show loader when request starts
 
     return next.handle(req).pipe(
       finalize(() => {
         this.loaderService.hide(); // Hide loader when request completes
-      }), catchError((err) => {
-
-        if (err.status === 401 || err.error.exc_type == "CSRFTokenError") {
-          this.toastr.error(err?.error?.message)
-          localStorage.clear()
+      }),
+      catchError((err) => {
+        if (err.status === 401 || err.error.exc_type == 'CSRFTokenError') {
+          this.toastr.error(err?.error?.message);
+          localStorage.clear();
           this.router.navigate(['']);
         }
         if (err.status === 500) {
-          this.toastr.error("Internal Error 500");
+          this.toastr.error('Internal Error 500');
         }
         if (err.status === 403) {
-          this.toastr.error("Forbidden Error 403")
-          this.router.navigate([''])
+          this.toastr.error('Forbidden Error 403');
+          this.router.navigate(['']);
         }
         if (err.status === 409) {
-          this.toastr.error("Already Exists");
+          this.toastr.error('Already Exists');
         }
         if (err.status === 400) {
-          this.toastr.error("Bad Request");
+          this.toastr.error('Bad Request');
         }
         if (err.status === 404) {
-          this.toastr.error("Not Found");
+          this.toastr.error('Not Found');
         }
         if (err.status === 504) {
-          this.toastr.error("Bad Gateway");
+          this.toastr.error('Bad Gateway');
         }
         return throwError(err);
       })

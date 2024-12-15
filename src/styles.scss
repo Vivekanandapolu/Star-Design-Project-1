@@ -212,6 +212,16 @@ textarea.ng-touched.ng-invalid:not(form) {
   /* red */
 }
 
+
+select.form-select{
+  min-height: 42px;
+}
+
+select.form-select.ng-invalid.ng-touched
+{
+  border: 1px solid var(--red);
+
+}
 .nofile {
   border: 1px solid var(--red);
 }
