@@ -11,7 +11,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
 import { Meta, Title } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { apis } from 'src/app/shared/apiUrls';
-import { environment } from 'src/app/shared/environments/environment.development';
+import { environment } from 'src/environments/environment';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
 import { NgForm } from '@angular/forms';
