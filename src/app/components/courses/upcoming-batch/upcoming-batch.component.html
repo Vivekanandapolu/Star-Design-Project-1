@@ -290,13 +290,13 @@
         required
       />
 
-      <label for="vacancies">No of Vacancies</label>
+      <label for="vacancies">Max Batch Size</label>
       <input
         appNumberInput
         type="text"
         id="vacancies"
         name="vacancies"
-        placeholder="e.g., 3 Months"
+        placeholder="e.g., 20,30,50,100"
         class="form-control mb-3"
         #vacancies="ngModel"
         [(ngModel)]="batchDetails.vacancies"

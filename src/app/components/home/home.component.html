@@ -1020,7 +1020,7 @@
 
         <!-- Course Route -->
         <div class="col-12 col-md-6">
-          <label class="form-label m-0">Course Route</label>
+          <label class="form-label m-0">Course Page Navigation</label>
           <select
             class="mb-3 form-select form-select-sm"
             [(ngModel)]="addCourseForm.route"
@@ -1050,7 +1050,9 @@
             [ngClass]="{ nofile: !courseFiles.course_img }"
             class="upload-div mb-4"
           >
-            <label for="img2" class="form-label">Upload Course Image</label>
+            <label for="img2" class="form-label d-flex gap-3"
+              ><i class="ri-upload-2-line"></i> Course Image-Home page
+            </label>
             <input
               required
               type="file"
@@ -1082,7 +1084,9 @@
         <!-- Upload Background Image -->
         <div class="col-12">
           <div [ngClass]="{ nofile: !courseFiles.bg_img }" class="upload-div">
-            <label for="img1" class="form-label">Upload Background Image</label>
+            <label for="img1" class="form-label d-flex gap-3"
+              ><i class="ri-upload-2-line"></i> Hero Image-Course page
+            </label>
             <input
               required
               type="file"
@@ -1114,7 +1118,7 @@
 
       <!-- Submit Button -->
       <button type="submit" class="btn btn-sm btn-dark w-100 text-center">
-        {{ type == "add" ? "Add" : "Edit" }} Course
+        {{ type == "add" ? "Add Course" : "Submit" }}
       </button>
     </form>
   </div>
