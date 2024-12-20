@@ -16,6 +16,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomPreloadingStrategy } from './shared/services-comp/custom-preloading-strategy';
 import { UrlSerializer } from '@angular/router';
 import { LowerCaseUrlSerializer } from './shared/LowerCaseUrlSerializer';
+import { LoginComponent } from './components/Auth/login/login.component';
+import { SitemapComponent } from './shared/sitemap/sitemap.component';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AuthInterceptor } from './shared/auth.interceptor';
+import { NgbModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { NumberInputDirectiveModule } from './shared/directive/number-input.directive';
+import { TrimPipeModule } from './shared/pipes/trim.pipe';
+import { ToastrModule } from 'ngx-toastr';
+import { LoaderService } from './shared/loader/loader.service';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 
 @NgModule({
@@ -29,15 +39,28 @@ import { LowerCaseUrlSerializer } from './shared/LowerCaseUrlSerializer';
     ContactUsComponent,
     HireTalentComponent,
     FooterComponent,
+    LoginComponent,
+    SitemapComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
-    // HeaderModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    NgbModule,
+    NumberInputDirectiveModule,
+    TrimPipeModule,
+    ToastrModule.forRoot({ timeOut: 2000 }),
+    NgbTooltipModule
   ],
-  providers: [CustomPreloadingStrategy, Title, { provide: UrlSerializer, useClass: LowerCaseUrlSerializer }],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true,
+  }, LoaderService,
+    CustomPreloadingStrategy, Title, { provide: UrlSerializer, useClass: LowerCaseUrlSerializer }],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

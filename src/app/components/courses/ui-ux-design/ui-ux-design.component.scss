@@ -73,15 +73,6 @@
         font-size: var(--eleven);
       }
     }
-    .submit-btn {
-      background-color: var(--bg-blue);
-      color: var(--white);
-      font-size: var(--sixteen);
-      font-weight: 500;
-    }
-    .submit-btn:hover {
-      background-color: rgba(4, 4, 128, 0.818);
-    }
   }
 
   .tools {
@@ -329,6 +320,9 @@
       padding-bottom: 10px;
       margin-bottom: 5px;
     }
+    .lady {
+      object-position: top !important;
+    }
   }
   .vr {
     display: none;
@@ -348,6 +342,10 @@
 @media (min-width: 1440px) {
   .expect-list:first-child {
     padding-left: 150px !important;
+  }
+  .about-course {
+    position: relative;
+    bottom: 1.5rem;
   }
 
   .expect-list:last-child {

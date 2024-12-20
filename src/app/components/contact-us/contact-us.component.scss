@@ -40,7 +40,7 @@
     font-size: var(--fifteen);
   }
   span.link {
-    font-size: var(--fourteen);
+    font-size: var(--sixteen);
     font-weight: normal !important;
     color: var(--bg-blue);
     cursor: pointer;
@@ -130,4 +130,9 @@
       font-size: var(--twentyFive) !important;
     }
   }
+}
+
+.container-fluid.p-0.bg-white.main > div {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }

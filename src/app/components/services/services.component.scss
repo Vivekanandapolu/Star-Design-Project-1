@@ -115,7 +115,7 @@
     opacity: 1;
   }
   p {
-    font: normal normal normal var(--fourteen) / 18px Messina Sans;
+    // font: normal normal normal var(--fourteen) / 18px Messina Sans;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
@@ -151,7 +151,7 @@
     font: normal normal bold var(--fourtyFive) / 81px Montserrat;
 
     letter-spacing: 0px;
-    color: #ffcb05;
+    color: green;
     opacity: 1;
   }
   .testingh1 {
@@ -162,6 +162,7 @@
     opacity: 1;
   }
 }
+
 .container-fluid {
   padding: 0px;
   .img-sec {
@@ -194,20 +195,11 @@
 .card img {
   transition: transform 0.3s ease;
 }
-
-.card:hover img {
-  transform: scale(1.1); /* Increase image size on hover */
-}
-
-/* Card hover effect */
 .card {
   transition: transform 0.3s ease;
   overflow: hidden !important;
 }
 
-.card:hover {
-  transform: translateY(-10px); /* Move card up slightly on hover */
-}
 h1,
 h4 {
   transition: color 0.3s ease;
@@ -242,6 +234,7 @@ p {
 }
 @media (max-width: 654px) {
   .bgimg1 {
+    min-height: 50dvh !important;
     h1 {
       font-size: 40px;
       line-height: 50px;
@@ -249,6 +242,25 @@ p {
     p {
       font-size: 20px;
     }
+    .container {
+      z-index: 2;
+      position: relative;
+      bottom: -8vh;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-sec {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid-sec {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -296,13 +308,24 @@ p {
   .number-div {
     display: flex;
     align-items: flex-start;
-    gap: 30px;
+    gap: 10px;
   }
 }
 
 @media (max-width: 576px) {
   h1 {
     font-size: 20px;
+  }
+
+  .bulb-column {
+    position: absolute;
+    top: 0px;
+    .image {
+      width: 100px;
+    }
+  }
+  .bulb-arrow {
+    width: 50px;
   }
 
   .service {
@@ -324,8 +347,21 @@ p {
   .card {
     margin-bottom: 10px;
   }
-}
 
+  .grid-sec {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow: auto;
+    .card {
+      min-width: 270px;
+      border-radius: 10px;
+      border: 1px solid #eee !important;
+      padding: 0px 10px;
+      box-shadow: 3px 3px 5px #eee;
+    }
+  }
+}
 .seeall {
   width: 40px;
   height: 40px;

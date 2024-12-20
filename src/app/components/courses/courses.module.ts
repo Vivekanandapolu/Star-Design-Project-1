@@ -10,15 +10,21 @@ import { BachelorDesignComponent } from './bachelor-design/bachelor-design.compo
 import { ProductManagementComponent } from './product-management/product-management.component';
 import { GraphicDesignComponent } from './graphic-design/graphic-design.component';
 import { PhotographyComponent } from './photography/photography.component';
+import { FormsModule } from '@angular/forms';
+import { NumberInputDirectiveModule } from 'src/app/shared/directive/number-input.directive';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { UpcomingBatchComponent } from './upcoming-batch/upcoming-batch.component';
 // import { HeaderModule } from 'src/app/shared/header/header.module';
 
 
 @NgModule({
-  declarations: [CoursesComponent, UIUXDesignComponent, ArVrUxDesignComponent, UiViDesignComponent, BachelorDesignComponent, ProductManagementComponent, GraphicDesignComponent, PhotographyComponent],
+  declarations: [CoursesComponent, UIUXDesignComponent, ArVrUxDesignComponent, UiViDesignComponent, BachelorDesignComponent, ProductManagementComponent, GraphicDesignComponent, PhotographyComponent, ContactFormComponent, UpcomingBatchComponent],
   imports: [
     CommonModule,
     CoursesRoutingModule,
     // HeaderModule
+    FormsModule,
+    NumberInputDirectiveModule
   ]
 })
 export class CoursesModule { }

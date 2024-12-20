@@ -7,6 +7,8 @@ import { PlacementsComponent } from './components/placements/placements.componen
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { HireTalentComponent } from './components/hire-talent/hire-talent.component';
 import { CustomPreloadingStrategy } from './shared/services-comp/custom-preloading-strategy';
+import { LoginComponent } from './components/Auth/login/login.component';
+import { SitemapComponent } from './shared/sitemap/sitemap.component';
 // import { HeaderComponent } from './shared/header/header.component';
 
 const routes: Routes = [
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'placements', component: PlacementsComponent, data: { title: 'Placements' } },
   { path: 'contact-us', component: ContactUsComponent, data: { title: 'Contact Us' } },
   { path: 'hire-talent', component: HireTalentComponent, data: { title: 'Hire Talent' } },
+  { path: 'login', component: LoginComponent, data: { title: 'Login' } },
+  { path: 'sitemap', component: SitemapComponent, data: { title: 'Sitemap' } },
   {
     path: 'courses',
     loadChildren: () => import('./components/courses/courses.module').then(m => m.CoursesModule),
@@ -23,6 +27,7 @@ const routes: Routes = [
   },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
+
 
 @NgModule({
   imports: [

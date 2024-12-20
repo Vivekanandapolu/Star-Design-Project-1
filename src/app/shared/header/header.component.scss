@@ -1,10 +1,10 @@
 .container-fluid {
   animation: navbar linear forwards;
   animation-timeline: view();
-  animation-range: 110dvh 180dvh;
+  animation-range: 100dvh 180dvh;
   position: sticky;
   top: -10rem;
-  z-index: 1000;
+  z-index: 999;
   background-color: white;
 }
 .container {
@@ -28,7 +28,7 @@
   max-width: 100%;
 }
 .header > * {
-  flex: 1;
+  flex: auto;
 }
 
 .left-head {
@@ -89,8 +89,7 @@ a.active {
 @keyframes navbar {
   0%,
   100% {
-    box-shadow: 5px 5px 10px #eee;
-
+    // box-shadow: 5px 5px 10px #eee;
     padding: 0px 30px;
     backdrop-filter: blur(0.3rem);
     background-color: rgb(255 255 255 / 80%);
@@ -104,8 +103,9 @@ a.active {
   .container-fluid {
     padding: 5px !important;
   }
-  .header {
-    // margin: 0px 10px !important;
+  li,
+  a {
+    font-weight: 500;
   }
   .header > div {
     flex: auto;
@@ -294,4 +294,41 @@ a.active {
   width: 100%;
   background-color: blue;
   height: 10px;
+}
+
+.list-tem.dropdown:has(a.active) > a::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  background-color: var(--bg-blue);
+  transition: all 0.4s ease !important;
+}
+.list-tem.dropdown:has(a.active) > a {
+  font-weight: bold !important;
+  color: var(--bg-blue);
+}
+
+.login-btn {
+  color: var(--bg-blue);
+  border: 1px solid var(--bg-blue);
+  font-weight: normal;
+  border-radius: 25px;
+  max-width: 111px;
+  font-size: 16px;
+  height: 35px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-btn:hover {
+  color: white;
+  font-weight: 500;
+  background-color: var(--bg-blue);
 }

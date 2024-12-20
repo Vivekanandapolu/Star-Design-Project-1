@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="login-div">
+        <div class="card">
+            <div class="card-body p-4">
+                <div class="d-flex justify-content-center">
+                    <img class="mb-4" src="../../../../assets/new_logo/logo star design institute.svg" alt="">
+
+                </div>
+                <div class="mb-3">
+                    <h4 class="card-title">Welcome to Student Portal
+                    </h4>
+                    <p class="card-text">
+                        Please sign-in to your account now.
+                    </p>
+                </div>
+
+                <form #form>
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" name="username" class="form-control mb-3" placeholder="Enter your username"
+                        id="username">
+                    <label for="Password" class="form-label">Password</label>
+                    <div class="input-group d-flex mb-3">
+                        <input [type]="!passwordType?'password':'text'" name="Password" class="form-control "
+                            [placeholder]="!passwordType?'...................':'1234567890'" id="password">
+                        <span *ngIf="passwordType" class="input-group-text"><i (click)="passwordType=false"
+                                class="ri-eye-line"></i></span>
+                        <span *ngIf="!passwordType" class="input-group-text"><i (click)="passwordType=true"
+                                class="ri-eye-off-line"></i>
+                        </span>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="checkbox" id="remember" name="remember" class="form-check">
+                        <label for="remember" class="form-label mb-0">Remember Me
+                        </label>
+                    </div>
+                    <p class="forgot mb-3">Forgot Password?</p>
+                    <button class="btn login">Sign in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

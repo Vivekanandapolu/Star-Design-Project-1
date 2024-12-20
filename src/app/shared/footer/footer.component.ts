@@ -20,6 +20,7 @@ export class FooterComponent implements OnInit {
     const url = `https://web.whatsapp.com/send?phone=${this.phoneNumber}`;
     window.open(url);
   }
+
   navigateTo(linkType: string) {
     switch (linkType) {
       case 'twitter':

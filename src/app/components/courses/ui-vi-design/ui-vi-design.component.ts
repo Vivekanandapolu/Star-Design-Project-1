@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-ui-vi-design',
@@ -7,13 +7,25 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./ui-vi-design.component.scss']
 })
 export class UiViDesignComponent {
-  constructor(private metaService: Meta) {
-    this.setMeta()
+  constructor(private metaService: Meta, private titleService: Title) {
+    this.setMeta();
   }
+
   setMeta() {
+    // Set the meta title with keywords
+    this.titleService.setTitle('Best UX/VI Design Course and Training Institute in Hyderabad | Fees & Details');
+
+    // Set the meta description with keywords
     this.metaService.updateTag({
       name: 'description',
-      content: "Learn Voice User Interface (VUI) design to bring the future to life. Master the skills to create intuitive voice-driven experiences that engage users. Enroll now and advance your career in UI/VI design."
+      content: 'Explore the best UX/VI design course in Hyderabad with affordable fees. Join the top UX/VI design training institute and advance your career with expert guidance and hands-on training.'
+    });
+
+    // Optional: Add meta keywords
+    this.metaService.updateTag({
+      name: 'keywords',
+      content: 'UX/VI design course fees in Hyderabad, Best UX/VI design training institute in Hyderabad fees, UX/VI design course Hyderabad, Best UX/VI design course in Hyderabad'
     });
   }
+
 }
