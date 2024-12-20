@@ -1,7 +1,8 @@
 import { environment } from './../../environments/environment';
 
-const domain = environment.apiDomain;
+const domain = environment.apiDomain + environment.domain;
 
+console.log(domain, 'domain');
 export const apis = {
   userList: `${domain}/demo/users`,
   upload_file: `${domain}/home/upload_image`,
