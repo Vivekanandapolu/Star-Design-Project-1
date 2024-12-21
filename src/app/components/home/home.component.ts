@@ -41,8 +41,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   scrollDirection: string = 'right';
   windowWidth786: boolean = false;
   image: any;
-
-  domain = environment.domain;
+  domain = environment.apiDomain;
 
   courseFiles: any = {
     bg_img: '',

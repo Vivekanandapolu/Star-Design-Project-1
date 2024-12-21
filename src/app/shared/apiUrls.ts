@@ -1,6 +1,6 @@
 import { environment } from './../../environments/environment';
 
-const domain = environment.apiDomain + environment.domain;
+const domain = environment.apiDomain;
 
 console.log(domain, 'domain');
 export const apis = {
