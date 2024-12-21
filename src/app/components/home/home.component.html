@@ -71,9 +71,10 @@
 
             <div [routerLink]="course?.route">
               <div class="card-img-top">
+                {{ domain | json }}
                 <img
                   alt="Star Design Landing Page Image"
-                  [src]="domain + course?.course_img"
+                  [src]="'/api' + course?.course_img"
                   class="img-fluid"
                 />
               </div>
