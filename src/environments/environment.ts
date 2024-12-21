@@ -1,4 +1,4 @@
 export const environment = {
-  production: true,
+  production: false,
   apiDomain: 'https://star-design-backend.onrender.com',
 };
