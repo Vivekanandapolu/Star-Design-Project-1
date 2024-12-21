@@ -62,7 +62,7 @@
           *ngFor="let course of coursesData; let idx = index"
         >
           <div class="card h-100">
-            <span class="edit" (click)="deleteCourse(course)">
+            <span class="edit" (click)="confirmDelete(course)">
               <i class="ri-delete-bin-5-line"></i>
             </span>
             <span class="delete" (click)="editCourseModal(addCourse, course)">
@@ -925,20 +925,20 @@
             />
           </ng-container>
           <select
-            *ngIf="addCourseForm.title != 'custom'"
+            *ngIf="addCourseForm.title !== 'custom'"
             class="mb-3 form-select shadow-none form-select-sm"
             [(ngModel)]="addCourseForm.title"
             name="title"
             #title="ngModel"
+            (ngModelChange)="onCourseChange($event)"
           >
             <option value="null" disabled>Select Course</option>
-
             <option value="UI/UX Design">UI/UX Design</option>
             <option value="AR-VR/UX Design">AR-VR/UX Design</option>
             <option value="UX/VI Design">UX/VI Design</option>
             <option value="Bachelor of Design">Bachelor of Design</option>
-            <option value="Product Management">BACHELOR OF DESIGN</option>
-            <option value="Graphic Design">PRODUCT MANAGEMENT</option>
+            <option value="Product Management">Product Management</option>
+            <option value="Graphic Design">Graphic Design</option>
             <option value="custom">Custom</option>
           </select>
         </div>
@@ -1023,20 +1023,20 @@
           <label class="form-label m-0">Course Page Navigation</label>
           <select
             class="mb-3 form-select form-select-sm"
-            [(ngModel)]="addCourseForm.route"
+            [value]="selectedRoute"
             name="route"
-            #route="ngModel"
+            disabled
           >
             <option [value]="null" disabled>Select route</option>
-            <option value="/courses/ui-ux-design">UI/UX DESIGN</option>
-            <option value="/courses/ar-vr-ux-design">AR-VR/UX DESIGN</option>
-            <option value="/courses/ui-vi-design">UX/VI DESIGN</option>
-            <option value="/courses/graphic-design">GRAPHIC DESIGN</option>
+            <option value="/courses/ui-ux-design">UI/UX Design</option>
+            <option value="/courses/ar-vr-ux-design">AR-VR/UX Design</option>
+            <option value="/courses/ui-vi-design">UX/VI Design</option>
+            <option value="/courses/graphic-design">Graphic Design</option>
             <option value="/courses/bachelor-of-design">
-              BACHELOR OF DESIGN
+              Bachelor of Design
             </option>
             <option value="/courses/product-management">
-              PRODUCT MANAGEMENT
+              Product Management
             </option>
             <option value="/courses/photography&digital-imaging">
               Photography & DI
@@ -1069,7 +1069,7 @@
               class="d-flex align-items-center justify-content-between px-2"
             >
               <p class="file m-0">
-                {{ courseFiles.course_img.split("/files/")[1] | trim : 30 }}
+                {{ courseFiles.course_img.split("/files/")[1] | trim : 25 }}
               </p>
               <span
                 ><i
@@ -1103,7 +1103,7 @@
               class="d-flex align-items-center justify-content-between px-2"
             >
               <p class="file m-0">
-                {{ courseFiles.bg_img.split("/files/")[1] | trim : 30 }}
+                {{ courseFiles.bg_img.split("/files/")[1] | trim : 25 }}
               </p>
               <span
                 ><i

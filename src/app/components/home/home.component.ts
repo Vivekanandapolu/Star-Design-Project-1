@@ -54,7 +54,19 @@ export class HomeComponent implements OnInit, OnDestroy {
     route: null,
     title: null,
   };
+
+  selectedRoute: string | null = null;
+
   coursesData: any[] = [];
+
+  courseRouteMap: { [key: string]: string } = {
+    'UI/UX Design': '/courses/ui-ux-design',
+    'AR-VR/UX Design': '/courses/ar-vr-ux-design',
+    'UX/VI Design': '/courses/ui-vi-design',
+    'Bachelor of Design': '/courses/bachelor-of-design',
+    'Product Management': '/courses/product-management',
+    'Graphic Design': '/courses/graphic-design',
+  };
 
   constructor(
     private titleService: Title,
@@ -75,6 +87,12 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     this.setMeta();
     this.getAllCourses();
+  }
+
+  onCourseChange(selectedCourse: string): void {
+    // Update the selectedRoute based on the course
+    this.selectedRoute = this.courseRouteMap[selectedCourse] || null;
+    this.addCourseForm.route = this.selectedRoute; // Optional: Sync form route
   }
 
   openCourseModal(content: any) {
@@ -146,6 +164,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     form.value.bg_img = this.courseFiles.bg_img;
+    form.value.route = this.selectedRoute;
     form.value.course_img = this.courseFiles.course_img;
 
     try {
@@ -190,6 +209,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.addCourseForm = { ...course };
     this.type = 'edit';
     this.courseFiles.bg_img = course.bg_img;
+    console.log(course.title);
+    this.onCourseChange(course.title);
     this.courseFiles.course_img = course.course_img;
     this.modalService.open(content, {
       backdrop: 'static',
@@ -209,6 +230,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
+  async confirmDelete(course: any) {
+    let result: any = await window.confirm(
+      `Are you sure to delete this ${course?.title} Course`
+    );
+    if (result) {
+      await this.deleteCourse(course);
+    }
+  }
+
   async deleteCourse(course: any) {
     course.action = false;
     const res: any = await this.http
@@ -225,12 +255,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   setMeta() {
-    // Set the meta title with keywords
     this.titleService.setTitle(
       'Best UI/UX Design and Graphic Design Institute in Hyderabad | AR/VR Training'
     );
 
-    // Set the meta description with keywords
     this.metaService.updateTag({
       name: 'description',
       content:
