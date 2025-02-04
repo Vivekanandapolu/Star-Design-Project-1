@@ -1055,7 +1055,7 @@
             class="upload-div mb-4"
           >
             <label for="img2" class="form-label d-flex gap-3"
-              ><i class="ri-upload-2-line"></i> Course Image
+              ><i class="ri-upload-2-line"></i> Course Thumbnail
             </label>
             <input
               required
@@ -1073,7 +1073,7 @@
               class="d-flex align-items-center justify-content-between px-2"
             >
               <p class="file m-0">
-                {{ courseFiles.course_img | trim : 30 }}
+                {{ courseFiles.course_img | trim : 25 }}
               </p>
               <span
                 ><i
@@ -1089,7 +1089,7 @@
         <div class="col-12">
           <div [ngClass]="{ nofile: !courseFiles.bg_img }" class="upload-div">
             <label for="img1" class="form-label d-flex gap-3"
-              ><i class="ri-upload-2-line"></i> Hero Image
+              ><i class="ri-upload-2-line"></i> Course Hero Image
             </label>
             <input
               required
@@ -1107,7 +1107,7 @@
               class="d-flex align-items-center justify-content-between px-2"
             >
               <p class="file m-0">
-                {{ courseFiles.bg_img | trim : 30 }}
+                {{ courseFiles.bg_img | trim : 25 }}
               </p>
               <span
                 ><i
