@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "https://star-design-backend.onrender.com",
+    "target": "https://star-backend-wh7u.onrender.com/",
     "secure": false,
     "changeOrigin": true,
     "pathRewrite": {

@@ -1,6 +1,7 @@
 <div class="table-responsive">
   <div class="d-flex justify-content-end">
     <button
+      *ngIf="userDetails?.role && userDetails?.role == 'admin'"
       class="btn btn-sm btn-primary mb-3"
       (click)="openCourseModal(AddBatch)"
     >
@@ -16,7 +17,6 @@
         <th><span>METHODS</span></th>
         <th><span>CLASS TIMES (IST)</span></th>
         <th><span>BRANCH LOCATION</span></th>
-
         <th><span>COURSE FEE</span></th>
       </tr>
     </thead>
@@ -24,7 +24,7 @@
       <tr *ngFor="let batch of batches; let idx = index">
         <td>
           <span class="d-flex gap-4 align-items-center justify-content-around"
-            >{{ batch?.next_batch_name }}
+            >{{ batch?.nextBatchFrom | date : "dd MMM yyyy" }}
             <i class="ri-arrow-right-line fs-6 cursor-pointer"></i
           ></span>
         </td>
