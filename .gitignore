@@ -10,7 +10,7 @@
 npm-debug.log
 
 
-/dist
+dist/
 yarn-error.log
 
 # IDEs and editors
