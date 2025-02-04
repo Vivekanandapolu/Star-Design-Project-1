@@ -15,6 +15,7 @@ import { environment } from 'src/environments/environment';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
 import { NgForm } from '@angular/forms';
+import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
   selector: 'app-home',
@@ -67,14 +68,18 @@ export class HomeComponent implements OnInit, OnDestroy {
     'Product Management': '/courses/product-management',
     'Graphic Design': '/courses/graphic-design',
   };
+  userDetails: any | null;
 
   constructor(
     private titleService: Title,
     private metaService: Meta,
     private http: HttpClient,
     private modalService: NgbModal,
-    private toastr: ToastrService
-  ) {}
+    private toastr: ToastrService,
+    private userService: UserService
+  ) {
+    userService.loadUserDetails();
+  }
 
   ngOnInit(): void {
     this.updateScrollState();
@@ -83,6 +88,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     window.addEventListener('resize', () => {
       this.windowWidth786 = window.innerWidth <= 786;
       this.updateScrollState();
+    });
+    this.userService.userDetails.subscribe((res) => {
+      if (res) {
+        this.userDetails = res;
+      }
     });
 
     this.setMeta();
@@ -121,23 +131,25 @@ export class HomeComponent implements OnInit, OnDestroy {
     const file = e.target.files[0];
     const fileformData = new FormData();
     fileformData.append('file', file, file?.name);
-    this.http.post(apis.upload_file, fileformData).subscribe((res: any) => {
-      if (res.success) {
-        if (type == 'bg') {
-          this.courseFiles.bg_img = res.file_url;
+    this.http
+      .post(apis.node_singleFileUpload, fileformData)
+      .subscribe((res: any) => {
+        if (res.success) {
+          if (type == 'bg') {
+            this.courseFiles.bg_img = res.file.filename;
+          } else {
+            this.courseFiles.course_img = res.file.filename;
+          }
+          this.toastr.success(res.message);
         } else {
-          this.courseFiles.course_img = res.file_url;
+          if (type == 'bg') {
+            this.courseFiles.bg_img = res.file.filename;
+          } else {
+            this.courseFiles.course_img = res.file.filename;
+          }
+          this.toastr.error(res.message);
         }
-        this.toastr.success(res.message);
-      } else {
-        if (type == 'bg') {
-          this.courseFiles.bg_img = res.file_url;
-        } else {
-          this.courseFiles.course_img = res.file_url;
-        }
-        this.toastr.error(res.message);
-      }
-    });
+      });
   }
 
   removeImg(type: any) {
@@ -164,13 +176,16 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     form.value.bg_img = this.courseFiles.bg_img;
-    form.value.route = this.selectedRoute;
+    console.log(this.selectedRoute, 'this.selectedRoute');
+    form.value.route = !this.selectedRoute
+      ? form.value.title
+      : this.selectedRoute;
     form.value.course_img = this.courseFiles.course_img;
 
     try {
       if (this.type === 'add') {
         const res: any = await this.http
-          .post(apis.add_course, form.value)
+          .post(apis.node_addCourse, [form.value])
           .toPromise();
         if (res.success) {
           this.toastr.success(res.message);
@@ -181,7 +196,10 @@ export class HomeComponent implements OnInit, OnDestroy {
       } else {
         form.value.action = true;
         const res: any = await this.http
-          .put(apis.updateCourse + '/' + this.addCourseForm?.id, form.value)
+          .put(
+            apis.node_updateCourse + '/' + this.addCourseForm?._id,
+            form.value
+          )
           .toPromise();
         if (res.success) {
           this.toastr.success(res.message);
@@ -219,10 +237,10 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   getAllCourses() {
     this.coursesData = [];
-    this.http.get(apis.getCourses).subscribe((res: any) => {
+    this.http.get(apis.node_getAllcourses).subscribe((res: any) => {
       if (res.success) {
-        if (res?.message.length > 0) {
-          this.coursesData = res.message;
+        if (res?.data.length > 0) {
+          this.coursesData = res.data;
         }
       } else {
         this.toastr.error(res.message);
@@ -240,9 +258,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   async deleteCourse(course: any) {
-    course.action = false;
+    // course.action = false;
     const res: any = await this.http
-      .put(apis.updateCourse + '/' + course?.id, course)
+      .delete(apis.node_deleteCourse + '/' + course?._id)
       .toPromise();
     if (res.success) {
       this.toastr.success(res.message);

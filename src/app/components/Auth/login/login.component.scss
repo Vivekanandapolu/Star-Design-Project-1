@@ -6,8 +6,8 @@
 }
 .card {
   border-radius: 10px;
-  max-width: 360px;
-  width: 360px;
+  // max-width: 360px;
+  // width: 360px;
   box-shadow: 1px 1px 5px rgb(206, 203, 203);
   .card-title {
     font-size: 20px;
@@ -46,6 +46,9 @@
     color: rgb(120, 123, 255);
     font-weight: 500;
     cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   .login {
     background: rgb(120, 123, 255);
