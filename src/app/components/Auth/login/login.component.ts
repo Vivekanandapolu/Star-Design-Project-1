@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
   ) {
     userService.loadUserDetails();
   }
+
   ngOnInit(): void {
     this.userService.userDetails.subscribe((res) => {
       if (res) {
@@ -34,11 +35,12 @@ export class LoginComponent implements OnInit {
   }
 
   login(form: NgForm) {
+    console.log(form.value);
     if (form.invalid) {
       form.form.markAllAsTouched();
       return;
     }
-    this.http.post(apis.node_login, form.value).subscribe((res: any) => {
+    this.http.post(apis.login, form.value).subscribe((res: any) => {
       if (res.success) {
         localStorage.setItem('token', res.token);
         localStorage.setItem('userDetails', JSON.stringify(res.userDetails));
@@ -51,12 +53,13 @@ export class LoginComponent implements OnInit {
   }
 
   signUp(form: NgForm) {
+    console.log(form.value);
     if (form.invalid) {
       form.form.markAllAsTouched();
       return;
     }
     console.log(form.value);
-    this.http.post(apis.node_signup, form.value).subscribe((res: any) => {
+    this.http.post(apis.signUp, form.value).subscribe((res: any) => {
       if (res.success) {
         // localStorage.setItem('token', res.token);
         // localStorage.setItem('userDetails', JSON.stringify(res.userDetails));
